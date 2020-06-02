@@ -1,0 +1,1999 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrain_activity2"
+        android:layout_width="match_parent"
+        android:layout_height="805dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <ImageView
+            android:id="@+id/royal_delivery"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="royal_delivery"
+            app:srcCompat="@drawable/royal_delivery"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="498dp" />
+
+        <ImageView
+            android:id="@+id/spear_goblins"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="spear_goblins"
+            app:srcCompat="@drawable/spear_goblins"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="498dp" />
+
+        <Button
+            android:id="@+id/skeleton_army_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="716dp" />
+
+        <ImageView
+            android:id="@+id/skeleton_army"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="skeleton_army"
+            app:srcCompat="@drawable/skeleton_army"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="626dp" />
+
+        <ImageView
+            android:id="@+id/fire_spirits"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="fire_spirits"
+            app:srcCompat="@drawable/fire_spirits"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="498dp" />
+
+        <Button
+            android:id="@+id/arrows_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="716dp" />
+
+        <Button
+            android:id="@+id/goblin_barrel_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="716dp" />
+
+        <Button
+            android:id="@+id/giant_snowball_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="588dp" />
+
+        <ImageView
+            android:id="@+id/goblin_barrel"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="goblin_barrel"
+            app:srcCompat="@drawable/goblin_barrel"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="626dp" />
+
+        <Button
+            android:id="@+id/spear_goblins_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="588dp" />
+
+        <Button
+            android:id="@+id/fire_spirits_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="588dp" />
+
+        <ImageView
+            android:id="@+id/bomber"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="bomber"
+            app:srcCompat="@drawable/bomber"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="626dp" />
+
+        <Button
+            android:id="@+id/royal_delivery_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="588dp" />
+
+        <ImageView
+            android:id="@+id/giant_snowball"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="giant_snowball"
+            app:srcCompat="@drawable/giant_snowball"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="498dp" />
+
+        <Button
+            android:id="@+id/bomber_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="716dp" />
+
+        <ImageView
+            android:id="@+id/arrows"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="arrows"
+            app:srcCompat="@drawable/arrows"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="626dp" />
+
+        <ImageView
+            android:id="@+id/zap"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="zap"
+            app:srcCompat="@drawable/zap"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="241dp" />
+
+        <ImageView
+            android:id="@+id/goblins"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="goblins"
+            app:srcCompat="@drawable/goblins"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="241dp" />
+
+        <Button
+            android:id="@+id/bats_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="460dp" />
+
+        <ImageView
+            android:id="@+id/bats"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="bats"
+            app:srcCompat="@drawable/bats"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="369dp" />
+
+        <Button
+            android:id="@+id/wall_breakers_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="460dp" />
+
+        <ImageView
+            android:id="@+id/barbarian_barrel"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="barbarian_barrel"
+            app:srcCompat="@drawable/barbarian_barrel"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="241dp" />
+
+        <Button
+            android:id="@+id/rage_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="460dp" />
+
+        <Button
+            android:id="@+id/the_log_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="331dp" />
+
+        <ImageView
+            android:id="@+id/rage"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="rage"
+            app:srcCompat="@drawable/rage"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="369dp" />
+
+        <Button
+            android:id="@+id/goblins_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="331dp" />
+
+        <Button
+            android:id="@+id/barbarian_barrel_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="331dp" />
+
+        <ImageView
+            android:id="@+id/ice_golem"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="ice_golem"
+            app:srcCompat="@drawable/ice_golem"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="369dp" />
+
+        <Button
+            android:id="@+id/zap_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="331dp" />
+
+        <ImageView
+            android:id="@+id/the_log"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="the_log"
+            app:srcCompat="@drawable/the_log"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="241dp" />
+
+        <ImageView
+            android:id="@+id/wall_breakers"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="wall_breakers"
+            app:srcCompat="@drawable/wall_breakers"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="369dp" />
+
+        <Button
+            android:id="@+id/ice_golem_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="460dp" />
+
+        <ImageView
+            android:id="@+id/mirror"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="mirror"
+            app:srcCompat="@drawable/mirror"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <Button
+            android:id="@+id/mirror_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="203dp" />
+
+        <ImageView
+            android:id="@+id/ice_spirit"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="ice_spirit"
+            app:srcCompat="@drawable/ice_spirit"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <ImageView
+            android:id="@+id/heal_spirit"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="heal_spirit"
+            app:srcCompat="@drawable/heal_spirit"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <Button
+            android:id="@+id/heal_spirit_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="203dp" />
+
+        <Button
+            android:id="@+id/skeletons_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="203dp" />
+
+        <Button
+            android:id="@+id/ice_spirit_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="203dp" />
+
+        <ImageView
+            android:id="@+id/skeletons"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="skeletons"
+            app:srcCompat="@drawable/skeletons"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <ImageView
+            android:id="@+id/tombstone"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="tombstone"
+            app:srcCompat="@drawable/tombstone"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="755dp" />
+
+        <ImageView
+            android:id="@+id/cannon"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="cannon"
+            app:srcCompat="@drawable/cannon"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="755dp" />
+
+        <ImageView
+            android:id="@+id/elixir_golem"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="elixir_golem"
+            app:srcCompat="@drawable/elixir_golem"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="755dp" />
+
+        <ImageView
+            android:id="@+id/firecracker"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="firecracker"
+            app:srcCompat="@drawable/firecracker"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="755dp" />
+
+        <Button
+            android:id="@+id/tombstone_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="845dp" />
+
+        <Button
+            android:id="@+id/cannon_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="845dp" />
+
+        <Button
+            android:id="@+id/elixir_golem_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="845dp" />
+
+        <Button
+            android:id="@+id/firecracker_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="845dp" />
+
+
+        <ImageView
+            android:id="@+id/fisherman"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="fisherman"
+            app:srcCompat="@drawable/fisherman"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="883dp" />
+
+        <ImageView
+            android:id="@+id/tornado"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="tornado"
+            app:srcCompat="@drawable/tornado"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="883dp" />
+
+        <ImageView
+            android:id="@+id/skeleton_barrel"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="skeleton_barrel"
+            app:srcCompat="@drawable/skeleton_barrel"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="883dp" />
+
+        <ImageView
+            android:id="@+id/clone"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="clone"
+            app:srcCompat="@drawable/clone"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="883dp" />
+
+        <Button
+            android:id="@+id/fisherman_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="973dp" />
+
+        <Button
+            android:id="@+id/tornado_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="973dp" />
+
+        <Button
+            android:id="@+id/skeleton_barrel_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="973dp" />
+
+        <Button
+            android:id="@+id/clone_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="973dp" />
+
+        <ImageView
+            android:id="@+id/earthquake"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="earthquake"
+            app:srcCompat="@drawable/earthquake"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1011dp" />
+
+        <ImageView
+            android:id="@+id/ice_wizard"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="ice_wizard"
+            app:srcCompat="@drawable/ice_wizard"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1011dp" />
+
+        <ImageView
+            android:id="@+id/royal_ghost"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="royal_ghost"
+            app:srcCompat="@drawable/royal_ghost"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1011dp" />
+
+        <ImageView
+            android:id="@+id/guards"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="guards"
+            app:srcCompat="@drawable/guards"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1011dp" />
+
+        <Button
+            android:id="@+id/earthquake_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1101dp" />
+
+        <Button
+            android:id="@+id/ice_wizard_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1101dp" />
+
+        <Button
+            android:id="@+id/royal_ghost_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1101dp" />
+
+        <Button
+            android:id="@+id/guards_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1101dp" />
+
+        <ImageView
+            android:id="@+id/princess"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="princess"
+            app:srcCompat="@drawable/princess"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1140dp" />
+
+        <ImageView
+            android:id="@+id/bandit"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="bandit"
+            app:srcCompat="@drawable/bandit"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1140dp" />
+
+        <ImageView
+            android:id="@+id/knight"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="knight"
+            app:srcCompat="@drawable/knight"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1140dp" />
+
+        <ImageView
+            android:id="@+id/archers"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="archers"
+            app:srcCompat="@drawable/archers"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1140dp" />
+
+        <Button
+            android:id="@+id/princess_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1230dp" />
+
+        <Button
+            android:id="@+id/bandit_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1230dp" />
+
+        <Button
+            android:id="@+id/knight_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1230dp" />
+
+        <Button
+            android:id="@+id/archers_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1230dp" />
+
+        <ImageView
+            android:id="@+id/goblin_gang"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="goblin_gang"
+            app:srcCompat="@drawable/goblin_gang"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1268dp" />
+
+        <ImageView
+            android:id="@+id/miner"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="miner"
+            app:srcCompat="@drawable/miner"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1268dp" />
+
+        <ImageView
+            android:id="@+id/dart_goblin"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="dart_goblin"
+            app:srcCompat="@drawable/dart_goblin"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1268dp" />
+
+        <ImageView
+            android:id="@+id/mega_minion"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="mega_minion"
+            app:srcCompat="@drawable/mega_minion"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1268dp" />
+
+        <Button
+            android:id="@+id/goblin_gang_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1358dp" />
+
+        <Button
+            android:id="@+id/miner_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1358dp" />
+
+        <Button
+            android:id="@+id/dart_goblin_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1358dp" />
+
+        <Button
+            android:id="@+id/mega_minion_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1358dp" />
+
+        <ImageView
+            android:id="@+id/minions"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="minions"
+            app:srcCompat="@drawable/minions"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1396dp" />
+
+        <ImageView
+            android:id="@+id/battle_ram"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="battle_ram"
+            app:srcCompat="@drawable/battle_ram"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1396dp" />
+
+        <ImageView
+            android:id="@+id/inferno_dragon"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="inferno_dragon"
+            app:srcCompat="@drawable/inferno_dragon"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1396dp" />
+
+        <ImageView
+            android:id="@+id/lumberjack"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="lumberjack"
+            app:srcCompat="@drawable/lumberjack"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1396dp" />
+
+        <Button
+            android:id="@+id/minions_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1487dp" />
+
+        <Button
+            android:id="@+id/battle_ram_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1487dp" />
+
+        <Button
+            android:id="@+id/inferno_dragon_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1487dp" />
+
+        <Button
+            android:id="@+id/lumberjack_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1487dp" />
+
+        <ImageView
+            android:id="@+id/poison"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="poison"
+            app:srcCompat="@drawable/poison"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1525dp" />
+
+        <ImageView
+            android:id="@+id/freeze"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="freeze"
+            app:srcCompat="@drawable/freeze"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1525dp" />
+
+        <ImageView
+            android:id="@+id/zappies"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="zappies"
+            app:srcCompat="@drawable/zappies"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1525dp" />
+
+        <ImageView
+            android:id="@+id/electro_wizard"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="electro_wizard"
+            app:srcCompat="@drawable/electro_wizard"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1525dp" />
+
+        <Button
+            android:id="@+id/poison_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1615dp" />
+
+        <Button
+            android:id="@+id/freeze_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1615dp" />
+
+        <Button
+            android:id="@+id/zappies_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1615dp" />
+
+        <Button
+            android:id="@+id/electro_wizard_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1615dp" />
+
+        <ImageView
+            android:id="@+id/valkyrie"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="valkyrie"
+            app:srcCompat="@drawable/valkyrie"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1653dp" />
+
+        <ImageView
+            android:id="@+id/hunter"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="hunter"
+            app:srcCompat="@drawable/hunter"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1653dp" />
+
+        <ImageView
+            android:id="@+id/fireball"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="fireball"
+            app:srcCompat="@drawable/fireball"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1653dp" />
+
+        <ImageView
+            android:id="@+id/dark_prince"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="dark_prince"
+            app:srcCompat="@drawable/dark_prince"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1653dp" />
+
+        <Button
+            android:id="@+id/valkyrie_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1743dp" />
+
+        <Button
+            android:id="@+id/hunter_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1743dp" />
+
+        <Button
+            android:id="@+id/fireball_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1743dp" />
+
+        <Button
+            android:id="@+id/dark_prince_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1743dp" />
+
+        <ImageView
+            android:id="@+id/goblin_cage"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="goblin_cage"
+            app:srcCompat="@drawable/goblin_cage"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1781dp" />
+
+        <ImageView
+            android:id="@+id/night_witch"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="night_witch"
+            app:srcCompat="@drawable/night_witch"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1781dp" />
+
+        <ImageView
+            android:id="@+id/furnace"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="furnace"
+            app:srcCompat="@drawable/furnace"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1781dp" />
+
+        <ImageView
+            android:id="@+id/musketeer"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="musketeer"
+            app:srcCompat="@drawable/musketeer"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1781dp" />
+
+        <Button
+            android:id="@+id/goblin_cage_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1872dp" />
+
+        <Button
+            android:id="@+id/night_witch_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1872dp" />
+
+        <Button
+            android:id="@+id/furnace_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1872dp" />
+
+        <Button
+            android:id="@+id/musketeer_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1872dp" />
+
+        <ImageView
+            android:id="@+id/tesla"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="tesla"
+            app:srcCompat="@drawable/tesla"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="1910dp" />
+
+        <ImageView
+            android:id="@+id/bomb_tower"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="bomb_tower"
+            app:srcCompat="@drawable/bomb_tower"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="1910dp" />
+
+        <ImageView
+            android:id="@+id/mortar"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="mortar"
+            app:srcCompat="@drawable/mortar"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="1910dp" />
+
+        <ImageView
+            android:id="@+id/hog_rider"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="hog_rider"
+            app:srcCompat="@drawable/hog_rider"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="1910dp" />
+
+        <Button
+            android:id="@+id/tesla_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2000dp" />
+
+        <Button
+            android:id="@+id/bomb_tower_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2000dp" />
+
+        <Button
+            android:id="@+id/mortar_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2000dp" />
+
+        <Button
+            android:id="@+id/hog_rider_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2000dp" />
+
+        <ImageView
+            android:id="@+id/baby_dragon"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="baby_dragon"
+            app:srcCompat="@drawable/baby_dragon"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2038dp" />
+
+        <ImageView
+            android:id="@+id/flying_machine"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="flying_machine"
+            app:srcCompat="@drawable/flying_machine"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2038dp" />
+
+        <ImageView
+            android:id="@+id/battle_healer"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="battle_healer"
+            app:srcCompat="@drawable/battle_healer"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2038dp" />
+
+        <ImageView
+            android:id="@+id/magic_archer"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="magic_archer"
+            app:srcCompat="@drawable/magic_archer"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2038dp" />
+
+        <Button
+            android:id="@+id/baby_dragon_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2128dp" />
+
+        <Button
+            android:id="@+id/flying_machine_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2128dp" />
+
+        <Button
+            android:id="@+id/battle_healer_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2128dp" />
+
+        <Button
+            android:id="@+id/magic_archer_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2128dp" />
+
+        <ImageView
+            android:id="@+id/mini_pekka"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="mini_pekka"
+            app:srcCompat="@drawable/mini_pekka"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2167dp" />
+
+        <ImageView
+            android:id="@+id/royal_hogs"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="royal_hogs"
+            app:srcCompat="@drawable/royal_hogs"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2167dp" />
+
+        <ImageView
+            android:id="@+id/wizard"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="wizard"
+            app:srcCompat="@drawable/wizard"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2167dp" />
+
+        <ImageView
+            android:id="@+id/prince"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="prince"
+            app:srcCompat="@drawable/prince"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2167dp" />
+
+        <Button
+            android:id="@+id/mini_pekka_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2257dp" />
+
+        <Button
+            android:id="@+id/royal_hogs_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2257dp" />
+
+        <Button
+            android:id="@+id/wizard_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2257dp" />
+
+        <Button
+            android:id="@+id/prince_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2257dp" />
+
+        <ImageView
+            android:id="@+id/witch"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="witch"
+            app:srcCompat="@drawable/witch"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2295dp" />
+
+        <ImageView
+            android:id="@+id/goblin_hut"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="goblin_hut"
+            app:srcCompat="@drawable/goblin_hut"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2295dp" />
+
+        <ImageView
+            android:id="@+id/cannon_cart"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="cannon_cart"
+            app:srcCompat="@drawable/cannon_cart"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2295dp" />
+
+        <ImageView
+            android:id="@+id/inferno_tower"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="inferno_tower"
+            app:srcCompat="@drawable/inferno_tower"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2295dp" />
+
+        <Button
+            android:id="@+id/witch_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2385dp" />
+
+        <Button
+            android:id="@+id/goblin_hut_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2385dp" />
+
+        <Button
+            android:id="@+id/cannon_cart_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2385dp" />
+
+        <Button
+            android:id="@+id/inferno_tower_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2385dp" />
+
+        <ImageView
+            android:id="@+id/rascals"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="rascals"
+            app:srcCompat="@drawable/rascals"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2423dp" />
+
+        <ImageView
+            android:id="@+id/graveyard"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="graveyard"
+            app:srcCompat="@drawable/graveyard"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2423dp" />
+
+        <ImageView
+            android:id="@+id/minion_horde"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="minion_horde"
+            app:srcCompat="@drawable/minion_horde"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2423dp" />
+
+        <ImageView
+            android:id="@+id/ram_rider"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="ram_rider"
+            app:srcCompat="@drawable/ram_rider"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2423dp" />
+
+        <Button
+            android:id="@+id/rascals_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2513dp" />
+
+        <Button
+            android:id="@+id/graveyard_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2513dp" />
+
+        <Button
+            android:id="@+id/minion_horde_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2513dp" />
+
+        <Button
+            android:id="@+id/ram_rider_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2513dp" />
+
+        <ImageView
+            android:id="@+id/barbarians"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="barbarians"
+            app:srcCompat="@drawable/barbarians"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2552dp" />
+
+        <ImageView
+            android:id="@+id/executioner"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="executioner"
+            app:srcCompat="@drawable/executioner"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2552dp" />
+
+        <ImageView
+            android:id="@+id/giant"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="giant"
+            app:srcCompat="@drawable/giant"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2552dp" />
+
+        <ImageView
+            android:id="@+id/balloon"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="balloon"
+            app:srcCompat="@drawable/balloon"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2552dp" />
+
+        <Button
+            android:id="@+id/barbarians_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2642dp" />
+
+        <Button
+            android:id="@+id/executioner_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2642dp" />
+
+        <Button
+            android:id="@+id/giant_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2642dp" />
+
+        <Button
+            android:id="@+id/balloon_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2642dp" />
+
+        <ImageView
+            android:id="@+id/bowler"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="bowler"
+            app:srcCompat="@drawable/bowler"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2680dp" />
+
+        <ImageView
+            android:id="@+id/electro_dragon"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="electro_dragon"
+            app:srcCompat="@drawable/electro_dragon"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2680dp" />
+
+        <ImageView
+            android:id="@+id/goblin_giant"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="goblin_giant"
+            app:srcCompat="@drawable/goblin_giant"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2680dp" />
+
+        <ImageView
+            android:id="@+id/giant_skeleton"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="giant_skeleton"
+            app:srcCompat="@drawable/giant_skeleton"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2680dp" />
+
+        <Button
+            android:id="@+id/bowler_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2770dp" />
+
+        <Button
+            android:id="@+id/electro_dragon_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2770dp" />
+
+        <Button
+            android:id="@+id/goblin_giant_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2770dp" />
+
+        <Button
+            android:id="@+id/giant_skeleton_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2770dp" />
+
+        <ImageView
+            android:id="@+id/elixir_collector"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="elixir_collector"
+            app:srcCompat="@drawable/elixir_collector"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2808dp" />
+
+        <ImageView
+            android:id="@+id/xbow"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="xbow"
+            app:srcCompat="@drawable/xbow"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2808dp" />
+
+        <ImageView
+            android:id="@+id/royal_giant"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="royal_giant"
+            app:srcCompat="@drawable/royal_giant"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2808dp" />
+
+        <ImageView
+            android:id="@+id/elite_barbarians"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="elite_barbarians"
+            app:srcCompat="@drawable/elite_barbarians"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2808dp" />
+
+        <Button
+            android:id="@+id/eleixir_collector_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2899dp" />
+
+        <Button
+            android:id="@+id/xbow_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2899dp" />
+
+        <Button
+            android:id="@+id/royal_giant_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2899dp" />
+
+        <Button
+            android:id="@+id/elite_barbarians_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2899dp" />
+
+        <ImageView
+            android:id="@+id/rocket"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="rocket"
+            app:srcCompat="@drawable/rocket"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="2937dp" />
+
+        <ImageView
+            android:id="@+id/sparky"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="sparky"
+            app:srcCompat="@drawable/sparky"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="2937dp" />
+
+        <ImageView
+            android:id="@+id/lightning"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="lightning"
+            app:srcCompat="@drawable/lightning"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="2937dp" />
+
+        <ImageView
+            android:id="@+id/barbarian_hut"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="barbarian_hut"
+            app:srcCompat="@drawable/barbarian_hut"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="2937dp" />
+
+        <Button
+            android:id="@+id/rocket_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="3027dp" />
+
+        <Button
+            android:id="@+id/sparky_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="3027dp" />
+
+        <Button
+            android:id="@+id/lightning_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="3027dp" />
+
+        <Button
+            android:id="@+id/barbarian_hut_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="3027dp" />
+
+        <ImageView
+            android:id="@+id/pekka"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="pekka"
+            app:srcCompat="@drawable/pekka"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="3065dp" />
+
+        <ImageView
+            android:id="@+id/mega_knight"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="mega_knight"
+            app:srcCompat="@drawable/mega_knight"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="3065dp" />
+
+        <ImageView
+            android:id="@+id/royal_recruits"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="royal_recruits"
+            app:srcCompat="@drawable/royal_recruits"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="3065dp" />
+
+        <ImageView
+            android:id="@+id/lava_hound"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="lava_hound"
+            app:srcCompat="@drawable/lava_hound"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="3065dp" />
+
+        <Button
+            android:id="@+id/pekka_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="3155dp" />
+
+        <Button
+            android:id="@+id/mega_knight_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="3155dp" />
+
+        <Button
+            android:id="@+id/royal_recruits_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="3155dp" />
+
+        <Button
+            android:id="@+id/lava_hound_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="287dp"
+            tools:layout_editor_absoluteY="3155dp" />
+
+        <ImageView
+            android:id="@+id/golem"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="golem"
+            app:srcCompat="@drawable/golem"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="3193dp" />
+
+        <ImageView
+            android:id="@+id/three_musketeers"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:tag="three_musketeers"
+            app:srcCompat="@drawable/three_musketeers"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="3193dp" />
+
+        <Button
+            android:id="@+id/golem_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="3284dp" />
+
+        <Button
+            android:id="@+id/three_musketeers_button"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:background="@drawable/use_button"
+            android:text="Use"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="3284dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_field"
+            android:layout_width="391dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="SEARCH FOR CARD" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

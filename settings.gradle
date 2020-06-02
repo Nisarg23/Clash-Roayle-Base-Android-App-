@@ -1,0 +1,2 @@
+rootProject.name='Clash Royale Base'
+include ':app'
