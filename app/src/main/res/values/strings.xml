@@ -12,4 +12,21 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
+    <string-array name="arenas">
+        <item>Arena 1</item>
+        <item>Arena 2</item>
+        <item>Arena 3</item>
+        <item>Arena 4</item>
+        <item>Arena 5</item>
+        <item>Arena 6</item>
+        <item>Arena 7</item>
+        <item>Arena 8</item>
+        <item>Arena 9</item>
+        <item>Arena 10</item>
+        <item>Arena 11</item>
+        <item>Arena 12</item>
+        <item>Legendary Arena</item>
+        <item>Tournaments</item>
+    </string-array>
+
 </resources>

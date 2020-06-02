@@ -1,9 +1,12 @@
 package com.example.clashroyalebase.ui.gallery;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,13 +26,14 @@ public class GalleryFragment extends Fragment {
         galleryViewModel =
                 ViewModelProviders.of(this).get(GalleryViewModel.class);
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
+        String[] items = {"Arena 1", "Arena 2", "Arena 3", "Arena 4", "Arena 5", "Arena 6", "Arena 7", "Arena 8", "Arena 9", "Arena 10", "Arena 11", "Arena 12", "Legendary Arena","Tournaments"};
+        //ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),  items, android.R.layout.simple_spinner_item);
+        ArrayAdapter adapter = new ArrayAdapter(getActivity(), R.layout.spinner, items);
+
+
+        Spinner listView = root.findViewById(R.id.spinner);
+        listView.setAdapter(adapter);
         return root;
     }
 }
