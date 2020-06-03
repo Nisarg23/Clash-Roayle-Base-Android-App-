@@ -2,6 +2,7 @@ package com.example.clashroyalebase.ui.home;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,12 +22,23 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.clashroyalebase.Activity2;
 import com.example.clashroyalebase.R;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class HomeFragment extends Fragment {
     public static Hashtable<String, Integer> elixir_dict = new Hashtable<String, Integer>();
 
     public static Deck[] decks = new Deck[0];
+
+    public static ArrayList<Drawable> drawables = new ArrayList<Drawable>();
 
     public static TextView[] textViews = new TextView[0];
     public static TextView textView1;public static TextView textView2;
@@ -285,8 +297,126 @@ public class HomeFragment extends Fragment {
                 cardView74,cardView75,cardView76,cardView77,cardView78,cardView79,cardView80,
                 addButton73,addButton74,addButton75,addButton76,addButton77,addButton78,addButton79,addButton80);
 
-        decks = new Deck[]{deck1,deck2,deck3,deck4,deck5,deck6,deck7,deck8,deck9,deck10};
+         decks = new Deck[]{deck1,deck2,deck3,deck4,deck5,deck6,deck7,deck8,deck9,deck10};
 
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Document doc = Jsoup.connect("https://statsroyale.com/decks/popular?type=ladder").get();
+                    Elements img = doc.getElementsByTag("img");
+                    img.remove(0);
+                    img.remove(0);
+                    img.remove(0);
+                    System.out.println(img);
+
+                    for (int i =0; i<80;i++) {
+                        try {
+                            String url = img.get(i).toString();
+                            int end_index = url.indexOf('>');
+                            url = url.substring(10, end_index - 1);
+                            InputStream is = (InputStream) new URL(url).getContent();
+                            Drawable d = Drawable.createFromStream(is, "src name");
+                            drawables.add(d);
+
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        for (int i=0; i<10; i++){
+                            for (int j=0; j<8;j++){
+                                HomeFragment.decks[i].card_array[j].setImageDrawable(drawables.get(i*8+j));
+                            }
+                        }
+
+//                        for (int i=0; i<1;i++){
+//                                for (int j=0;j<5;j++) {
+//                                    String url = img.get(i*8+j).toString();
+//                                    int end_index = url.indexOf('>');
+//                                    url = url.substring(10,end_index-1);
+//                                    System.out.println(url);
+//
+//
+//                                    try {
+//                                        is = (InputStream) new URL(url).getContent();
+//                                    } catch (IOException e) {
+//                                        e.printStackTrace();
+//                                    }
+//                                    d = Drawable.createFromStream(is, "src name");
+//                                    HomeFragment.decks[i].card_array[j].setImageDrawable(d);
+//
+//                                }
+//                            }
+//
+
+
+//                        StringBuilder builder = new StringBuilder();
+//                        try {
+//                            Document doc = Jsoup.connect("https://statsroyale.com/decks/popular?type=ladder").get();
+//                            //System.out.println(Jsoup.connect("https://statsroyale.com/decks/popular?type=ladder").get().toString());
+////                    Elements div = doc.getElementsByClass("popularDecks__decklist");
+////                    Elements get = div.select("img");
+////
+////                    System.out.println(get.attr("abs:src"));
+//                            Elements img = doc.getElementsByTag("img");
+//                            img.remove(0);
+//                            img.remove(0);
+//                            img.remove(0);
+//                            System.out.println(img);
+//                            InputStream is;
+//                            Drawable d;
+//                            for (int i=0; i<1;i++){
+//                                for (int j=0;j<5;j++) {
+//                                    String url = img.get(i*8+j).toString();
+//                                    int end_index = url.indexOf('>');
+//                                    url = url.substring(10,end_index-1);
+//                                    System.out.println(url);
+//
+//
+//                                    is = (InputStream) new URL(url).getContent();
+//                                    d = Drawable.createFromStream(is, "src name");
+//                                    HomeFragment.decks[i].card_array[j].setImageDrawable(d);
+//
+//                                }
+//                            }
+//
+////                    String url = img.get(5).toString();
+////                    int end_index = url.indexOf('>');
+////                    url = url.substring(10,end_index-1);
+////                    System.out.println(url);
+////
+////                    is = (InputStream) new URL(url).getContent();
+////                    d = Drawable.createFromStream(is, "src name");
+////                    HomeFragment.decks[0].card_array[7].setImageDrawable(d);
+//
+//
+//
+//                            String title = doc.title();
+//                            Elements links = doc.select("a[href]");
+//
+//                            builder.append(title).append("\n");
+//                            for (Element link: links){
+//                                builder.append("\n").append("Link: ").append(link.attr("href"))
+//                                        .append("\n").append("Text: ").append(link.text());
+//
+//                            }
+//
+//                        } catch (IOException e) {
+//                            builder.append("Error: ").append(e.getMessage()).append("\n");
+//                        }
+                    }
+                });
+            }
+        }).start();
 
 
         AddClick();

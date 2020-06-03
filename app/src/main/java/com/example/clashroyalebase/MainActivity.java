@@ -52,53 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                StringBuilder builder = new StringBuilder();
-                try {
-                    Document doc = Jsoup.connect("https://statsroyale.com/decks/popular?type=ladder").get();
-                    //System.out.println(Jsoup.connect("https://statsroyale.com/decks/popular?type=ladder").get().toString());
-//                    Elements div = doc.getElementsByClass("popularDecks__decklist");
-//                    Elements get = div.select("img");
-//
-//                    System.out.println(get.attr("abs:src"));
-//                    Elements img = doc.getElementsByTag("img");
-//                    img.remove(0);
-//                    img.remove(0);
-//                    img.remove(0);
-//                    System.out.println(img);
 
-                    Object strPhotoUrl;
-                    InputStream is = (InputStream) new URL("https://cdn.statsroyale.com/images/cards/full/knight.png").getContent();
-                    Drawable d = Drawable.createFromStream(is, "src name");
-                    HomeFragment.cardView1.setImageDrawable(d);
-
-
-
-
-                    String title = doc.title();
-                    Elements links = doc.select("a[href]");
-
-                    builder.append(title).append("\n");
-                    for (Element link: links){
-                        builder.append("\n").append("Link: ").append(link.attr("href"))
-                                .append("\n").append("Text: ").append(link.text());
-
-                    }
-
-                } catch (IOException e) {
-                    builder.append("Error: ").append(e.getMessage()).append("\n");
-                }
-
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-
-                    }
-                });
-            }
-        }).start();
     }
 
     @Override
