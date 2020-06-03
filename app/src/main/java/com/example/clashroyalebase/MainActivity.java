@@ -1,9 +1,11 @@
 package com.example.clashroyalebase;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.clashroyalebase.ui.home.HomeFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -22,6 +24,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,13 +50,32 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+
+
         new Thread(new Runnable() {
             @Override
             public void run() {
                 StringBuilder builder = new StringBuilder();
                 try {
                     Document doc = Jsoup.connect("https://statsroyale.com/decks/popular?type=ladder").get();
-                    System.out.println(Jsoup.connect("https://statsroyale.com/decks/popular?type=ladder").get().toString());
+                    //System.out.println(Jsoup.connect("https://statsroyale.com/decks/popular?type=ladder").get().toString());
+//                    Elements div = doc.getElementsByClass("popularDecks__decklist");
+//                    Elements get = div.select("img");
+//
+//                    System.out.println(get.attr("abs:src"));
+//                    Elements img = doc.getElementsByTag("img");
+//                    img.remove(0);
+//                    img.remove(0);
+//                    img.remove(0);
+//                    System.out.println(img);
+
+                    Object strPhotoUrl;
+                    InputStream is = (InputStream) new URL("https://cdn.statsroyale.com/images/cards/full/knight.png").getContent();
+                    Drawable d = Drawable.createFromStream(is, "src name");
+                    HomeFragment.cardView1.setImageDrawable(d);
+
+
+
 
                     String title = doc.title();
                     Elements links = doc.select("a[href]");

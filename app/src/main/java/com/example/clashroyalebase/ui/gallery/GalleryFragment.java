@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.clashroyalebase.MainActivity;
 import com.example.clashroyalebase.R;
 
 public class GalleryFragment extends Fragment {
@@ -34,6 +35,7 @@ public class GalleryFragment extends Fragment {
 
         Spinner listView = root.findViewById(R.id.spinner);
         listView.setAdapter(adapter);
+
         return root;
     }
 }
