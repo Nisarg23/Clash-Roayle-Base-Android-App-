@@ -1,5 +1,6 @@
 package com.example.clashroyalebase.ui.gallery;
 
+import android.annotation.SuppressLint;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -19,6 +20,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -49,6 +51,7 @@ public class GalleryFragment extends Fragment {
     public ImageView imageView2;
     public ArrayList<Drawable> drawables = new ArrayList<Drawable>();
 
+    @SuppressLint("ResourceType")
     @RequiresApi(api = Build.VERSION_CODES.O)
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -75,20 +78,56 @@ public class GalleryFragment extends Fragment {
 
         LinearLayout.LayoutParams layoutParams_text = new LinearLayout.LayoutParams(w, h);
 
+
+
+
+
+        ConstraintSet constraintSet = new ConstraintSet();
+        @SuppressLint("CutPasteId") ConstraintLayout constraintLayout = root.findViewById(R.id.gallery_constraint);
+        constraintSet.clone(constraintLayout);
+
         for (int i =0; i<4; i++){
             ImageView a = new ImageView(getActivity());
+            a.setId(i);
             a.setImageResource(R.drawable.ic_launcher_background);
             a.setLayoutParams(layoutParams_img);
             meta_cards.add(a);
             gallery_constraint.addView(a);
 
             TextView b = new TextView(getActivity());
+            b.setId(i+90);
             b.setLayoutParams(layoutParams_text);
             b.setText("Win Rate: 53.66%");
             b.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM);
             win_rate.add(b);
             gallery_constraint.addView(b);
         }
+        System.out.println(constraintLayout.getChildAt(1));
+        System.out.println(constraintLayout.getChildAt(2));
+        System.out.println(constraintLayout.getChildAt(3));
+        System.out.println(constraintLayout.getChildAt(4));
+        System.out.println(constraintLayout.getChildAt(5));
+        System.out.println(constraintLayout.getChildAt(6));
+        System.out.println(constraintLayout.getChildAt(7));
+        System.out.println(constraintLayout.getChildAt(8));
+        System.out.println(constraintLayout.getChildAt(9));
+        System.out.println(meta_cards.get(0).getId());
+        constraintSet.connect(meta_cards.get(0).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 16);
+
+//        for (int i=0; i<4;i++) {
+//            if (i < 4) {
+//                if (i % 4 == 0) {
+//                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
+//                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 16);
+//
+//                }
+//                else{
+//                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, meta_cards.get(i-1).getId(), ConstraintSet.LEFT, 8);
+//                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 16);
+//                }
+//            }
+//        }
+        constraintSet.applyTo(constraintLayout);
 
 
 //        new Thread(new Runnable() {
