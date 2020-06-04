@@ -2,17 +2,23 @@ package com.example.clashroyalebase.ui.gallery;
 
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -37,10 +43,13 @@ public class GalleryFragment extends Fragment {
     public Elements img;
     public InputStream is;
     public Drawable d;
+    public ArrayList<ImageView> meta_cards = new ArrayList<ImageView>();
+    public ArrayList<TextView> win_rate = new ArrayList<TextView>();
 
     public ImageView imageView2;
     public ArrayList<Drawable> drawables = new ArrayList<Drawable>();
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         galleryViewModel =
@@ -54,9 +63,75 @@ public class GalleryFragment extends Fragment {
 
         Spinner listView = root.findViewById(R.id.spinner);
         listView.setAdapter(adapter);
-        imageView2 = root.findViewById(R.id.imageView2);
+
+        ConstraintLayout gallery_constraint = root.findViewById(R.id.gallery_constraint);
+        int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 90, getResources().getDisplayMetrics());
+        int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 85, getResources().getDisplayMetrics());
+
+        LinearLayout.LayoutParams layoutParams_img = new LinearLayout.LayoutParams(width, height);
+
+        int h = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 35, getResources().getDisplayMetrics());
+        int w = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 300, getResources().getDisplayMetrics());
+
+        LinearLayout.LayoutParams layoutParams_text = new LinearLayout.LayoutParams(w, h);
+
+        for (int i =0; i<4; i++){
+            ImageView a = new ImageView(getActivity());
+            a.setImageResource(R.drawable.ic_launcher_background);
+            a.setLayoutParams(layoutParams_img);
+            meta_cards.add(a);
+            gallery_constraint.addView(a);
+
+            TextView b = new TextView(getActivity());
+            b.setLayoutParams(layoutParams_text);
+            b.setText("Win Rate: 53.66%");
+            b.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM);
+            win_rate.add(b);
+            gallery_constraint.addView(b);
+        }
 
 
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                    Document doc = Jsoup.connect("https://statsroyale.com/decks/popular?type=ladder").get();
+//                    img = doc.getElementsByTag("img");
+//                    img.remove(0);
+//                    img.remove(0);
+//                    img.remove(0);
+//
+//                    for (int i =0; i<80;i++) {
+//                        try {
+//                            String url = img.get(i).toString();
+//                            int end_index = url.indexOf('>');
+//                            url = url.substring(10, end_index - 1);
+//                            is = (InputStream) new URL(url).getContent();
+//                            d = Drawable.createFromStream(is, "src name");
+//                            drawables.add(d);
+//
+//                        } catch (IOException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//
+//
+//                getActivity().runOnUiThread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        for (int i=0; i<10; i++){
+//                            for (int j=0; j<8;j++){
+//                                HomeFragment.decks[i].card_array[j].setImageDrawable(drawables.get(i*8+j));
+//                            }
+//                        }
+//                    }
+//                });
+//            }
+//        }).start();
 
         return root;
     }
