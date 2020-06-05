@@ -86,33 +86,31 @@ public class GalleryFragment extends Fragment {
         @SuppressLint("CutPasteId") ConstraintLayout constraintLayout = root.findViewById(R.id.gallery_constraint);
         constraintSet.clone(constraintLayout);
 
-        for (int i =0; i<4; i++){
-            ImageView a = new ImageView(getActivity());
-            a.setId(i);
-            a.setImageResource(R.drawable.ic_launcher_background);
-            a.setLayoutParams(layoutParams_img);
-            meta_cards.add(a);
-            gallery_constraint.addView(a);
+        constraintSet.connect(R.id.textView2, constraintSet.TOP, ConstraintSet.PARENT_ID, ConstraintSet.TOP, 50);
+        constraintSet.connect(R.id.textView2, constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 50);
+        constraintSet.connect(R.id.spinner, constraintSet.LEFT, R.id.textView2, ConstraintSet.RIGHT, 30);
+        constraintSet.connect(R.id.spinner, constraintSet.TOP, ConstraintSet.PARENT_ID, ConstraintSet.TOP, 50);
+        constraintSet.applyTo(constraintLayout);
+//        for (int i =0; i<4; i++){
+//            ImageView a = new ImageView(getActivity());
+//            a.setId(i);
+//            a.setImageResource(R.drawable.ic_launcher_background);
+//            a.setLayoutParams(layoutParams_img);
+//            meta_cards.add(a);
+//            gallery_constraint.addView(a);
+//
+//            TextView b = new TextView(getActivity());
+//            b.setId(i+90);
+//            b.setLayoutParams(layoutParams_text);
+//            b.setText("Win Rate: 53.66%");
+//            b.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM);
+//            win_rate.add(b);
+//            gallery_constraint.addView(b);
+//            //constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 16);
+//
+//            System.out.println(a.getId());
+//        }
 
-            TextView b = new TextView(getActivity());
-            b.setId(i+90);
-            b.setLayoutParams(layoutParams_text);
-            b.setText("Win Rate: 53.66%");
-            b.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM);
-            win_rate.add(b);
-            gallery_constraint.addView(b);
-        }
-        System.out.println(constraintLayout.getChildAt(1));
-        System.out.println(constraintLayout.getChildAt(2));
-        System.out.println(constraintLayout.getChildAt(3));
-        System.out.println(constraintLayout.getChildAt(4));
-        System.out.println(constraintLayout.getChildAt(5));
-        System.out.println(constraintLayout.getChildAt(6));
-        System.out.println(constraintLayout.getChildAt(7));
-        System.out.println(constraintLayout.getChildAt(8));
-        System.out.println(constraintLayout.getChildAt(9));
-        System.out.println(meta_cards.get(0).getId());
-        constraintSet.connect(meta_cards.get(0).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 16);
 
 //        for (int i=0; i<4;i++) {
 //            if (i < 4) {
@@ -127,7 +125,7 @@ public class GalleryFragment extends Fragment {
 //                }
 //            }
 //        }
-        constraintSet.applyTo(constraintLayout);
+//        constraintSet.applyTo(constraintLayout);
 
 
 //        new Thread(new Runnable() {
