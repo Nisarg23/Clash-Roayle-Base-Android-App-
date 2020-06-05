@@ -113,7 +113,7 @@ public class GalleryFragment extends Fragment {
 
 
 
-        for (int i =0; i<4; i++){
+        for (int i =0; i<400; i++){
             ImageView a = new ImageView(getActivity());
             a.setId(View.generateViewId());
 
@@ -141,21 +141,58 @@ public class GalleryFragment extends Fragment {
         constraintSet.connect(R.id.spinner, constraintSet.LEFT, R.id.textView2, ConstraintSet.RIGHT, 30);
         constraintSet.connect(R.id.spinner, constraintSet.TOP, ConstraintSet.PARENT_ID, ConstraintSet.TOP, 50);
 
+        int temp = 0;
+        for (int i=7; i<400;i++) {
+                if (i < 8) {
+                    constraintSet.connect(meta_cards.get(0).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
+                    constraintSet.connect(meta_cards.get(0).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
+                    constraintSet.connect(meta_cards.get(1).getId(), constraintSet.LEFT, meta_cards.get(0).getId(), ConstraintSet.RIGHT, 8);
+                    constraintSet.connect(meta_cards.get(1).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
+                    constraintSet.connect(meta_cards.get(2).getId(), constraintSet.LEFT, meta_cards.get(1).getId(), ConstraintSet.RIGHT, 8);
+                    constraintSet.connect(meta_cards.get(2).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
+                    constraintSet.connect(meta_cards.get(3).getId(), constraintSet.LEFT, meta_cards.get(2).getId(), ConstraintSet.RIGHT, 8);
+                    constraintSet.connect(meta_cards.get(3).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
 
-        for (int i=0; i<4;i++) {
-            if (i < 4) {
-                if (i % 4 == 0) {
-                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
-                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
+                    constraintSet.connect(meta_cards.get(4).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
+                    constraintSet.connect(meta_cards.get(4).getId(), constraintSet.TOP, meta_cards.get(0).getId(), ConstraintSet.BOTTOM, 8);
+                    constraintSet.connect(meta_cards.get(5).getId(), constraintSet.LEFT, meta_cards.get(4).getId(), ConstraintSet.RIGHT, 8);
+                    constraintSet.connect(meta_cards.get(5).getId(), constraintSet.TOP, meta_cards.get(1).getId(), ConstraintSet.BOTTOM, 8);
+                    constraintSet.connect(meta_cards.get(6).getId(), constraintSet.LEFT, meta_cards.get(5).getId(), ConstraintSet.RIGHT, 8);
+                    constraintSet.connect(meta_cards.get(6).getId(), constraintSet.TOP, meta_cards.get(2).getId(), ConstraintSet.BOTTOM, 8);
+                    constraintSet.connect(meta_cards.get(7).getId(), constraintSet.LEFT, meta_cards.get(6).getId(), ConstraintSet.RIGHT, 8);
+                    constraintSet.connect(meta_cards.get(7).getId(), constraintSet.TOP, meta_cards.get(3).getId(), ConstraintSet.BOTTOM, 8);
+
 
                 }
+                else if (i%8==4){
+                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
+                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, meta_cards.get(i-4).getId(), ConstraintSet.BOTTOM, 8);
+                }
+
+                else if (i%4==0){
+                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
+                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, meta_cards.get(i-4).getId(), ConstraintSet.BOTTOM, 180);
+                }
+
+                else if (i%8==1||i%8==2||i%8==3){
+                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, meta_cards.get(i-1).getId(), ConstraintSet.RIGHT, 8);
+                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, meta_cards.get(i-4).getId(), ConstraintSet.BOTTOM, 180);
+                }
+
+
+
                 else{
                     constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, meta_cards.get(i-1).getId(), ConstraintSet.RIGHT, 8);
-                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
+                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP,  meta_cards.get(i-4).getId(), ConstraintSet.BOTTOM, 8);
                 }
+
+
             }
-        }
+
+
         constraintSet.applyTo(constraintLayout);
+
+
 
 
 //        new Thread(new Runnable() {
