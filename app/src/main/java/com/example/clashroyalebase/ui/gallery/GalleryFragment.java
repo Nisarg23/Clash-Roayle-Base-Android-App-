@@ -38,6 +38,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 public class GalleryFragment extends Fragment {
 
@@ -67,7 +68,35 @@ public class GalleryFragment extends Fragment {
         Spinner listView = root.findViewById(R.id.spinner);
         listView.setAdapter(adapter);
 
+
+  //      ConstraintLayout constraintLayout = root.findViewById(R.id.gallery_constraint);
+
+//        for (int i=0; i<4;i++) {
+//            ImageView button1 = new ImageView(getActivity());
+//            button1.setImageResource(R.drawable.ic_launcher_background);
+//            button1.setId(View.generateViewId());
+//            button1.setLayoutParams(new ConstraintLayout.LayoutParams(
+//                    ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+//            constraintLayout.addView(button1);
+//            meta_cards.add(button1);
+//        }
+//
+//        ConstraintSet constraintSet = new ConstraintSet();
+//        constraintSet.clone(constraintLayout);
+//        constraintSet.connect(R.id.textView2, constraintSet.TOP, ConstraintSet.PARENT_ID, ConstraintSet.TOP, 50);
+//        constraintSet.connect(R.id.textView2, constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 50);
+//        constraintSet.connect(R.id.spinner, constraintSet.LEFT, R.id.textView2, ConstraintSet.RIGHT, 30);
+//        constraintSet.connect(R.id.spinner, constraintSet.TOP, ConstraintSet.PARENT_ID, ConstraintSet.TOP, 50);
+//
+//// Create Rule that states that the START of Button 1 will be positioned at the END of Button 2
+//        constraintSet.connect(meta_cards.get(0).getId(), ConstraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM);
+//
+//
+//        constraintSet.applyTo(constraintLayout);
+
         ConstraintLayout gallery_constraint = root.findViewById(R.id.gallery_constraint);
+//
+//
         int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 90, getResources().getDisplayMetrics());
         int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 85, getResources().getDisplayMetrics());
 
@@ -82,6 +111,27 @@ public class GalleryFragment extends Fragment {
 
 
 
+
+
+        for (int i =0; i<4; i++){
+            ImageView a = new ImageView(getActivity());
+            a.setId(View.generateViewId());
+
+
+            a.setImageResource(R.drawable.ic_launcher_background);
+
+            a.setLayoutParams(layoutParams_img);
+            meta_cards.add(a);
+            gallery_constraint.addView(a);
+
+            TextView b = new TextView(getActivity());
+            b.setId(i+90);
+            b.setLayoutParams(layoutParams_text);
+            b.setText("Win Rate: 53.66%");
+            b.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM);
+            win_rate.add(b);
+            gallery_constraint.addView(b);
+        }
         ConstraintSet constraintSet = new ConstraintSet();
         @SuppressLint("CutPasteId") ConstraintLayout constraintLayout = root.findViewById(R.id.gallery_constraint);
         constraintSet.clone(constraintLayout);
@@ -90,42 +140,22 @@ public class GalleryFragment extends Fragment {
         constraintSet.connect(R.id.textView2, constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 50);
         constraintSet.connect(R.id.spinner, constraintSet.LEFT, R.id.textView2, ConstraintSet.RIGHT, 30);
         constraintSet.connect(R.id.spinner, constraintSet.TOP, ConstraintSet.PARENT_ID, ConstraintSet.TOP, 50);
+
+
+        for (int i=0; i<4;i++) {
+            if (i < 4) {
+                if (i % 4 == 0) {
+                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
+                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
+
+                }
+                else{
+                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, meta_cards.get(i-1).getId(), ConstraintSet.RIGHT, 8);
+                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
+                }
+            }
+        }
         constraintSet.applyTo(constraintLayout);
-//        for (int i =0; i<4; i++){
-//            ImageView a = new ImageView(getActivity());
-//            a.setId(i);
-//            a.setImageResource(R.drawable.ic_launcher_background);
-//            a.setLayoutParams(layoutParams_img);
-//            meta_cards.add(a);
-//            gallery_constraint.addView(a);
-//
-//            TextView b = new TextView(getActivity());
-//            b.setId(i+90);
-//            b.setLayoutParams(layoutParams_text);
-//            b.setText("Win Rate: 53.66%");
-//            b.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM);
-//            win_rate.add(b);
-//            gallery_constraint.addView(b);
-//            //constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 16);
-//
-//            System.out.println(a.getId());
-//        }
-
-
-//        for (int i=0; i<4;i++) {
-//            if (i < 4) {
-//                if (i % 4 == 0) {
-//                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
-//                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 16);
-//
-//                }
-//                else{
-//                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, meta_cards.get(i-1).getId(), ConstraintSet.LEFT, 8);
-//                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 16);
-//                }
-//            }
-//        }
-//        constraintSet.applyTo(constraintLayout);
 
 
 //        new Thread(new Runnable() {
