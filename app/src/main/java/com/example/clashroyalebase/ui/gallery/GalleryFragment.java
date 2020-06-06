@@ -61,7 +61,6 @@ public class GalleryFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
 
         String[] items = {"Arena 1", "Arena 2", "Arena 3", "Arena 4", "Arena 5", "Arena 6", "Arena 7", "Arena 8", "Arena 9", "Arena 10", "Arena 11", "Arena 12", "Legendary Arena","Tournaments"};
-        //ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),  items, android.R.layout.simple_spinner_item);
         ArrayAdapter adapter = new ArrayAdapter(getActivity(), R.layout.spinner, items);
 
 
@@ -69,34 +68,7 @@ public class GalleryFragment extends Fragment {
         listView.setAdapter(adapter);
 
 
-  //      ConstraintLayout constraintLayout = root.findViewById(R.id.gallery_constraint);
-
-//        for (int i=0; i<4;i++) {
-//            ImageView button1 = new ImageView(getActivity());
-//            button1.setImageResource(R.drawable.ic_launcher_background);
-//            button1.setId(View.generateViewId());
-//            button1.setLayoutParams(new ConstraintLayout.LayoutParams(
-//                    ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-//            constraintLayout.addView(button1);
-//            meta_cards.add(button1);
-//        }
-//
-//        ConstraintSet constraintSet = new ConstraintSet();
-//        constraintSet.clone(constraintLayout);
-//        constraintSet.connect(R.id.textView2, constraintSet.TOP, ConstraintSet.PARENT_ID, ConstraintSet.TOP, 50);
-//        constraintSet.connect(R.id.textView2, constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 50);
-//        constraintSet.connect(R.id.spinner, constraintSet.LEFT, R.id.textView2, ConstraintSet.RIGHT, 30);
-//        constraintSet.connect(R.id.spinner, constraintSet.TOP, ConstraintSet.PARENT_ID, ConstraintSet.TOP, 50);
-//
-//// Create Rule that states that the START of Button 1 will be positioned at the END of Button 2
-//        constraintSet.connect(meta_cards.get(0).getId(), ConstraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM);
-//
-//
-//        constraintSet.applyTo(constraintLayout);
-
         ConstraintLayout gallery_constraint = root.findViewById(R.id.gallery_constraint);
-//
-//
         int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 90, getResources().getDisplayMetrics());
         int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 85, getResources().getDisplayMetrics());
 
@@ -106,11 +78,6 @@ public class GalleryFragment extends Fragment {
         int w = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 300, getResources().getDisplayMetrics());
 
         LinearLayout.LayoutParams layoutParams_text = new LinearLayout.LayoutParams(w, h);
-
-
-
-
-
 
 
         for (int i =0; i<400; i++){
@@ -124,14 +91,17 @@ public class GalleryFragment extends Fragment {
             meta_cards.add(a);
             gallery_constraint.addView(a);
 
-            TextView b = new TextView(getActivity());
-            b.setId(i+90);
-            b.setLayoutParams(layoutParams_text);
-            b.setText("Win Rate: 53.66%");
-            b.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM);
-            win_rate.add(b);
-            gallery_constraint.addView(b);
+            if (i%8 ==0) {
+                TextView b = new TextView(getActivity());
+                b.setId(i + 90);
+                b.setLayoutParams(layoutParams_text);
+                b.setText("Win Rate: 53.66%");
+                b.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM);
+                win_rate.add(b);
+                gallery_constraint.addView(b);
+            }
         }
+
         ConstraintSet constraintSet = new ConstraintSet();
         @SuppressLint("CutPasteId") ConstraintLayout constraintLayout = root.findViewById(R.id.gallery_constraint);
         constraintSet.clone(constraintLayout);
@@ -171,12 +141,12 @@ public class GalleryFragment extends Fragment {
 
                 else if (i%4==0){
                     constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
-                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, meta_cards.get(i-4).getId(), ConstraintSet.BOTTOM, 180);
+                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, meta_cards.get(i-4).getId(), ConstraintSet.BOTTOM, 200);
                 }
 
                 else if (i%8==1||i%8==2||i%8==3){
                     constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, meta_cards.get(i-1).getId(), ConstraintSet.RIGHT, 8);
-                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, meta_cards.get(i-4).getId(), ConstraintSet.BOTTOM, 180);
+                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, meta_cards.get(i-4).getId(), ConstraintSet.BOTTOM, 200);
                 }
 
 
@@ -185,15 +155,9 @@ public class GalleryFragment extends Fragment {
                     constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, meta_cards.get(i-1).getId(), ConstraintSet.RIGHT, 8);
                     constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP,  meta_cards.get(i-4).getId(), ConstraintSet.BOTTOM, 8);
                 }
-
-
             }
 
-
         constraintSet.applyTo(constraintLayout);
-
-
-
 
 //        new Thread(new Runnable() {
 //            @Override
@@ -205,7 +169,7 @@ public class GalleryFragment extends Fragment {
 //                    img.remove(0);
 //                    img.remove(0);
 //
-//                    for (int i =0; i<80;i++) {
+//                    for (int i =0; i<400;i++) {
 //                        try {
 //                            String url = img.get(i).toString();
 //                            int end_index = url.indexOf('>');
@@ -227,10 +191,8 @@ public class GalleryFragment extends Fragment {
 //                getActivity().runOnUiThread(new Runnable() {
 //                    @Override
 //                    public void run() {
-//                        for (int i=0; i<10; i++){
-//                            for (int j=0; j<8;j++){
-//                                HomeFragment.decks[i].card_array[j].setImageDrawable(drawables.get(i*8+j));
-//                            }
+//                        for (int i=0; i<400;i++){
+//                            meta_cards.get(i).setImageDrawable(drawables.get(i));
 //                        }
 //                    }
 //                });
