@@ -8,21 +8,21 @@
     tools:context=".LoadScreen">
 
     <ProgressBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/progress_bar"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_marginBottom="20dp"
-        android:layout_alignParentBottom="true"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp" />
 
     <TextView
+        android:id="@+id/load_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0% "
-        android:id="@+id/load_text"
-        android:textSize="25sp"
-        android:textColor="#fff"
         android:layout_above="@id/progress_bar"
-        />
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:textSize="40sp" />
 
 </RelativeLayout>
