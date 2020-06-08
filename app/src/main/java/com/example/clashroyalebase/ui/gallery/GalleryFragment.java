@@ -2,6 +2,7 @@ package com.example.clashroyalebase.ui.gallery;
 
 import android.annotation.SuppressLint;
 import android.content.res.Resources;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -41,9 +42,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GalleryFragment extends Fragment {
+    public LinearLayout.LayoutParams layoutParams_text;
 
     private GalleryViewModel galleryViewModel;
     public Elements img;
+    public Elements txt;
     public InputStream is;
     public Drawable d;
     public ArrayList<ImageView> meta_cards = new ArrayList<ImageView>();
@@ -74,10 +77,10 @@ public class GalleryFragment extends Fragment {
 
         LinearLayout.LayoutParams layoutParams_img = new LinearLayout.LayoutParams(width, height);
 
-        int h = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 35, getResources().getDisplayMetrics());
-        int w = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 300, getResources().getDisplayMetrics());
+        int h = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());
+        int w = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 350, getResources().getDisplayMetrics());
 
-        LinearLayout.LayoutParams layoutParams_text = new LinearLayout.LayoutParams(w, h);
+        layoutParams_text = new LinearLayout.LayoutParams(w, h);
 
 
         for (int i =0; i<400; i++){
@@ -93,14 +96,16 @@ public class GalleryFragment extends Fragment {
 
             if (i%8 ==0) {
                 TextView b = new TextView(getActivity());
-                b.setId(i + 90);
+                b.setId(View.generateViewId());
                 b.setLayoutParams(layoutParams_text);
-                b.setText("Win Rate: 53.66%");
-                b.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM);
+                b.setText("This is: "+ i);
+                b.setTextSize(20);
+                b.setTypeface(b.getTypeface(), Typeface.BOLD);
                 win_rate.add(b);
                 gallery_constraint.addView(b);
             }
         }
+
 
         ConstraintSet constraintSet = new ConstraintSet();
         @SuppressLint("CutPasteId") ConstraintLayout constraintLayout = root.findViewById(R.id.gallery_constraint);
@@ -111,93 +116,103 @@ public class GalleryFragment extends Fragment {
         constraintSet.connect(R.id.spinner, constraintSet.LEFT, R.id.textView2, ConstraintSet.RIGHT, 30);
         constraintSet.connect(R.id.spinner, constraintSet.TOP, ConstraintSet.PARENT_ID, ConstraintSet.TOP, 50);
 
-        int temp = 0;
-        for (int i=7; i<400;i++) {
-                if (i < 8) {
-                    constraintSet.connect(meta_cards.get(0).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
-                    constraintSet.connect(meta_cards.get(0).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
-                    constraintSet.connect(meta_cards.get(1).getId(), constraintSet.LEFT, meta_cards.get(0).getId(), ConstraintSet.RIGHT, 8);
-                    constraintSet.connect(meta_cards.get(1).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
-                    constraintSet.connect(meta_cards.get(2).getId(), constraintSet.LEFT, meta_cards.get(1).getId(), ConstraintSet.RIGHT, 8);
-                    constraintSet.connect(meta_cards.get(2).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
-                    constraintSet.connect(meta_cards.get(3).getId(), constraintSet.LEFT, meta_cards.get(2).getId(), ConstraintSet.RIGHT, 8);
-                    constraintSet.connect(meta_cards.get(3).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
+        constraintSet.connect(meta_cards.get(0).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
+        constraintSet.connect(meta_cards.get(0).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
+        constraintSet.connect(meta_cards.get(1).getId(), constraintSet.LEFT, meta_cards.get(0).getId(), ConstraintSet.RIGHT, 8);
+        constraintSet.connect(meta_cards.get(1).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
+        constraintSet.connect(meta_cards.get(2).getId(), constraintSet.LEFT, meta_cards.get(1).getId(), ConstraintSet.RIGHT, 8);
+        constraintSet.connect(meta_cards.get(2).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
+        constraintSet.connect(meta_cards.get(3).getId(), constraintSet.LEFT, meta_cards.get(2).getId(), ConstraintSet.RIGHT, 8);
+        constraintSet.connect(meta_cards.get(3).getId(), constraintSet.TOP, R.id.spinner, ConstraintSet.BOTTOM, 30);
 
-                    constraintSet.connect(meta_cards.get(4).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
-                    constraintSet.connect(meta_cards.get(4).getId(), constraintSet.TOP, meta_cards.get(0).getId(), ConstraintSet.BOTTOM, 8);
-                    constraintSet.connect(meta_cards.get(5).getId(), constraintSet.LEFT, meta_cards.get(4).getId(), ConstraintSet.RIGHT, 8);
-                    constraintSet.connect(meta_cards.get(5).getId(), constraintSet.TOP, meta_cards.get(1).getId(), ConstraintSet.BOTTOM, 8);
-                    constraintSet.connect(meta_cards.get(6).getId(), constraintSet.LEFT, meta_cards.get(5).getId(), ConstraintSet.RIGHT, 8);
-                    constraintSet.connect(meta_cards.get(6).getId(), constraintSet.TOP, meta_cards.get(2).getId(), ConstraintSet.BOTTOM, 8);
-                    constraintSet.connect(meta_cards.get(7).getId(), constraintSet.LEFT, meta_cards.get(6).getId(), ConstraintSet.RIGHT, 8);
-                    constraintSet.connect(meta_cards.get(7).getId(), constraintSet.TOP, meta_cards.get(3).getId(), ConstraintSet.BOTTOM, 8);
+        constraintSet.connect(meta_cards.get(4).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
+        constraintSet.connect(meta_cards.get(4).getId(), constraintSet.TOP, meta_cards.get(0).getId(), ConstraintSet.BOTTOM, 8);
+        constraintSet.connect(meta_cards.get(5).getId(), constraintSet.LEFT, meta_cards.get(4).getId(), ConstraintSet.RIGHT, 8);
+        constraintSet.connect(meta_cards.get(5).getId(), constraintSet.TOP, meta_cards.get(1).getId(), ConstraintSet.BOTTOM, 8);
+        constraintSet.connect(meta_cards.get(6).getId(), constraintSet.LEFT, meta_cards.get(5).getId(), ConstraintSet.RIGHT, 8);
+        constraintSet.connect(meta_cards.get(6).getId(), constraintSet.TOP, meta_cards.get(2).getId(), ConstraintSet.BOTTOM, 8);
+        constraintSet.connect(meta_cards.get(7).getId(), constraintSet.LEFT, meta_cards.get(6).getId(), ConstraintSet.RIGHT, 8);
+        constraintSet.connect(meta_cards.get(7).getId(), constraintSet.TOP, meta_cards.get(3).getId(), ConstraintSet.BOTTOM, 8);
 
+        constraintSet.connect(win_rate.get(0).getId(), constraintSet.TOP, meta_cards.get(7).getId(), ConstraintSet.BOTTOM, 50);
+        constraintSet.connect(win_rate.get(0).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 410);
 
-                }
-                else if (i%8==4){
-                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
-                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, meta_cards.get(i-4).getId(), ConstraintSet.BOTTOM, 8);
-                }
+        for (int i=1; i<50;i++) {
+            constraintSet.connect(meta_cards.get(i*8).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
+            constraintSet.connect(meta_cards.get(i*8).getId(), constraintSet.TOP, win_rate.get(i-1).getId(), ConstraintSet.BOTTOM, 30);
+            constraintSet.connect(meta_cards.get(i*8+1).getId(), constraintSet.LEFT, meta_cards.get(i*8).getId(), ConstraintSet.RIGHT, 8);
+            constraintSet.connect(meta_cards.get(i*8+1).getId(), constraintSet.TOP, win_rate.get(i-1).getId(), ConstraintSet.BOTTOM, 30);
+            constraintSet.connect(meta_cards.get(i*8+2).getId(), constraintSet.LEFT, meta_cards.get(i*8+1).getId(), ConstraintSet.RIGHT, 8);
+            constraintSet.connect(meta_cards.get(i*8+2).getId(), constraintSet.TOP, win_rate.get(i-1).getId(), ConstraintSet.BOTTOM, 30);
+            constraintSet.connect(meta_cards.get(i*8+3).getId(), constraintSet.LEFT, meta_cards.get(i*8+2).getId(), ConstraintSet.RIGHT, 8);
+            constraintSet.connect(meta_cards.get(i*8+3).getId(), constraintSet.TOP, win_rate.get(i-1).getId(), ConstraintSet.BOTTOM, 30);
 
-                else if (i%4==0){
-                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
-                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, meta_cards.get(i-4).getId(), ConstraintSet.BOTTOM, 200);
-                }
+            constraintSet.connect(meta_cards.get(i*8+4).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
+            constraintSet.connect(meta_cards.get(i*8+4).getId(), constraintSet.TOP, meta_cards.get(i*8).getId(), ConstraintSet.BOTTOM, 8);
+            constraintSet.connect(meta_cards.get(i*8+5).getId(), constraintSet.LEFT, meta_cards.get(i*8+4).getId(), ConstraintSet.RIGHT, 8);
+            constraintSet.connect(meta_cards.get(i*8+5).getId(), constraintSet.TOP, meta_cards.get(i*8+1).getId(), ConstraintSet.BOTTOM, 8);
+            constraintSet.connect(meta_cards.get(i*8+6).getId(), constraintSet.LEFT, meta_cards.get(i*8+5).getId(), ConstraintSet.RIGHT, 8);
+            constraintSet.connect(meta_cards.get(i*8+6).getId(), constraintSet.TOP, meta_cards.get(i*8+2).getId(), ConstraintSet.BOTTOM, 8);
+            constraintSet.connect(meta_cards.get(i*8+7).getId(), constraintSet.LEFT, meta_cards.get(i*8+6).getId(), ConstraintSet.RIGHT, 8);
+            constraintSet.connect(meta_cards.get(i*8+7).getId(), constraintSet.TOP, meta_cards.get(i*8+3).getId(), ConstraintSet.BOTTOM, 8);
 
-                else if (i%8==1||i%8==2||i%8==3){
-                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, meta_cards.get(i-1).getId(), ConstraintSet.RIGHT, 8);
-                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP, meta_cards.get(i-4).getId(), ConstraintSet.BOTTOM, 200);
-                }
+            constraintSet.connect(win_rate.get(i).getId(), constraintSet.TOP, meta_cards.get(i*8+7).getId(), ConstraintSet.BOTTOM, 50);
+            constraintSet.connect(win_rate.get(i).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 410);
 
-
-
-                else{
-                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.LEFT, meta_cards.get(i-1).getId(), ConstraintSet.RIGHT, 8);
-                    constraintSet.connect(meta_cards.get(i).getId(), constraintSet.TOP,  meta_cards.get(i-4).getId(), ConstraintSet.BOTTOM, 8);
-                }
-            }
+        }
 
         constraintSet.applyTo(constraintLayout);
 
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    Document doc = Jsoup.connect("https://statsroyale.com/decks/popular?type=ladder").get();
-//                    img = doc.getElementsByTag("img");
-//                    img.remove(0);
-//                    img.remove(0);
-//                    img.remove(0);
-//
-//                    for (int i =0; i<400;i++) {
-//                        try {
-//                            String url = img.get(i).toString();
-//                            int end_index = url.indexOf('>');
-//                            url = url.substring(10, end_index - 1);
-//                            is = (InputStream) new URL(url).getContent();
-//                            d = Drawable.createFromStream(is, "src name");
-//                            drawables.add(d);
-//
-//                        } catch (IOException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-//
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//
-//
-//                getActivity().runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        for (int i=0; i<400;i++){
-//                            meta_cards.get(i).setImageDrawable(drawables.get(i));
-//                        }
-//                    }
-//                });
-//            }
-//        }).start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Document doc = Jsoup.connect("https://statsroyale.com/decks/popular?type=ladder").get();
+                    img = doc.getElementsByTag("img");
+                    txt = doc.getElementsByClass("ui__headerBig");
+
+
+                    img.remove(0);
+                    img.remove(0);
+                    img.remove(0);
+
+                    for (int i =0; i<400;i++) {
+                        try {
+                            String url = img.get(i).toString();
+                            int end_index = url.indexOf('>');
+                            url = url.substring(10, end_index - 1);
+                            is = (InputStream) new URL(url).getContent();
+                            d = Drawable.createFromStream(is, "src name");
+                            drawables.add(d);
+                            if (i < 50) {
+                                String sub = txt.get(i).toString();
+                                sub = sub.substring(27);
+                                int end = sub.indexOf('<');
+                                sub = sub.substring(0, end);
+                                win_rate.get(i).setText("Win rate: " + sub+ "%");
+                            }
+
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        for (int i=0; i<400;i++){
+                            meta_cards.get(i).setImageDrawable(drawables.get(i));
+                        }
+                    }
+                });
+            }
+        }).start();
+
 
         return root;
     }
