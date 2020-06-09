@@ -31,7 +31,7 @@ public class LoadScreen extends AppCompatActivity {
 
     public void progressAnimation(){
         ProgressBarAnimation anim = new ProgressBarAnimation(this,progressBar,textView,0f,100f);
-        anim.setDuration(5000);
+        anim.setDuration(1000);
         progressBar.setAnimation(anim);
     }
 }

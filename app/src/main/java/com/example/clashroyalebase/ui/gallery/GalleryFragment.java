@@ -1,6 +1,8 @@
 package com.example.clashroyalebase.ui.gallery;
 
 import android.annotation.SuppressLint;
+import android.bluetooth.le.ScanSettings;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
@@ -10,6 +12,7 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,6 +29,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.clashroyalebase.BufferingActivity;
 import com.example.clashroyalebase.MainActivity;
 import com.example.clashroyalebase.R;
 import com.example.clashroyalebase.ui.home.HomeFragment;
@@ -49,11 +53,18 @@ public class GalleryFragment extends Fragment {
     public Elements txt;
     public InputStream is;
     public Drawable d;
-    public ArrayList<ImageView> meta_cards = new ArrayList<ImageView>();
-    public ArrayList<TextView> win_rate = new ArrayList<TextView>();
+    public static ArrayList<ImageView> meta_cards = new ArrayList<ImageView>();
+    public static ArrayList<TextView> win_rate = new ArrayList<TextView>();
 
     public ImageView imageView2;
     public ArrayList<Drawable> drawables = new ArrayList<Drawable>();
+
+    public Spinner spinner;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+    }
 
     @SuppressLint("ResourceType")
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -63,12 +74,11 @@ public class GalleryFragment extends Fragment {
                 ViewModelProviders.of(this).get(GalleryViewModel.class);
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
 
-        String[] items = {"Arena 1", "Arena 2", "Arena 3", "Arena 4", "Arena 5", "Arena 6", "Arena 7", "Arena 8", "Arena 9", "Arena 10", "Arena 11", "Arena 12", "Legendary Arena","Tournaments"};
+        String[] items = {"","Arena 1", "Arena 2", "Arena 3", "Arena 4", "Arena 5", "Arena 6", "Arena 7", "Arena 8", "Arena 9", "Arena 10", "Arena 11", "Arena 12", "Legendary Arena","Tournaments"};
         ArrayAdapter adapter = new ArrayAdapter(getActivity(), R.layout.spinner, items);
 
-
-        Spinner listView = root.findViewById(R.id.spinner);
-        listView.setAdapter(adapter);
+        spinner = root.findViewById(R.id.spinner);
+        spinner.setAdapter(adapter);
 
 
         ConstraintLayout gallery_constraint = root.findViewById(R.id.gallery_constraint);
@@ -163,57 +173,31 @@ public class GalleryFragment extends Fragment {
 
         constraintSet.applyTo(constraintLayout);
 
-        new Thread(new Runnable() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void run() {
-                try {
-                    Document doc = Jsoup.connect("https://statsroyale.com/decks/popular?type=ladder").get();
-                    img = doc.getElementsByTag("img");
-                    txt = doc.getElementsByClass("ui__headerBig");
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                switch (spinner.getSelectedItem().toString()){
+                    case "Legendary Arena":
+                        startActivity(new Intent(getActivity(), BufferingActivity.class));
 
-
-                    img.remove(0);
-                    img.remove(0);
-                    img.remove(0);
-
-                    for (int i =0; i<400;i++) {
-                        try {
-                            String url = img.get(i).toString();
-                            int end_index = url.indexOf('>');
-                            url = url.substring(10, end_index - 1);
-                            is = (InputStream) new URL(url).getContent();
-                            d = Drawable.createFromStream(is, "src name");
-                            drawables.add(d);
-                            if (i < 50) {
-                                String sub = txt.get(i).toString();
-                                sub = sub.substring(27);
-                                int end = sub.indexOf('<');
-                                sub = sub.substring(0, end);
-                                win_rate.get(i).setText("Win rate: " + sub+ "%");
-                            }
-
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-
-                } catch (IOException e) {
-                    e.printStackTrace();
                 }
-
-
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        for (int i=0; i<400;i++){
-                            meta_cards.get(i).setImageDrawable(drawables.get(i));
-                        }
-                    }
-                });
             }
-        }).start();
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+
+        });
 
         return root;
     }
+
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+    }
+
 }
