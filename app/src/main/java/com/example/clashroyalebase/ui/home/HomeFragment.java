@@ -37,6 +37,8 @@ public class HomeFragment extends Fragment {
 
     public static Deck[] decks = new Deck[0];
 
+
+
     public static TextView[] textViews = new TextView[0];
     public static TextView textView1;public static TextView textView2;
     public static TextView textView3;public static TextView textView4;

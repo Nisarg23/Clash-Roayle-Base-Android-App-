@@ -48,6 +48,8 @@ import java.util.List;
 public class GalleryFragment extends Fragment {
     public LinearLayout.LayoutParams layoutParams_text;
 
+    public static String link;
+
     private GalleryViewModel galleryViewModel;
     public Elements img;
     public Elements txt;
@@ -178,7 +180,62 @@ public class GalleryFragment extends Fragment {
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 switch (spinner.getSelectedItem().toString()){
                     case "Legendary Arena":
+                        link = "https://statsroyale.com/decks/popular?type=ladder";
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        break;
+                    case "Tournaments":
+                        link = "https://statsroyale.com/decks/popular?type=tournament";
+                        startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        break;
+                    case "Arena 12":
+                        link = "https://statsroyale.com/decks/popular?type=ladder&arena=12";
+                        startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        break;
+                    case "Arena 11":
+                        link = "https://statsroyale.com/decks/popular?type=ladder&arena=11";
+                        startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        break;
+                    case "Arena 10":
+                        link = "https://statsroyale.com/decks/popular?type=ladder&arena=10";
+                        startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        break;
+                    case "Arena 9":
+                        link = "https://statsroyale.com/decks/popular?type=ladder&arena=9";
+                        startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        break;
+                    case "Arena 8":
+                        link = "https://statsroyale.com/decks/popular?type=ladder&arena=8";
+                        startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        break;
+                    case "Arena 7":
+                        link = "https://statsroyale.com/decks/popular?type=ladder&arena=7";
+                        startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        break;
+                    case "Arena 6":
+                        link = "https://statsroyale.com/decks/popular?type=ladder&arena=6";
+                        startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        break;
+                    case "Arena 5":
+                        link = "https://statsroyale.com/decks/popular?type=ladder&arena=5";
+                        startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        break;
+                    case "Arena 4":
+                        link = "https://statsroyale.com/decks/popular?type=ladder&arena=4";
+                        startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        break;
+                    case "Arena 3":
+                        link = "https://statsroyale.com/decks/popular?type=ladder&arena=3";
+                        startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        break;
+                    case "Arena 2":
+                        link = "https://statsroyale.com/decks/popular?type=ladder&arena=2";
+                        startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        break;
+                    case "Arena 1":
+                        link = "https://statsroyale.com/decks/popular?type=ladder&arena=1";
+                        startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        break;
+
 
                 }
             }

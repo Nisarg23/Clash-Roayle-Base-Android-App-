@@ -42,7 +42,7 @@ public class BufferingActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    Document doc = Jsoup.connect("https://statsroyale.com/decks/popular?type=ladder").get();
+                    Document doc = Jsoup.connect(GalleryFragment.link).get();
                     img = doc.getElementsByTag("img");
                     txt = doc.getElementsByClass("ui__headerBig");
 
