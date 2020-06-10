@@ -16,7 +16,7 @@ public class PopActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
         int width = (int) (dm.widthPixels*.6);
-        int height = (int) (dm.heightPixels*.2);
+        int height = (int) (dm.heightPixels*.19);
 
         //.3
         //.15
