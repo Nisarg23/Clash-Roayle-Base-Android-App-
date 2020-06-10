@@ -91,5 +91,8 @@ public class BufferingActivity extends AppCompatActivity {
 
 
     }
+    public void onBackPressed() {
+
+    }
 
 }

@@ -31,6 +31,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.clashroyalebase.BufferingActivity;
 import com.example.clashroyalebase.MainActivity;
+import com.example.clashroyalebase.PopActivity;
 import com.example.clashroyalebase.R;
 import com.example.clashroyalebase.ui.home.HomeFragment;
 
@@ -47,6 +48,7 @@ import java.util.List;
 
 public class GalleryFragment extends Fragment {
     public LinearLayout.LayoutParams layoutParams_text;
+    public LinearLayout.LayoutParams layoutParams_button;
 
     public static String link;
 
@@ -57,6 +59,7 @@ public class GalleryFragment extends Fragment {
     public Drawable d;
     public static ArrayList<ImageView> meta_cards = new ArrayList<ImageView>();
     public static ArrayList<TextView> win_rate = new ArrayList<TextView>();
+    public static ArrayList<Button> deck_copy = new ArrayList<Button>();
 
     public ImageView imageView2;
     public ArrayList<Drawable> drawables = new ArrayList<Drawable>();
@@ -64,7 +67,7 @@ public class GalleryFragment extends Fragment {
     public Spinner spinner;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState){
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
@@ -76,7 +79,7 @@ public class GalleryFragment extends Fragment {
                 ViewModelProviders.of(this).get(GalleryViewModel.class);
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
 
-        String[] items = {"","Arena 1", "Arena 2", "Arena 3", "Arena 4", "Arena 5", "Arena 6", "Arena 7", "Arena 8", "Arena 9", "Arena 10", "Arena 11", "Arena 12", "Legendary Arena","Tournaments"};
+        String[] items = {"", "Arena 1", "Arena 2", "Arena 3", "Arena 4", "Arena 5", "Arena 6", "Arena 7", "Arena 8", "Arena 9", "Arena 10", "Arena 11", "Arena 12", "Legendary Arena", "Tournaments"};
         ArrayAdapter adapter = new ArrayAdapter(getActivity(), R.layout.spinner, items);
 
         spinner = root.findViewById(R.id.spinner);
@@ -94,8 +97,13 @@ public class GalleryFragment extends Fragment {
 
         layoutParams_text = new LinearLayout.LayoutParams(w, h);
 
+        int he = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40, getResources().getDisplayMetrics());
+        int wi = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40, getResources().getDisplayMetrics());
 
-        for (int i =0; i<400; i++){
+        layoutParams_button = new LinearLayout.LayoutParams(he, wi);
+
+
+        for (int i = 0; i < 400; i++) {
             ImageView a = new ImageView(getActivity());
             a.setId(View.generateViewId());
 
@@ -106,15 +114,23 @@ public class GalleryFragment extends Fragment {
             meta_cards.add(a);
             gallery_constraint.addView(a);
 
-            if (i%8 ==0) {
+            if (i % 8 == 0) {
                 TextView b = new TextView(getActivity());
                 b.setId(View.generateViewId());
                 b.setLayoutParams(layoutParams_text);
-                b.setText("This is: "+ i);
+                b.setText("Win Rate: ");
                 b.setTextSize(20);
                 b.setTypeface(b.getTypeface(), Typeface.BOLD);
                 win_rate.add(b);
                 gallery_constraint.addView(b);
+
+                Button c = new Button(getActivity());
+                c.setId(View.generateViewId());
+                c.setLayoutParams(layoutParams_button);
+                c.setBackground(getResources().getDrawable(R.drawable.deck_copy));
+                deck_copy.add(c);
+                gallery_constraint.addView(c);
+
             }
         }
 
@@ -149,36 +165,51 @@ public class GalleryFragment extends Fragment {
         constraintSet.connect(win_rate.get(0).getId(), constraintSet.TOP, meta_cards.get(7).getId(), ConstraintSet.BOTTOM, 50);
         constraintSet.connect(win_rate.get(0).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 410);
 
-        for (int i=1; i<50;i++) {
-            constraintSet.connect(meta_cards.get(i*8).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
-            constraintSet.connect(meta_cards.get(i*8).getId(), constraintSet.TOP, win_rate.get(i-1).getId(), ConstraintSet.BOTTOM, 30);
-            constraintSet.connect(meta_cards.get(i*8+1).getId(), constraintSet.LEFT, meta_cards.get(i*8).getId(), ConstraintSet.RIGHT, 8);
-            constraintSet.connect(meta_cards.get(i*8+1).getId(), constraintSet.TOP, win_rate.get(i-1).getId(), ConstraintSet.BOTTOM, 30);
-            constraintSet.connect(meta_cards.get(i*8+2).getId(), constraintSet.LEFT, meta_cards.get(i*8+1).getId(), ConstraintSet.RIGHT, 8);
-            constraintSet.connect(meta_cards.get(i*8+2).getId(), constraintSet.TOP, win_rate.get(i-1).getId(), ConstraintSet.BOTTOM, 30);
-            constraintSet.connect(meta_cards.get(i*8+3).getId(), constraintSet.LEFT, meta_cards.get(i*8+2).getId(), ConstraintSet.RIGHT, 8);
-            constraintSet.connect(meta_cards.get(i*8+3).getId(), constraintSet.TOP, win_rate.get(i-1).getId(), ConstraintSet.BOTTOM, 30);
+        constraintSet.connect(deck_copy.get(0).getId(), constraintSet.TOP, meta_cards.get(7).getId(), ConstraintSet.BOTTOM, 50);
+        constraintSet.connect(deck_copy.get(0).getId(), constraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, 30);
 
-            constraintSet.connect(meta_cards.get(i*8+4).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
-            constraintSet.connect(meta_cards.get(i*8+4).getId(), constraintSet.TOP, meta_cards.get(i*8).getId(), ConstraintSet.BOTTOM, 8);
-            constraintSet.connect(meta_cards.get(i*8+5).getId(), constraintSet.LEFT, meta_cards.get(i*8+4).getId(), ConstraintSet.RIGHT, 8);
-            constraintSet.connect(meta_cards.get(i*8+5).getId(), constraintSet.TOP, meta_cards.get(i*8+1).getId(), ConstraintSet.BOTTOM, 8);
-            constraintSet.connect(meta_cards.get(i*8+6).getId(), constraintSet.LEFT, meta_cards.get(i*8+5).getId(), ConstraintSet.RIGHT, 8);
-            constraintSet.connect(meta_cards.get(i*8+6).getId(), constraintSet.TOP, meta_cards.get(i*8+2).getId(), ConstraintSet.BOTTOM, 8);
-            constraintSet.connect(meta_cards.get(i*8+7).getId(), constraintSet.LEFT, meta_cards.get(i*8+6).getId(), ConstraintSet.RIGHT, 8);
-            constraintSet.connect(meta_cards.get(i*8+7).getId(), constraintSet.TOP, meta_cards.get(i*8+3).getId(), ConstraintSet.BOTTOM, 8);
 
-            constraintSet.connect(win_rate.get(i).getId(), constraintSet.TOP, meta_cards.get(i*8+7).getId(), ConstraintSet.BOTTOM, 50);
+        for (int i = 1; i < 50; i++) {
+            constraintSet.connect(meta_cards.get(i * 8).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
+            constraintSet.connect(meta_cards.get(i * 8).getId(), constraintSet.TOP, win_rate.get(i - 1).getId(), ConstraintSet.BOTTOM, 30);
+            constraintSet.connect(meta_cards.get(i * 8 + 1).getId(), constraintSet.LEFT, meta_cards.get(i * 8).getId(), ConstraintSet.RIGHT, 8);
+            constraintSet.connect(meta_cards.get(i * 8 + 1).getId(), constraintSet.TOP, win_rate.get(i - 1).getId(), ConstraintSet.BOTTOM, 30);
+            constraintSet.connect(meta_cards.get(i * 8 + 2).getId(), constraintSet.LEFT, meta_cards.get(i * 8 + 1).getId(), ConstraintSet.RIGHT, 8);
+            constraintSet.connect(meta_cards.get(i * 8 + 2).getId(), constraintSet.TOP, win_rate.get(i - 1).getId(), ConstraintSet.BOTTOM, 30);
+            constraintSet.connect(meta_cards.get(i * 8 + 3).getId(), constraintSet.LEFT, meta_cards.get(i * 8 + 2).getId(), ConstraintSet.RIGHT, 8);
+            constraintSet.connect(meta_cards.get(i * 8 + 3).getId(), constraintSet.TOP, win_rate.get(i - 1).getId(), ConstraintSet.BOTTOM, 30);
+
+            constraintSet.connect(meta_cards.get(i * 8 + 4).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 8);
+            constraintSet.connect(meta_cards.get(i * 8 + 4).getId(), constraintSet.TOP, meta_cards.get(i * 8).getId(), ConstraintSet.BOTTOM, 8);
+            constraintSet.connect(meta_cards.get(i * 8 + 5).getId(), constraintSet.LEFT, meta_cards.get(i * 8 + 4).getId(), ConstraintSet.RIGHT, 8);
+            constraintSet.connect(meta_cards.get(i * 8 + 5).getId(), constraintSet.TOP, meta_cards.get(i * 8 + 1).getId(), ConstraintSet.BOTTOM, 8);
+            constraintSet.connect(meta_cards.get(i * 8 + 6).getId(), constraintSet.LEFT, meta_cards.get(i * 8 + 5).getId(), ConstraintSet.RIGHT, 8);
+            constraintSet.connect(meta_cards.get(i * 8 + 6).getId(), constraintSet.TOP, meta_cards.get(i * 8 + 2).getId(), ConstraintSet.BOTTOM, 8);
+            constraintSet.connect(meta_cards.get(i * 8 + 7).getId(), constraintSet.LEFT, meta_cards.get(i * 8 + 6).getId(), ConstraintSet.RIGHT, 8);
+            constraintSet.connect(meta_cards.get(i * 8 + 7).getId(), constraintSet.TOP, meta_cards.get(i * 8 + 3).getId(), ConstraintSet.BOTTOM, 8);
+
+            constraintSet.connect(win_rate.get(i).getId(), constraintSet.TOP, meta_cards.get(i * 8 + 7).getId(), ConstraintSet.BOTTOM, 50);
             constraintSet.connect(win_rate.get(i).getId(), constraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 410);
+
+            constraintSet.connect(deck_copy.get(i).getId(), constraintSet.TOP, meta_cards.get(i * 8 + 7).getId(), ConstraintSet.BOTTOM, 50);
+            constraintSet.connect(deck_copy.get(i).getId(), constraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, 30);
+
 
         }
 
         constraintSet.applyTo(constraintLayout);
+        spinner_click();
+        deck_copy_click();
 
+
+        return root;
+    }
+
+    public void spinner_click() {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                switch (spinner.getSelectedItem().toString()){
+                switch (spinner.getSelectedItem().toString()) {
                     case "Legendary Arena":
                         link = "https://statsroyale.com/decks/popular?type=ladder";
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
@@ -246,8 +277,17 @@ public class GalleryFragment extends Fragment {
             }
 
         });
+    }
 
-        return root;
+    public void deck_copy_click() {
+        for (int i = 0; i < deck_copy.size(); i++) {
+            deck_copy.get(i).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(getActivity(), PopActivity.class));
+                }
+            });
+        }
     }
 
 
@@ -256,5 +296,6 @@ public class GalleryFragment extends Fragment {
         super.onSaveInstanceState(outState);
 
     }
-
 }
+
+
