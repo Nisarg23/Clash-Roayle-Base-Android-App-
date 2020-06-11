@@ -2,7 +2,6 @@ package com.example.clashroyalebase.ui.home;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,23 +12,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.clashroyalebase.Activity2;
 import com.example.clashroyalebase.R;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
 import java.util.Hashtable;
 
 public class HomeFragment extends Fragment {
@@ -130,6 +119,10 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
+
+        super.onCreate(savedInstanceState);
+
+        this.setRetainInstance(true);
  /*
         My Code
          */
@@ -306,6 +299,23 @@ public class HomeFragment extends Fragment {
         GetAverageElixir();
         return root;
     }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        if (getParentFragmentManager().findFragmentByTag("MyFragment") != null)
+            getParentFragmentManager().findFragmentByTag("MyFragment").setRetainInstance(true);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getParentFragmentManager().findFragmentByTag("MyFragment") != null)
+            getParentFragmentManager().findFragmentByTag("MyFragment").getRetainInstance();
+    }
+
+
 
 
     public static void GetAverageElixir() {
