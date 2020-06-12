@@ -16,10 +16,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="150dp"
+        android:layout_width="260dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Retrieving Data"
+        android:text="Retrieving Most Recent Data"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

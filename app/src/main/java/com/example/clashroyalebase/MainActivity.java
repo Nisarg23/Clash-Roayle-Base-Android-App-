@@ -1,16 +1,21 @@
 package com.example.clashroyalebase;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -21,9 +26,15 @@ import com.example.clashroyalebase.ui.home.HomeFragment;
 import com.example.clashroyalebase.ui.slideshow.SlideshowFragment;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Hashtable;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity implements
-NavigationView.OnNavigationItemSelectedListener{
+        NavigationView.OnNavigationItemSelectedListener {
     public DrawerLayout drawer;
+    public ListView mDrawerList;
+
+    public static Hashtable<String, Boolean> fragment_selected = new Hashtable<String, Boolean>();
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -35,6 +46,7 @@ NavigationView.OnNavigationItemSelectedListener{
         setSupportActionBar(toolbar);
 
          drawer = findViewById(R.id.drawer_layout);
+         mDrawerList = findViewById(R.id.drawer_listview);
 //        NavigationView navigationView = findViewById(R.id.nav_view);
 //        // Passing each menu ID as a set of Ids because each
 //        // menu should be considered as top level destinations.
@@ -52,7 +64,20 @@ NavigationView.OnNavigationItemSelectedListener{
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        getSupportFragmentManager().beginTransaction().add(R.id.content_main,new HomeFragment(),"home").commitNow();
+        getSupportFragmentManager().beginTransaction().add(R.id.content_main,new GalleryFragment(),"gallery").commitNow();
+        getSupportFragmentManager().beginTransaction().add(R.id.content_main,new SlideshowFragment(),"slideshow").commitNow();
 
+        Fragment f1 = getSupportFragmentManager().findFragmentByTag("home");
+        Fragment f2 = getSupportFragmentManager().findFragmentByTag("gallery");
+        Fragment f3 = getSupportFragmentManager().findFragmentByTag("slideshow");
+
+        getSupportFragmentManager().beginTransaction().hide(f2).commitNow();
+        getSupportFragmentManager().beginTransaction().hide(f3).commitNow();
+
+        fragment_selected.put("home",true);
+        fragment_selected.put("gallery",false);
+        fragment_selected.put("slideshow",false);
 
 
 
@@ -62,6 +87,45 @@ NavigationView.OnNavigationItemSelectedListener{
 
 
     }
+//    public void selectItem(int position){
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        switch(position) {
+//            case 0:
+//                if(fragmentManager.findFragmentByTag("one") != null) {
+//                    //if the fragment exists, show it.
+//                    fragmentManager.beginTransaction().show(fragmentManager.findFragmentByTag("one")).commit();
+//                } else {
+//                    //if the fragment does not exist, add it to fragment manager.
+//                    fragmentManager.beginTransaction().add(R.id.container, new HomeFragment(), "one").commit();
+//                }
+//                if(fragmentManager.findFragmentByTag("two") != null){
+//                    //if the other fragment is visible, hide it.
+//                    fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("two")).commit();
+//                }
+//                break;
+//            case 1:
+//                if(fragmentManager.findFragmentByTag("two") != null) {
+//                    //if the fragment exists, show it.
+//                    fragmentManager.beginTransaction().show(fragmentManager.findFragmentByTag("two")).commit();
+//                } else {
+//                    //if the fragment does not exist, add it to fragment manager.
+//                    fragmentManager.beginTransaction().add(R.id.container, new GalleryFragment(), "two").commit();
+//                }
+//                if(fragmentManager.findFragmentByTag("one") != null){
+//                    //if the other fragment is visible, hide it.
+//                    fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("one")).commit();
+//                }
+//                break;
+//        }
+//
+//        // update selected item and title, then close the drawer
+//        mDrawerList.setItemChecked(position, true);
+//        drawer.closeDrawer(mDrawerList);
+//
+//    }
+//    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//        selectItem(position);
+//    }
 
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
@@ -72,29 +136,56 @@ NavigationView.OnNavigationItemSelectedListener{
         return super.onOptionsItemSelected(item);
     }
 
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void displaySelectedScreen(int id){
-        Fragment fragment = null;
+        String tag = "";
+        String select= "";
 
         switch (id){
             case R.id.nav_player_info:
-                fragment = new SlideshowFragment();
+                tag = "slideshow";
+                select = "slideshow";
                 break;
             case R.id.nav_meta_decks:
-                fragment = new GalleryFragment();
+                tag = "gallery";
+                select = "gallery";
                 break;
             case R.id.nav_my_decks:
-                fragment = new HomeFragment();
+                tag = "home";
+                select = "home";
                 break;
         }
-
-        if (fragment != null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_main,fragment).commit();
+        FragmentManager manager = getSupportFragmentManager();
+        if (fragment_selected.get("home").equals(true)){
+            fragment_selected.replace("home",false);
+            getSupportFragmentManager().beginTransaction().hide(manager.findFragmentByTag("home")).commitNow();
         }
+        else if (fragment_selected.get("gallery").equals(true)){
+            fragment_selected.replace("gallery",false);
+            getSupportFragmentManager().beginTransaction().hide(manager.findFragmentByTag("gallery")).commitNow();
+        }
+        else if (fragment_selected.get("slideshow").equals(true)){
+            fragment_selected.replace("slideshow",false);
+            getSupportFragmentManager().beginTransaction().hide(manager.findFragmentByTag("slideshow")).commitNow();
+        }
+
+
+
+        if (!tag.equals("")){
+            getSupportFragmentManager().beginTransaction().show(manager.findFragmentByTag(tag)).commitNow();
+            //getSupportFragmentManager().beginTransaction().detach(manager.findFragmentByTag("home")).commitNow();
+        }
+        fragment_selected.replace(tag,true);
+
         drawer.closeDrawer(GravityCompat.START);
     }
 
+
+
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public boolean onNavigationItemSelected(MenuItem item){
-        System.out.println("SECTD");
         int id = item.getItemId();
 
             displaySelectedScreen(id);

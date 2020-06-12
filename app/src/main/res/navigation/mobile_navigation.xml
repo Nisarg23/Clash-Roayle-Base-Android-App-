@@ -9,6 +9,7 @@
         android:id="@+id/nav_my_decks"
         android:name="com.example.clashroyalebase.ui.home.HomeFragment"
         android:label="My Decks"
+        android:tag="one"
         tools:layout="@layout/fragment_home">
 
     </fragment>
@@ -17,11 +18,13 @@
         android:id="@+id/nav_meta_decks"
         android:name="com.example.clashroyalebase.ui.gallery.GalleryFragment"
         android:label="Meta Decks"
+        android:tag="two"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_player_info"
         android:name="com.example.clashroyalebase.ui.slideshow.SlideshowFragment"
         android:label="Interactions"
+        android:tag="three"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>
