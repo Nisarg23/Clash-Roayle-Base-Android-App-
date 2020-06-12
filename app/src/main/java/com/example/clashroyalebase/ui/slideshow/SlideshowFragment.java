@@ -1,10 +1,12 @@
 package com.example.clashroyalebase.ui.slideshow;
 
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -80,6 +82,9 @@ public void searchButtonListener(){
         public void onClick(View view) {
             String tag = player_tag.getText().toString();
             url = base_url + tag;
+
+            InputMethodManager mgr = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+            mgr.hideSoftInputFromWindow(view.getWindowToken(), 0);
 
             new Thread(new Runnable() {
                 @Override
