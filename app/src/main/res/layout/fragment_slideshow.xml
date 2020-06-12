@@ -38,7 +38,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="26dp"
         android:drawableBottom="@android:drawable/ic_menu_search"
-        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintStart_toEndOf="@+id/player_tag"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
