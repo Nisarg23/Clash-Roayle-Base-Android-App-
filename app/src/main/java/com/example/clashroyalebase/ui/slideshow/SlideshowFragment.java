@@ -1,6 +1,7 @@
 package com.example.clashroyalebase.ui.slideshow;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.clashroyalebase.PlayerInfo;
 import com.example.clashroyalebase.R;
 import com.example.clashroyalebase.ui.gallery.GalleryFragment;
 
@@ -38,13 +40,13 @@ public class SlideshowFragment extends Fragment {
     public static EditText player_tag;
     public static Button search_player;
 
-    public static String base_url = "https://statsroyale.com/profile/";
+    public static String base_url = "https://www.deckshop.pro/spy/player/";
     public static String url;
 
     public Elements img;
     public Elements txt;
     public Elements txt1;
-    public Elements txt2;
+    Document doc;
     public Element invalid;
     public Element invalid2;
     public InputStream is;
@@ -80,7 +82,7 @@ public void searchButtonListener(){
     search_player.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            String tag = player_tag.getText().toString();
+            final String tag = player_tag.getText().toString().toUpperCase();
             url = base_url + tag;
 
             InputMethodManager mgr = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -90,13 +92,13 @@ public void searchButtonListener(){
                 @Override
                 public void run() {
                     try {
-                        Document doc = Jsoup.connect(url).get();
-                        txt = doc.getElementsByClass("ui__headerMedium");
-                        txt1 = doc.getElementsByClass("profileHeader__nameCaption");
+                         doc = Jsoup.connect(url).userAgent("Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:25.0) Gecko/20100101 Firefox/25.0")
+                                .referrer("http://www.google.com").ignoreHttpErrors(true).get();;
+                        txt = doc.getElementsByClass("text-white text-center mb-3");
                         invalid = txt.get(0);
-                        invalid2 = txt1.get(0);
                         System.out.println(invalid.html());
-                        System.out.println(invalid2.html());
+
+
 
 
                     } catch (Exception e) {
@@ -107,15 +109,19 @@ public void searchButtonListener(){
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            if (invalid.html().toString().equals("Invalid Hashtag Provided")||
-                                invalid.html().toString().equals("Profile is currently missing!")||
-                                invalid2.html().toString().equals("Name Not Set")){
+                            if (invalid.html().toString().equals("Player with tag #"+ tag+ " not found.")){
 
                                 Toast toast = Toast.makeText(getActivity(),
                                         "Invalid hashtag Provided",
                                         Toast.LENGTH_SHORT);
 
                                 toast.show();
+                            }
+                            else{
+//                                Elements queue = doc.getElementsByClass("ui__tooltip ui__tooltipTop ui__tooltipMiddle chests__tooltip");
+//                                System.out.println(queue.get(0).html());
+//                                System.out.println(queue.get(13).html());
+//                                startActivity(new Intent(getActivity(), PlayerInfo.class));
                             }
                         }
                     });
