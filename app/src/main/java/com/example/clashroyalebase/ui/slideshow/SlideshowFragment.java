@@ -2,6 +2,7 @@ package com.example.clashroyalebase.ui.slideshow;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,6 +30,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class SlideshowFragment extends Fragment {
 
@@ -38,11 +41,15 @@ public class SlideshowFragment extends Fragment {
 
     static Boolean invalid;
 
+
     JSONObject obj;
 
     public static String base_url = "https://api.clashroyale.com/v1/players/";
     public static String url_player;
     public static String url_chest;
+
+    public static ArrayList<String> chest = new ArrayList<String>();
+    public static ArrayList<Integer> chestAt = new ArrayList<Integer>();
 
     public final String key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjVmYjEyNDI0LWIwODEtNDMwNC05MWQ0LTlkNjIyYmEwN2M5OSIsImlhdCI6MTU5MjIzNDk3MSwic3ViIjoiZGV2ZWxvcGVyLzBlZjM4ZDg5LWI1MjItYThhMC01YWE2LTQ1OGZlNjZmMTM4ZSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIyNC4yMzUuMjEwLjc2Il0sInR5cGUiOiJjbGllbnQifV19.aCOBc9Gg2fyKCcd4GiyO3kKvG5tPWp52vWWLdJ_L8e_8WB9WVAorbx3fTiej3dfIbIK7rCKveNVwTUdWCLBJ3w";
 
@@ -55,9 +62,10 @@ public class SlideshowFragment extends Fragment {
         player_tag = root.findViewById(R.id.player_tag);
         search_player = root.findViewById(R.id.search_player);
 
+
+
+
         searchButtonListener();
-
-
 
 
         return root;
@@ -70,14 +78,7 @@ public class SlideshowFragment extends Fragment {
                 final String tag = "%23"+player_tag.getText().toString().toUpperCase();
                 url_player = base_url + tag;
                 url_chest = url_player.concat("/upcomingchests");
-
-                System.out.println(url_chest.charAt(51));
-                System.out.println(url_chest.charAt(50));
-                System.out.println(url_chest.charAt(49));
-
-
-
-                System.out.println(url_chest);
+                url_chest = url_chest.replaceAll("\\s+","");
 
                 InputMethodManager mgr = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                 mgr.hideSoftInputFromWindow(view.getWindowToken(), 0);
@@ -109,10 +110,6 @@ public class SlideshowFragment extends Fragment {
                             in.close();
                              obj = new JSONObject(response.toString());
 
-                            // print result
-                            for (int i=0; i<obj.length();i++){
-                                System.out.println(obj.keys());
-                            }
 
 
 
@@ -145,8 +142,9 @@ public class SlideshowFragment extends Fragment {
                                     try {
                                         JSONArray array = (JSONArray) obj.get("items");
                                         for (int i = 0; i < array.length(); i++) {
-                                            //System.out.println(array.get(i));
                                             JSONObject o = new JSONObject(array.get(i).toString());
+                                            chest.add((String) o.get("name"));
+                                            chestAt.add((Integer) o.get("index"));
                                             System.out.println(o.get("name") + "   " + o.get("index"));
                                         }
                                     }catch(JSONException e){
@@ -157,6 +155,7 @@ public class SlideshowFragment extends Fragment {
 
 
                                     startActivity(new Intent(getActivity(), PlayerInfo.class));
+
                                 }
                             }
                         });
