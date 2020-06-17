@@ -2,7 +2,6 @@ package com.example.clashroyalebase.ui.slideshow;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,28 +9,25 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.clashroyalebase.PlayerInfo;
 import com.example.clashroyalebase.R;
-import com.example.clashroyalebase.ui.gallery.GalleryFragment;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
 
 public class SlideshowFragment extends Fragment {
 
@@ -40,18 +36,15 @@ public class SlideshowFragment extends Fragment {
     public static EditText player_tag;
     public static Button search_player;
 
-    public static String base_url = "https://www.deckshop.pro/spy/player/";
-    public static String url;
+    static Boolean invalid;
 
-    public Elements img;
-    public Elements txt;
-    public Elements txt1;
-    Document doc;
-    public Element invalid;
-    public Element invalid2;
-    public InputStream is;
-    public Drawable d;
-    public ArrayList<Drawable> drawables = new ArrayList<Drawable>();
+    JSONObject obj;
+
+    public static String base_url = "https://api.clashroyale.com/v1/players/";
+    public static String url_player;
+    public static String url_chest;
+
+    public final String key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjVmYjEyNDI0LWIwODEtNDMwNC05MWQ0LTlkNjIyYmEwN2M5OSIsImlhdCI6MTU5MjIzNDk3MSwic3ViIjoiZGV2ZWxvcGVyLzBlZjM4ZDg5LWI1MjItYThhMC01YWE2LTQ1OGZlNjZmMTM4ZSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIyNC4yMzUuMjEwLjc2Il0sInR5cGUiOiJjbGllbnQifV19.aCOBc9Gg2fyKCcd4GiyO3kKvG5tPWp52vWWLdJ_L8e_8WB9WVAorbx3fTiej3dfIbIK7rCKveNVwTUdWCLBJ3w";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -62,74 +55,116 @@ public class SlideshowFragment extends Fragment {
         player_tag = root.findViewById(R.id.player_tag);
         search_player = root.findViewById(R.id.search_player);
 
-        search_player.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                url = url + player_tag.getText().toString();
-
-            }
-        });
-
         searchButtonListener();
 
 
 
 
-
         return root;
-}
-public void searchButtonListener(){
-    search_player.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            final String tag = player_tag.getText().toString().toUpperCase();
-            url = base_url + tag;
+    }
 
-            InputMethodManager mgr = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-            mgr.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    public void searchButtonListener() {
+        search_player.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final String tag = "%23"+player_tag.getText().toString().toUpperCase();
+                url_player = base_url + tag;
+                url_chest = url_player.concat("/upcomingchests");
 
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                         doc = Jsoup.connect(url).userAgent("Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:25.0) Gecko/20100101 Firefox/25.0")
-                                .referrer("http://www.google.com").ignoreHttpErrors(true).get();;
-                        txt = doc.getElementsByClass("text-white text-center mb-3");
-                        invalid = txt.get(0);
-                        System.out.println(invalid.html());
+                System.out.println(url_chest.charAt(51));
+                System.out.println(url_chest.charAt(50));
+                System.out.println(url_chest.charAt(49));
 
 
 
+                System.out.println(url_chest);
 
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+                InputMethodManager mgr = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                mgr.hideSoftInputFromWindow(view.getWindowToken(), 0);
 
 
-                    getActivity().runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (invalid.html().toString().equals("Player with tag #"+ tag+ " not found.")){
 
-                                Toast toast = Toast.makeText(getActivity(),
-                                        "Invalid hashtag Provided",
-                                        Toast.LENGTH_SHORT);
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        URL urlForGetRequest = null;
+                        invalid = false;
 
-                                toast.show();
+                        try {
+                            urlForGetRequest = new URL(url_chest);
+                            String readLine = null;
+                            HttpURLConnection conection = (HttpURLConnection) urlForGetRequest.openConnection();
+                            conection.setRequestMethod("GET");
+                            conection.setRequestProperty("Content-Type", "application/json");
+                            conection.setRequestProperty("Authorization", "Bearer " + key);
+                            int responseCode = conection.getResponseCode();
+
+
+                            BufferedReader in = new BufferedReader(
+                                    new InputStreamReader(conection.getInputStream()));
+                            StringBuffer response = new StringBuffer();
+                            while ((readLine = in.readLine()) != null) {
+                                response.append(readLine);
                             }
-                            else{
-//                                Elements queue = doc.getElementsByClass("ui__tooltip ui__tooltipTop ui__tooltipMiddle chests__tooltip");
-//                                System.out.println(queue.get(0).html());
-//                                System.out.println(queue.get(13).html());
-//                                startActivity(new Intent(getActivity(), PlayerInfo.class));
+                            in.close();
+                             obj = new JSONObject(response.toString());
+
+                            // print result
+                            for (int i=0; i<obj.length();i++){
+                                System.out.println(obj.keys());
                             }
+
+
+
+
+                        } catch (MalformedURLException e) {
+                            e.printStackTrace();
+                            System.out.println("MALFORMEDURL");
+                            invalid = true;
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            System.out.println("I/O");
+                            invalid = true;
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            System.out.println("JSON");
+                            invalid = true;
                         }
-                    });
-                }
-            }).start();
-        }
-    });
+
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                if (invalid == true){
+                                    Toast toast = Toast.makeText(getActivity(),
+                                            "Invalid player tag Provided",
+                                            Toast.LENGTH_SHORT);
+
+                                    toast.show();
+                                }
+                                else{
+                                    try {
+                                        JSONArray array = (JSONArray) obj.get("items");
+                                        for (int i = 0; i < array.length(); i++) {
+                                            //System.out.println(array.get(i));
+                                            JSONObject o = new JSONObject(array.get(i).toString());
+                                            System.out.println(o.get("name") + "   " + o.get("index"));
+                                        }
+                                    }catch(JSONException e){
+                                        e.printStackTrace();
+                                        }
 
 
+
+
+                                    startActivity(new Intent(getActivity(), PlayerInfo.class));
+                                }
+                            }
+                        });
+                    }
+                }).start();
+
+
+            }
+        });
     }
 }
