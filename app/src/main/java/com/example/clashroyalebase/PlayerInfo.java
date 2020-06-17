@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.clashroyalebase.ui.slideshow.SlideshowFragment;
 
@@ -31,10 +32,32 @@ public class PlayerInfo extends AppCompatActivity {
      ImageView chest13 = findViewById(R.id.chest13);
      ImageView chest14 = findViewById(R.id.chest14);
 
+     TextView t1 = findViewById(R.id.index1);
+    TextView t2 = findViewById(R.id.index2);
+    TextView t3 = findViewById(R.id.index3);
+    TextView t4= findViewById(R.id.index4);
+    TextView t5 = findViewById(R.id.index5);
+    TextView t6 = findViewById(R.id.index6);
+    TextView t7 = findViewById(R.id.index7);
+    TextView t8 = findViewById(R.id.index8);
+    TextView t9 = findViewById(R.id.index9);
+    TextView t10 = findViewById(R.id.index10);
+    TextView t11 = findViewById(R.id.index11);
+    TextView t12 = findViewById(R.id.index12);
+    TextView t13 = findViewById(R.id.index13);
+    TextView t14 = findViewById(R.id.index14);
+
+    TextView[] indexs = new TextView[]{t1,t2,t3,t4,t5,
+            t6,t7,t8,t9,t10,t11,t12,t13,t14
+
+    };
+
      ImageView[] chest_buttons =new ImageView[]{
         chest1, chest2, chest3, chest4,
                 chest5, chest6, chest7, chest8, chest9, chest10, chest11, chest12, chest13, chest14
     };
+
+
 
     for (int i=0; i<14;i++){
         switch (SlideshowFragment.chest.get(i)){
@@ -60,6 +83,8 @@ public class PlayerInfo extends AppCompatActivity {
                 chest_buttons[i].setImageResource(R.drawable.mega_lightning_chest);
                 break;
         }
+
+       indexs[i].setText("+"+SlideshowFragment.chestAt.get(i).toString());
     }
 
     }
