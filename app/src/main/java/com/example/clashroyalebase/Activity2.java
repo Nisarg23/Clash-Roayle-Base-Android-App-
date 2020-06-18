@@ -32,6 +32,8 @@ public class Activity2 extends AppCompatActivity {
 
     public static TextInputEditText input_text;
 
+    Button temp;
+
 
 
     public static ImageView mirror;public static ImageView heal_spirit;public static ImageView ice_spirit;public static ImageView skeletons;public static ImageView barbarian_barrel;public static ImageView goblins;public static ImageView the_log;
@@ -249,7 +251,7 @@ public class Activity2 extends AppCompatActivity {
                         temp_cards.add(c);
                         temp_buttons.add(b);
                         c.setVisibility(View.VISIBLE);
-                        b.setVisibility(View.INVISIBLE);
+                        //b.setVisibility(View.INVISIBLE);
 
                     }
                     else{
@@ -290,13 +292,21 @@ public class Activity2 extends AppCompatActivity {
             c.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (b.getVisibility() == View.INVISIBLE) {
+                    if (c.getColorFilter() == null) {
                         if (max <8) {
+                            if (temp != null){
+                                temp.setVisibility(View.INVISIBLE);
+                            }
                             b.setVisibility(View.VISIBLE);
+
 
                             c.setColorFilter(Color.rgb(123, 123, 123), android.graphics.PorterDuff.Mode.MULTIPLY);
                             choose_multiple.add(c);
+
+
+
                             max++;
+                            temp = b;
                         }
                     } else {
                         b.setVisibility(View.INVISIBLE);
