@@ -24,7 +24,11 @@ public class Activity2 extends AppCompatActivity {
     public static ImageView[] allCards = new ImageView[0];
     public static Button[] allButtons = new Button[0];
 
+    public static ArrayList<ImageView> choose_multiple = new ArrayList<ImageView>();
+
     public static int pos;
+
+    int max = 0;
 
     public static TextInputEditText input_text;
 
@@ -168,7 +172,6 @@ public class Activity2 extends AppCompatActivity {
 
 
 
-        DisableButtons();
         CardClick();
         UseButtonClick();
         FindCard();
@@ -275,19 +278,9 @@ public class Activity2 extends AppCompatActivity {
         finish();
     }
 
-    public static void DisableButtons(){
-        HomeFragment.Deck deck = HomeFragment.decks[pos];
-        for (int i = 0; i < 8; i++) {
-            ImageView c = deck.card_array[i];
-            for (int j = 0; j < allButtons.length; j++) {
-                if (allCards[j].getTag().equals(c.getTag())) {
-                    allButtons[j].setEnabled(false);
-                }
 
-            }
-        }
 
-    }
+
 
     public void CardClick(){
 
@@ -298,13 +291,18 @@ public class Activity2 extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     if (b.getVisibility() == View.INVISIBLE) {
-                        b.setVisibility(View.VISIBLE);
+                        if (max <8) {
+                            b.setVisibility(View.VISIBLE);
 
-                        c.setColorFilter(Color.rgb(123, 123, 123), android.graphics.PorterDuff.Mode.MULTIPLY);
-
+                            c.setColorFilter(Color.rgb(123, 123, 123), android.graphics.PorterDuff.Mode.MULTIPLY);
+                            choose_multiple.add(c);
+                            max++;
+                        }
                     } else {
                         b.setVisibility(View.INVISIBLE);
                         c.setColorFilter(null);
+                        choose_multiple.remove(c);
+                        max--;
                     }
                 }
             });
@@ -323,15 +321,36 @@ public class Activity2 extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Drawable d = c.getDrawable();
+                    d.setColorFilter(null);
                     for (int k = 0; k< HomeFragment.decks.length; k++) {
                         for (int j = 0; j < 8; j++) {
                             ImageView f = HomeFragment.decks[k].card_array[j];
                             Button e = HomeFragment.decks[k].button_array[j];
-                            if (e.getTag().equals("selected")) {
-                                e.setTag("unselected");
-                                f.setImageDrawable(d);
-                                f.setTag(c.getTag());
+
+                            if (choose_multiple.size() == 1) {
+                                if (e.getTag().equals("selected")) {
+                                    e.setTag("unselected");
+                                    f.setImageDrawable(d);
+                                    f.setTag(c.getTag());
+                                    HomeFragment.GetAverageElixir();
+                                    choose_multiple.clear();
+                                    finish();
+                                }
+                            } else {
+                                for (int i = 0; i < choose_multiple.size(); i++) {
+                                    int deck = HomeFragment.deck_selected;
+                                    choose_multiple.get(i).setColorFilter(null);
+                                    HomeFragment.decks[deck].card_array[i].setImageDrawable(choose_multiple.get(i).getDrawable());
+                                    HomeFragment.decks[deck].card_array[i].setTag(choose_multiple.get(i).getTag());
+                                }
+
+                                for (int i=0; i<8;i++){
+                                    int deck = HomeFragment.deck_selected;
+                                    HomeFragment.decks[deck].button_array[i].setTag("unselected");
+                                }
+
                                 HomeFragment.GetAverageElixir();
+                                choose_multiple.clear();
                                 finish();
                             }
                         }

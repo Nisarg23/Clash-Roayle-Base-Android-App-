@@ -109,7 +109,7 @@ public class HomeFragment extends Fragment {
     public static ImageView cardView73;public static ImageView cardView74;public static ImageView cardView75;public static ImageView cardView76;
     public static ImageView cardView77;public static ImageView cardView78;public static ImageView cardView79;public static ImageView cardView80;
 
-
+    public static int deck_selected = -1;
 
 
     private HomeViewModel homeViewModel;
@@ -414,6 +414,7 @@ public class HomeFragment extends Fragment {
 
     public void AddClick(){
         for (int j =0; j<decks.length;j++) {
+            final int k = j;
             for (int i = 0; i < 8; i++) {
                 final Button b = decks[j].button_array[i];
                 final ImageView c = decks[j].card_array[i];
@@ -422,6 +423,10 @@ public class HomeFragment extends Fragment {
                     @Override
                     public void onClick(View view) {
                         b.setTag("selected");
+                        deck_selected = k;
+                        for (int m=0; m<8;m++) {
+                            decks[k].button_array[m].setVisibility(View.INVISIBLE);
+                        }
                         openActivity2(pos);
 
                     }
