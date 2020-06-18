@@ -51,14 +51,14 @@ public class PopActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try{
                         int deck = Integer.parseInt((String) b.getTag());
-                        HomeFragment.decks[deck].c1.setImageDrawable(BufferingActivity.drawables.get(j *50));
-                        HomeFragment.decks[deck].c2.setImageDrawable(BufferingActivity.drawables.get(j*50+1));
-                        HomeFragment.decks[deck].c3.setImageDrawable(BufferingActivity.drawables.get(j*50+2));
-                        HomeFragment.decks[deck].c4.setImageDrawable(BufferingActivity.drawables.get(j*50+3));
-                        HomeFragment.decks[deck].c5.setImageDrawable(BufferingActivity.drawables.get(j*50+4));
-                        HomeFragment.decks[deck].c6.setImageDrawable(BufferingActivity.drawables.get(j*50+5));
-                        HomeFragment.decks[deck].c7.setImageDrawable(BufferingActivity.drawables.get(j*50+6));
-                        HomeFragment.decks[deck].c8.setImageDrawable(BufferingActivity.drawables.get(j*50+7));
+                        HomeFragment.decks[deck].c1.setImageDrawable(GalleryFragment.drawables.get(j *50));
+                        HomeFragment.decks[deck].c2.setImageDrawable(GalleryFragment.drawables.get(j*50+1));
+                        HomeFragment.decks[deck].c3.setImageDrawable(GalleryFragment.drawables.get(j*50+2));
+                        HomeFragment.decks[deck].c4.setImageDrawable(GalleryFragment.drawables.get(j*50+3));
+                        HomeFragment.decks[deck].c5.setImageDrawable(GalleryFragment.drawables.get(j*50+4));
+                        HomeFragment.decks[deck].c6.setImageDrawable(GalleryFragment.drawables.get(j*50+5));
+                        HomeFragment.decks[deck].c7.setImageDrawable(GalleryFragment.drawables.get(j*50+6));
+                        HomeFragment.decks[deck].c8.setImageDrawable(GalleryFragment.drawables.get(j*50+7));
 
                         Toast toast = Toast.makeText(PopActivity.this,
                                 "Deck Copied",

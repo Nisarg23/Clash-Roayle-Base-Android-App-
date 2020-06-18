@@ -23,6 +23,7 @@ import java.util.Hashtable;
 
 public class HomeFragment extends Fragment {
     public static Hashtable<String, Integer> elixir_dict = new Hashtable<String, Integer>();
+    public static Hashtable<String, Integer> drawable_dict = new Hashtable<String, Integer>();
 
     public static Deck[] decks = new Deck[0];
 
@@ -246,8 +247,30 @@ public class HomeFragment extends Fragment {
         elixir_dict.put("ram_rider",5);elixir_dict.put("barbarians",5);elixir_dict.put("executioner",5);elixir_dict.put("giant",5);elixir_dict.put("balloon",5);
         elixir_dict.put("bowler",5);elixir_dict.put("electro_dragon",5);elixir_dict.put("goblin_giant",6);elixir_dict.put("giant_skeleton",6);elixir_dict.put("elixir_collector",6);
         elixir_dict.put("xbow",6);elixir_dict.put("royal_giant",6);elixir_dict.put("elite_barbarians",6);elixir_dict.put("rocket",6);elixir_dict.put("sparky",6);
-        elixir_dict.put("lightning",6);elixir_dict.put("barbarian_hut",6);elixir_dict.put("pekka",7);elixir_dict.put("mega_knight",7);elixir_dict.put("royal_guards",7);
+        elixir_dict.put("lightning",6);elixir_dict.put("barbarian_hut",6);elixir_dict.put("pekka",7);elixir_dict.put("mega_knight",7);
         elixir_dict.put("lava_hound",7);elixir_dict.put("golem",8);elixir_dict.put("three_musketeers",9);elixir_dict.put("royal_recruits",7);
+
+        drawable_dict.put("mirror",R.drawable.mirror);drawable_dict.put("heal_spirit",R.drawable.heal_spirit);drawable_dict.put("ice_spirit",R.drawable.ice_spirit);drawable_dict.put("skeletons",R.drawable.skeletons);drawable_dict.put("barbarian_barrel",R.drawable.barbarian_barrel);
+        drawable_dict.put("goblins",R.drawable.goblins);drawable_dict.put("the_log",R.drawable.the_log);drawable_dict.put("zap",R.drawable.zap);drawable_dict.put("rage",R.drawable.rage);drawable_dict.put("wall_breakers",R.drawable.wall_breakers);
+        drawable_dict.put("bats",R.drawable.bats);drawable_dict.put("ice_golem",R.drawable.ice_golem);drawable_dict.put("fire_spirits",R.drawable.fire_spirits);drawable_dict.put("spear_goblins",R.drawable.spear_goblins);drawable_dict.put("giant_snowball",R.drawable.giant_snowball);
+        drawable_dict.put("royal_delivery",R.drawable.royal_delivery);drawable_dict.put("goblin_barrel",R.drawable.goblin_barrel);drawable_dict.put("arrows",R.drawable.arrows);drawable_dict.put("skeleton_army",R.drawable.skeleton_army);drawable_dict.put("bomber",R.drawable.bomber);
+        drawable_dict.put("tombstone",R.drawable.tombstone);drawable_dict.put("cannon",R.drawable.cannon);drawable_dict.put("elixir_golem",R.drawable.elixir_golem);drawable_dict.put("firecracker",R.drawable.firecracker);drawable_dict.put("fisherman",R.drawable.fisherman);
+        drawable_dict.put("tornado",R.drawable.tornado);drawable_dict.put("skeleton_barrel",R.drawable.skeleton_barrel);drawable_dict.put("clone",R.drawable.clone);drawable_dict.put("earthquake",R.drawable.earthquake);drawable_dict.put("ice_wizard",R.drawable.ice_wizard);
+        drawable_dict.put("royal_ghost",R.drawable.royal_ghost);drawable_dict.put("guards",R.drawable.guards);drawable_dict.put("princess",R.drawable.princess);drawable_dict.put("bandit",R.drawable.bandit);drawable_dict.put("knight",R.drawable.knight);
+        drawable_dict.put("archers",R.drawable.archers);drawable_dict.put("goblin_gang",R.drawable.goblin_gang);drawable_dict.put("miner",R.drawable.miner);drawable_dict.put("dart_goblin",R.drawable.dart_goblin);drawable_dict.put("mega_minion",R.drawable.mega_minion);
+        drawable_dict.put("minions",R.drawable.minions);drawable_dict.put("battle_ram",R.drawable.battle_ram);drawable_dict.put("inferno_dragon",R.drawable.inferno_dragon);drawable_dict.put("lumberjack",R.drawable.lumberjack);drawable_dict.put("poison",R.drawable.poison);
+        drawable_dict.put("freeze",R.drawable.freeze);drawable_dict.put("zappies",R.drawable.zappies);drawable_dict.put("electro_wizard",R.drawable.electro_wizard);drawable_dict.put("valkyrie",R.drawable.valkyrie);drawable_dict.put("hunter",R.drawable.hunter);
+        drawable_dict.put("fireball",R.drawable.fireball);drawable_dict.put("dark_prince",R.drawable.dark_prince);drawable_dict.put("goblin_cage",R.drawable.goblin_cage);drawable_dict.put("night_witch",R.drawable.night_witch);drawable_dict.put("furnace",R.drawable.furnace);
+        drawable_dict.put("musketeer",R.drawable.musketeer);drawable_dict.put("tesla",R.drawable.tesla);drawable_dict.put("bomb_tower",R.drawable.bomb_tower);drawable_dict.put("mortar",R.drawable.mortar);drawable_dict.put("hog_rider",R.drawable.hog_rider);
+        drawable_dict.put("baby_dragon",R.drawable.baby_dragon);drawable_dict.put("flying_machine",R.drawable.flying_machine);drawable_dict.put("battle_healer",R.drawable.battle_healer);drawable_dict.put("magic_archer",R.drawable.magic_archer);drawable_dict.put("mini_pekka",R.drawable.mini_pekka);
+        drawable_dict.put("royal_hogs",R.drawable.royal_hogs);drawable_dict.put("wizard",R.drawable.wizard);drawable_dict.put("prince",R.drawable.prince);drawable_dict.put("witch",R.drawable.witch);drawable_dict.put("goblin_hut",R.drawable.goblin_hut);
+        drawable_dict.put("cannon_cart",R.drawable.cannon_cart);drawable_dict.put("inferno_tower",R.drawable.inferno_tower);drawable_dict.put("rascals",R.drawable.rascals);drawable_dict.put("graveyard",R.drawable.graveyard);drawable_dict.put("minion_horde",R.drawable.minion_horde);
+        drawable_dict.put("ram_rider",R.drawable.ram_rider);drawable_dict.put("barbarians",R.drawable.barbarians);drawable_dict.put("executioner",R.drawable.executioner);drawable_dict.put("giant",R.drawable.giant);drawable_dict.put("balloon",R.drawable.balloon);
+        drawable_dict.put("bowler",R.drawable.bowler);drawable_dict.put("electro_dragon",R.drawable.electro_dragon);drawable_dict.put("goblin_giant",R.drawable.goblin_giant);drawable_dict.put("giant_skeleton",R.drawable.giant_skeleton);drawable_dict.put("elixir_collector",R.drawable.elixir_collector);
+        drawable_dict.put("xbow",R.drawable.xbow);drawable_dict.put("royal_giant",R.drawable.royal_giant);drawable_dict.put("elite_barbarians",R.drawable.elite_barbarians);drawable_dict.put("rocket",R.drawable.rocket);drawable_dict.put("sparky",R.drawable.sparky);
+        drawable_dict.put("lightning",R.drawable.lightning);drawable_dict.put("barbarian_hut",R.drawable.barbarian_hut);drawable_dict.put("pekka",R.drawable.pekka);drawable_dict.put("mega_knight",R.drawable.mega_knight);
+        drawable_dict.put("lava_hound",R.drawable.lava_hound);drawable_dict.put("golem",R.drawable.golem);drawable_dict.put("three_musketeers",R.drawable.three_musketeers);drawable_dict.put("royal_recruits",R.drawable.royal_recruits);
+
 
 
         Deck deck1 = new Deck(textView1,elixir_cost_text_view1,cardView1,

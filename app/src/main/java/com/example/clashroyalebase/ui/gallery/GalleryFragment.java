@@ -51,10 +51,11 @@ public class GalleryFragment extends Fragment {
     public static ArrayList<Button> deck_copy = new ArrayList<Button>();
 
     public ImageView imageView2;
-    public ArrayList<Drawable> drawables = new ArrayList<Drawable>();
+    public static ArrayList<Drawable> drawables = new ArrayList<Drawable>();
     public static int share_button = -1;
 
     public Spinner spinner;
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -199,6 +200,7 @@ public class GalleryFragment extends Fragment {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                drawables.clear();
                 switch (spinner.getSelectedItem().toString()) {
                     case "Legendary Arena":
                         link = "https://statsroyale.com/decks/popular?type=ladder";
