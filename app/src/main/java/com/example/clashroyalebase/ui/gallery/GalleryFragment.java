@@ -1,9 +1,7 @@
 package com.example.clashroyalebase.ui.gallery;
 
 import android.annotation.SuppressLint;
-import android.bluetooth.le.ScanSettings;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -26,25 +24,16 @@ import androidx.annotation.RequiresApi;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.clashroyalebase.BufferingActivity;
-import com.example.clashroyalebase.MainActivity;
 import com.example.clashroyalebase.PopActivity;
 import com.example.clashroyalebase.R;
-import com.example.clashroyalebase.ui.home.HomeFragment;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 
 public class GalleryFragment extends Fragment {
     public LinearLayout.LayoutParams layoutParams_text;
@@ -63,6 +52,7 @@ public class GalleryFragment extends Fragment {
 
     public ImageView imageView2;
     public ArrayList<Drawable> drawables = new ArrayList<Drawable>();
+    public static int share_button = -1;
 
     public Spinner spinner;
 
@@ -281,9 +271,11 @@ public class GalleryFragment extends Fragment {
 
     public void deck_copy_click() {
         for (int i = 0; i < deck_copy.size(); i++) {
+            final int j = i;
             deck_copy.get(i).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    share_button = j;
                     startActivity(new Intent(getActivity(), PopActivity.class));
                 }
             });

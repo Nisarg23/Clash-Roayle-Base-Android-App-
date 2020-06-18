@@ -5,6 +5,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Editable;
@@ -291,14 +293,18 @@ public class Activity2 extends AppCompatActivity {
 
         for (int i =0; i<allCards.length;i++) {
             final Button b = allButtons[i];
-            ImageView c = allCards[i];
+            final ImageView c = allCards[i];
             c.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (b.getVisibility() == View.INVISIBLE) {
                         b.setVisibility(View.VISIBLE);
+
+                        c.setColorFilter(Color.rgb(123, 123, 123), android.graphics.PorterDuff.Mode.MULTIPLY);
+
                     } else {
                         b.setVisibility(View.INVISIBLE);
+                        c.setColorFilter(null);
                     }
                 }
             });

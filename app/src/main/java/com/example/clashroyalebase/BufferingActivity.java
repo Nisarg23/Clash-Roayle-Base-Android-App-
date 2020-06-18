@@ -30,7 +30,7 @@ public class BufferingActivity extends AppCompatActivity {
     public Elements txt;
     public InputStream is;
     public Drawable d;
-    public ArrayList<Drawable> drawables = new ArrayList<Drawable>();
+    public static ArrayList<Drawable> drawables = new ArrayList<Drawable>();
 
 
     @Override
