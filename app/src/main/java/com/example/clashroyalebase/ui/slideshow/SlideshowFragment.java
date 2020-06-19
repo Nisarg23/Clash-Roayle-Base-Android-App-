@@ -40,9 +40,11 @@ public class SlideshowFragment extends Fragment {
     public static Button search_player;
 
     static Boolean invalid;
+    public static JSONArray arr;
 
 
     JSONObject obj;
+    public static JSONObject obj_player;
 
     public static String base_url = "https://api.clashroyale.com/v1/players/";
     public static String url_player;
@@ -99,26 +101,51 @@ public class SlideshowFragment extends Fragment {
                     @Override
                     public void run() {
                         URL urlForGetRequest = null;
+                        URL urlForGetRequest_player = null;
                         invalid = false;
 
                         try {
                             urlForGetRequest = new URL(url_chest);
+                            urlForGetRequest_player = new URL(url_player);
                             String readLine = null;
+                            String readLine_player = null;
                             HttpURLConnection conection = (HttpURLConnection) urlForGetRequest.openConnection();
+                            HttpURLConnection conection_player = (HttpURLConnection) urlForGetRequest_player.openConnection();
                             conection.setRequestMethod("GET");
                             conection.setRequestProperty("Content-Type", "application/json");
                             conection.setRequestProperty("Authorization", "Bearer " + key);
+
+                            conection_player.setRequestMethod("GET");
+                            conection_player.setRequestProperty("Content-Type", "application/json");
+                            conection_player.setRequestProperty("Authorization", "Bearer " + key);
+
+
                             int responseCode = conection.getResponseCode();
+                            int responseCode_player = conection_player.getResponseCode();
 
 
                             BufferedReader in = new BufferedReader(
                                     new InputStreamReader(conection.getInputStream()));
+                            BufferedReader in_player = new BufferedReader(
+                                    new InputStreamReader(conection_player.getInputStream()));
+
+
                             StringBuffer response = new StringBuffer();
                             while ((readLine = in.readLine()) != null) {
                                 response.append(readLine);
                             }
+
+                            StringBuffer response_player = new StringBuffer();
+                            while ((readLine_player = in_player.readLine()) != null) {
+                                response_player.append(readLine_player);
+                            }
+
                             in.close();
+                            in_player.close();
+
                              obj = new JSONObject(response.toString());
+                             obj_player = new JSONObject(response_player.toString());
+
 
 
 

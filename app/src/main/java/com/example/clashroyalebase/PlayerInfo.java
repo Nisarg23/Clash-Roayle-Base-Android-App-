@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import com.example.clashroyalebase.ui.slideshow.SlideshowFragment;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class PlayerInfo extends AppCompatActivity {
 
 
@@ -47,6 +50,12 @@ public class PlayerInfo extends AppCompatActivity {
     TextView t13 = findViewById(R.id.index13);
     TextView t14 = findViewById(R.id.index14);
 
+    TextView player_name = findViewById(R.id.player_name);
+    TextView tag = findViewById(R.id.tag);
+
+    TextView trophies = findViewById(R.id.trophies);
+
+
     TextView[] indexs = new TextView[]{t1,t2,t3,t4,t5,
             t6,t7,t8,t9,t10,t11,t12,t13,t14
 
@@ -56,6 +65,8 @@ public class PlayerInfo extends AppCompatActivity {
         chest1, chest2, chest3, chest4,
                 chest5, chest6, chest7, chest8, chest9, chest10, chest11, chest12, chest13, chest14
     };
+
+     ImageView arena = findViewById(R.id.arena);
 
 
 
@@ -86,6 +97,90 @@ public class PlayerInfo extends AppCompatActivity {
 
        indexs[i].setText("+"+(SlideshowFragment.chestAt.get(i)+1));
     }
+
+        JSONObject o = SlideshowFragment.obj_player;
+        try {
+        player_name.setText( o.get("name").toString());
+        tag.setText(o.get("tag").toString());
+        trophies.setText(o.get("trophies").toString());
+
+        JSONObject obj = new JSONObject( o.get("arena").toString());
+        String arena_name = obj.get("name").toString();
+
+
+        switch (arena_name){
+            case "Arena 1":
+                arena.setImageResource(R.drawable.arena1);
+                break;
+            case "Arena 2":
+                arena.setImageResource(R.drawable.arena2);
+                break;
+            case "Arena 3":
+                arena.setImageResource(R.drawable.arena3);
+                break;
+            case "Arena 4":
+                arena.setImageResource(R.drawable.arena4);
+                break;
+            case "Arena 5":
+                arena.setImageResource(R.drawable.arena5);
+                break;
+            case "Arena 6":
+                arena.setImageResource(R.drawable.arena6);
+                break;
+            case "Arena 7":
+                arena.setImageResource(R.drawable.arena7);
+                break;
+            case "Arena 8":
+                arena.setImageResource(R.drawable.arena8);
+                break;
+            case "Arena 9":
+                arena.setImageResource(R.drawable.arena9);
+                break;
+            case "Arena 10":
+                arena.setImageResource(R.drawable.arena10);
+                break;
+            case "Arena 11":
+                arena.setImageResource(R.drawable.arena11);
+                break;
+            case "Arena 12":
+                arena.setImageResource(R.drawable.arena12);
+                break;
+            case "Challenger I":
+                arena.setImageResource(R.drawable.challenger1);
+                break;
+            case "Challenger II":
+                arena.setImageResource(R.drawable.challenger2);
+                break;
+            case "Challenger III":
+                arena.setImageResource(R.drawable.challenger3);
+                break;
+            case "Master I":
+                arena.setImageResource(R.drawable.master1);
+                break;
+            case "Master II":
+                arena.setImageResource(R.drawable.master2);
+                break;
+            case "Master III":
+                arena.setImageResource(R.drawable.master3);
+                break;
+            case "Champion":
+                arena.setImageResource(R.drawable.champion);
+                break;
+            case "Grand Champion":
+                arena.setImageResource(R.drawable.grand_champion);
+                break;
+            case "Royal Champion":
+                arena.setImageResource(R.drawable.royal_champion);
+                break;
+            case "Ultimate Champion":
+                arena.setImageResource(R.drawable.ultimate_champion);
+                break;
+        }
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
     }
 }

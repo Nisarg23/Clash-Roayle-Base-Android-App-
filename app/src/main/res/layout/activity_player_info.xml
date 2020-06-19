@@ -7,161 +7,180 @@
     tools:context=".PlayerInfo">
 
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/level" />
+
+    <ImageView
+        android:id="@+id/arena"
+        android:layout_width="80dp"
+        android:layout_height="74dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
     <ImageView
         android:id="@+id/chest12"
-        android:layout_width="85dp"
-        android:layout_height="90dp"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toEndOf="@+id/chest11"
-        app:layout_constraintTop_toBottomOf="@+id/index8"
+        app:layout_constraintTop_toBottomOf="@+id/index5"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <ImageView
         android:id="@+id/chest6"
-        android:layout_width="85dp"
-        android:layout_height="90dp"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toEndOf="@+id/chest5"
-        app:layout_constraintTop_toBottomOf="@+id/index2"
+        app:layout_constraintTop_toBottomOf="@+id/tag"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <ImageView
         android:id="@+id/chest8"
-        android:layout_width="85dp"
-        android:layout_height="90dp"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/chest7"
-        app:layout_constraintTop_toBottomOf="@+id/index4"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <ImageView
-        android:id="@+id/chest7"
-        android:layout_width="85dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/chest6"
-        app:layout_constraintTop_toBottomOf="@+id/index3"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <ImageView
-        android:id="@+id/chest5"
-        android:layout_width="85dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/index1"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <ImageView
+        android:id="@+id/chest7"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/chest6"
+        app:layout_constraintTop_toBottomOf="@+id/tag"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/chest5"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/chest4"
+        app:layout_constraintTop_toBottomOf="@+id/tag"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
         android:id="@+id/chest13"
-        android:layout_width="85dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/chest9"
-        app:layout_constraintTop_toBottomOf="@+id/index10"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <ImageView
-        android:id="@+id/chest4"
-        android:layout_width="85dp"
-        android:layout_height="90dp"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toEndOf="@+id/chest3"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <ImageView
-        android:id="@+id/chest3"
-        android:layout_width="85dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toEndOf="@+id/chest2"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <ImageView
-        android:id="@+id/chest11"
-        android:layout_width="85dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/chest10"
-        app:layout_constraintTop_toBottomOf="@+id/index7"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <ImageView
-        android:id="@+id/chest14"
-        android:layout_width="85dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/chest13"
-        app:layout_constraintTop_toBottomOf="@+id/index11"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-
-
-    <ImageView
-        android:id="@+id/chest1"
-        android:layout_width="85dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <ImageView
-        android:id="@+id/chest9"
-        android:layout_width="85dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/index5"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <ImageView
-        android:id="@+id/chest10"
-        android:layout_width="85dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/chest9"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/chest12"
         app:layout_constraintTop_toBottomOf="@+id/index6"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <ImageView
-        android:id="@+id/chest2"
-        android:layout_width="85dp"
-        android:layout_height="90dp"
+        android:id="@+id/chest4"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/chest3"
+        app:layout_constraintTop_toBottomOf="@+id/tag"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/chest3"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/chest2"
+        app:layout_constraintTop_toBottomOf="@+id/tag"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/chest11"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/chest10"
+        app:layout_constraintTop_toBottomOf="@+id/index4"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/chest14"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/chest13"
+        app:layout_constraintTop_toBottomOf="@+id/index7"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+
+    <ImageView
+        android:id="@+id/chest1"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tag"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/chest9"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/chest8"
+        app:layout_constraintTop_toBottomOf="@+id/index2"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/chest10"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/chest9"
+        app:layout_constraintTop_toBottomOf="@+id/index3"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/chest2"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toEndOf="@+id/chest1"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/tag"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
@@ -169,7 +188,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/chest1"
         app:layout_constraintStart_toStartOf="@+id/chest1"
         app:layout_constraintTop_toBottomOf="@+id/chest1" />
@@ -179,7 +198,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/chest5"
         app:layout_constraintStart_toStartOf="@+id/chest5"
         app:layout_constraintTop_toBottomOf="@+id/chest5" />
@@ -189,7 +208,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/chest6"
         app:layout_constraintStart_toStartOf="@+id/chest6"
         app:layout_constraintTop_toBottomOf="@+id/chest6" />
@@ -199,7 +218,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/chest7"
         app:layout_constraintStart_toEndOf="@+id/chest6"
         app:layout_constraintTop_toBottomOf="@+id/chest7" />
@@ -209,7 +228,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/chest2"
         app:layout_constraintStart_toEndOf="@+id/chest1"
         app:layout_constraintTop_toBottomOf="@+id/chest2" />
@@ -219,7 +238,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/chest4"
         app:layout_constraintStart_toStartOf="@+id/chest3"
         app:layout_constraintTop_toBottomOf="@+id/chest3" />
@@ -229,7 +248,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/chest4"
         app:layout_constraintStart_toStartOf="@+id/chest4"
         app:layout_constraintTop_toBottomOf="@+id/chest4" />
@@ -239,7 +258,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/chest10"
         app:layout_constraintStart_toStartOf="@+id/chest10"
         app:layout_constraintTop_toBottomOf="@+id/chest10" />
@@ -249,7 +268,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/chest14"
         app:layout_constraintStart_toStartOf="@+id/chest14"
         app:layout_constraintTop_toBottomOf="@+id/chest14" />
@@ -259,7 +278,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/chest13"
         app:layout_constraintStart_toStartOf="@+id/chest13"
         app:layout_constraintTop_toBottomOf="@+id/chest13" />
@@ -269,7 +288,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/chest11"
         app:layout_constraintStart_toStartOf="@+id/chest11"
         app:layout_constraintTop_toBottomOf="@+id/chest11" />
@@ -279,7 +298,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/chest12"
         app:layout_constraintStart_toStartOf="@+id/chest12"
         app:layout_constraintTop_toBottomOf="@+id/chest12" />
@@ -289,7 +308,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/chest9"
         app:layout_constraintStart_toStartOf="@+id/chest9"
         app:layout_constraintTop_toBottomOf="@+id/chest9" />
@@ -299,11 +318,57 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/chest8"
         app:layout_constraintStart_toStartOf="@+id/chest8"
         app:layout_constraintTop_toBottomOf="@+id/chest8" />
 
+    <TextView
+        android:id="@+id/player_name"
+        android:layout_width="189dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/arena"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="152dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/arena"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/player_name" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/trophies" />
+
+    <TextView
+        android:id="@+id/trophies"
+        android:layout_width="43dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
