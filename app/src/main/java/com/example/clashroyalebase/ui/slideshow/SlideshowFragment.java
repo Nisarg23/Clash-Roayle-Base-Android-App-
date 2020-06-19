@@ -66,9 +66,19 @@ public class SlideshowFragment extends Fragment {
 
 
         searchButtonListener();
+        playerTagListener();
 
 
         return root;
+    }
+
+    public void playerTagListener(){
+        player_tag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                player_tag.setText("");
+            }
+        });
     }
 
     public void searchButtonListener() {

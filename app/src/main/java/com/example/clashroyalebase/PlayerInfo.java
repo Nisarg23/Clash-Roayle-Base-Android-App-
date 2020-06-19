@@ -84,7 +84,7 @@ public class PlayerInfo extends AppCompatActivity {
                 break;
         }
 
-       indexs[i].setText("+"+SlideshowFragment.chestAt.get(i).toString());
+       indexs[i].setText("+"+(SlideshowFragment.chestAt.get(i)+1));
     }
 
     }
