@@ -57,6 +57,7 @@ public class GalleryFragment extends Fragment {
     public Spinner spinner;
 
 
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

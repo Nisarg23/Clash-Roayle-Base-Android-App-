@@ -13,11 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PlayerInfo"></activity>
+        <activity android:name=".Player_Buffering"></activity>
+        <activity android:name=".PlayerInfo" />
         <activity
             android:name=".PopActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.CustomTheme"></activity>
+            android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".BufferingActivity" />
         <activity
             android:name=".LoadScreen"
