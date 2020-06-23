@@ -321,6 +321,7 @@ public class HomeFragment extends Fragment {
 
 
 
+
         AddClick();
         CardClick();
         DeckName();
