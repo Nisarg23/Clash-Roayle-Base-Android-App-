@@ -54,7 +54,7 @@ public class SlideshowFragment extends Fragment {
     public static ArrayList<String> chest = new ArrayList<String>();
     public static ArrayList<Integer> chestAt = new ArrayList<Integer>();
 
-    public final String key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjVmYjEyNDI0LWIwODEtNDMwNC05MWQ0LTlkNjIyYmEwN2M5OSIsImlhdCI6MTU5MjIzNDk3MSwic3ViIjoiZGV2ZWxvcGVyLzBlZjM4ZDg5LWI1MjItYThhMC01YWE2LTQ1OGZlNjZmMTM4ZSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIyNC4yMzUuMjEwLjc2Il0sInR5cGUiOiJjbGllbnQifV19.aCOBc9Gg2fyKCcd4GiyO3kKvG5tPWp52vWWLdJ_L8e_8WB9WVAorbx3fTiej3dfIbIK7rCKveNVwTUdWCLBJ3w";
+    public static final String key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjVmYjEyNDI0LWIwODEtNDMwNC05MWQ0LTlkNjIyYmEwN2M5OSIsImlhdCI6MTU5MjIzNDk3MSwic3ViIjoiZGV2ZWxvcGVyLzBlZjM4ZDg5LWI1MjItYThhMC01YWE2LTQ1OGZlNjZmMTM4ZSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIyNC4yMzUuMjEwLjc2Il0sInR5cGUiOiJjbGllbnQifV19.aCOBc9Gg2fyKCcd4GiyO3kKvG5tPWp52vWWLdJ_L8e_8WB9WVAorbx3fTiej3dfIbIK7rCKveNVwTUdWCLBJ3w";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -101,50 +101,39 @@ public class SlideshowFragment extends Fragment {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        URL urlForGetRequest = null;
+
                         URL urlForGetRequest_player = null;
                         invalid = false;
 
                         try {
-                            urlForGetRequest = new URL(url_chest);
+
                             urlForGetRequest_player = new URL(url_player);
                             String readLine = null;
                             String readLine_player = null;
-                            HttpURLConnection conection = (HttpURLConnection) urlForGetRequest.openConnection();
                             HttpURLConnection conection_player = (HttpURLConnection) urlForGetRequest_player.openConnection();
-                            conection.setRequestMethod("GET");
-                            conection.setRequestProperty("Content-Type", "application/json");
-                            conection.setRequestProperty("Authorization", "Bearer " + key);
 
                             conection_player.setRequestMethod("GET");
                             conection_player.setRequestProperty("Content-Type", "application/json");
                             conection_player.setRequestProperty("Authorization", "Bearer " + key);
 
 
-                            int responseCode = conection.getResponseCode();
+
                             int responseCode_player = conection_player.getResponseCode();
 
 
-                            BufferedReader in = new BufferedReader(
-                                    new InputStreamReader(conection.getInputStream()));
+
                             BufferedReader in_player = new BufferedReader(
                                     new InputStreamReader(conection_player.getInputStream()));
 
 
-                            StringBuffer response = new StringBuffer();
-                            while ((readLine = in.readLine()) != null) {
-                                response.append(readLine);
-                            }
 
                             StringBuffer response_player = new StringBuffer();
                             while ((readLine_player = in_player.readLine()) != null) {
                                 response_player.append(readLine_player);
                             }
 
-                            in.close();
                             in_player.close();
 
-                             obj = new JSONObject(response.toString());
                              obj_player = new JSONObject(response_player.toString());
 
 
@@ -177,21 +166,6 @@ public class SlideshowFragment extends Fragment {
                                     toast.show();
                                 }
                                 else{
-                                    try {
-                                        JSONArray array = (JSONArray) obj.get("items");
-                                        for (int i = 0; i < array.length(); i++) {
-                                            JSONObject o = new JSONObject(array.get(i).toString());
-                                            chest.add((String) o.get("name"));
-                                            chestAt.add((Integer) o.get("index"));
-                                            System.out.println(o.get("name") + "   " + o.get("index"));
-                                        }
-                                    }catch(JSONException e){
-                                        e.printStackTrace();
-                                        }
-
-
-
-
                                     startActivity(new Intent(getActivity(), PlayerInfo.class));
 
                                 }
