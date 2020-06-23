@@ -29,6 +29,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.clashroyalebase.BufferingActivity;
 import com.example.clashroyalebase.PopActivity;
 import com.example.clashroyalebase.R;
+import com.example.clashroyalebase.ui.home.HomeFragment;
 
 import org.jsoup.select.Elements;
 
@@ -53,6 +54,7 @@ public class GalleryFragment extends Fragment {
     public ImageView imageView2;
     public static ArrayList<Drawable> drawables = new ArrayList<Drawable>();
     public static int share_button = -1;
+    public static Boolean empty_decks = true;
 
     public Spinner spinner;
 
@@ -205,59 +207,73 @@ public class GalleryFragment extends Fragment {
                 switch (spinner.getSelectedItem().toString()) {
                     case "Legendary Arena":
                         link = "https://statsroyale.com/decks/popular?type=ladder";
+                        empty_decks = false;
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
                         break;
                     case "Tournaments":
                         link = "https://statsroyale.com/decks/popular?type=tournament";
+                        empty_decks = false;
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
                         break;
                     case "Arena 12":
                         link = "https://statsroyale.com/decks/popular?type=ladder&arena=12";
+                        empty_decks = false;
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
                         break;
                     case "Arena 11":
                         link = "https://statsroyale.com/decks/popular?type=ladder&arena=11";
+                        empty_decks = false;
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
                         break;
                     case "Arena 10":
                         link = "https://statsroyale.com/decks/popular?type=ladder&arena=10";
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        empty_decks = false;
                         break;
                     case "Arena 9":
                         link = "https://statsroyale.com/decks/popular?type=ladder&arena=9";
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        empty_decks = false;
                         break;
                     case "Arena 8":
                         link = "https://statsroyale.com/decks/popular?type=ladder&arena=8";
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        empty_decks = false;
                         break;
                     case "Arena 7":
                         link = "https://statsroyale.com/decks/popular?type=ladder&arena=7";
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        empty_decks = false;
                         break;
                     case "Arena 6":
                         link = "https://statsroyale.com/decks/popular?type=ladder&arena=6";
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        empty_decks = false;
                         break;
                     case "Arena 5":
                         link = "https://statsroyale.com/decks/popular?type=ladder&arena=5";
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        empty_decks = false;
                         break;
                     case "Arena 4":
                         link = "https://statsroyale.com/decks/popular?type=ladder&arena=4";
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        empty_decks = false;
                         break;
                     case "Arena 3":
                         link = "https://statsroyale.com/decks/popular?type=ladder&arena=3";
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        empty_decks = false;
                         break;
                     case "Arena 2":
                         link = "https://statsroyale.com/decks/popular?type=ladder&arena=2";
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        empty_decks = false;
                         break;
                     case "Arena 1":
                         link = "https://statsroyale.com/decks/popular?type=ladder&arena=1";
                         startActivity(new Intent(getActivity(), BufferingActivity.class));
+                        empty_decks = false;
                         break;
 
 
@@ -280,6 +296,7 @@ public class GalleryFragment extends Fragment {
                 public void onClick(View view) {
                     share_button = j;
                     startActivity(new Intent(getActivity(), PopActivity.class));
+
                 }
             });
         }

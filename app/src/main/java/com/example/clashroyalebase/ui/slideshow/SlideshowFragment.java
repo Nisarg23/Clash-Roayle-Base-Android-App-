@@ -18,6 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.clashroyalebase.PlayerInfo;
+import com.example.clashroyalebase.Player_Buffering;
 import com.example.clashroyalebase.R;
 
 import org.json.JSONArray;

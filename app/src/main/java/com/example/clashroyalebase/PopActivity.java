@@ -42,23 +42,48 @@ public class PopActivity extends AppCompatActivity {
         Button b10= findViewById(R.id.button10);
 
         buttons = new Button[]{b1,b2,b3,b4,b5,b6,b7,b8,b9,b10};
+        final int j = GalleryFragment.share_button;
+
+        if (GalleryFragment.empty_decks == true){
+            Toast toast = Toast.makeText(PopActivity.this,
+                    "Nothing to Copy",
+                    Toast.LENGTH_SHORT);
+
+            toast.show();
+            finish();
+        }
 
         for (int i=0; i<buttons.length;i++){
             final Button b = buttons[i];
-            final int j = GalleryFragment.share_button;
+
             b.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     try{
                         int deck = Integer.parseInt((String) b.getTag());
-                        HomeFragment.decks[deck].c1.setImageDrawable(GalleryFragment.drawables.get(j *50));
-                        HomeFragment.decks[deck].c2.setImageDrawable(GalleryFragment.drawables.get(j*50+1));
-                        HomeFragment.decks[deck].c3.setImageDrawable(GalleryFragment.drawables.get(j*50+2));
-                        HomeFragment.decks[deck].c4.setImageDrawable(GalleryFragment.drawables.get(j*50+3));
-                        HomeFragment.decks[deck].c5.setImageDrawable(GalleryFragment.drawables.get(j*50+4));
-                        HomeFragment.decks[deck].c6.setImageDrawable(GalleryFragment.drawables.get(j*50+5));
-                        HomeFragment.decks[deck].c7.setImageDrawable(GalleryFragment.drawables.get(j*50+6));
-                        HomeFragment.decks[deck].c8.setImageDrawable(GalleryFragment.drawables.get(j*50+7));
+                        HomeFragment.decks[deck].c1.setImageDrawable(GalleryFragment.drawables.get(j *8));
+                        HomeFragment.decks[deck].c1.setTag(GalleryFragment.meta_cards.get(j*8).getTag());
+
+                        HomeFragment.decks[deck].c2.setImageDrawable(GalleryFragment.drawables.get(j*8+1));
+                        HomeFragment.decks[deck].c2.setTag(GalleryFragment.meta_cards.get(j*8+1).getTag());
+
+                        HomeFragment.decks[deck].c3.setImageDrawable(GalleryFragment.drawables.get(j*8+2));
+                        HomeFragment.decks[deck].c3.setTag(GalleryFragment.meta_cards.get(j*8+2).getTag());
+
+                        HomeFragment.decks[deck].c4.setImageDrawable(GalleryFragment.drawables.get(j*8+3));
+                        HomeFragment.decks[deck].c4.setTag(GalleryFragment.meta_cards.get(j*8+3).getTag());
+
+                        HomeFragment.decks[deck].c5.setImageDrawable(GalleryFragment.drawables.get(j*8+4));
+                        HomeFragment.decks[deck].c5.setTag(GalleryFragment.meta_cards.get(j*8+4).getTag());
+
+                        HomeFragment.decks[deck].c6.setImageDrawable(GalleryFragment.drawables.get(j*8+5));
+                        HomeFragment.decks[deck].c6.setTag(GalleryFragment.meta_cards.get(j*8+5).getTag());
+
+                        HomeFragment.decks[deck].c7.setImageDrawable(GalleryFragment.drawables.get(j*8+6));
+                        HomeFragment.decks[deck].c7.setTag(GalleryFragment.meta_cards.get(j*8+6).getTag());
+
+                        HomeFragment.decks[deck].c8.setImageDrawable(GalleryFragment.drawables.get(j*8+7));
+                        HomeFragment.decks[deck].c8.setTag(GalleryFragment.meta_cards.get(j*8+7).getTag());
 
                         Toast toast = Toast.makeText(PopActivity.this,
                                 "Deck Copied",
@@ -66,6 +91,7 @@ public class PopActivity extends AppCompatActivity {
 
                         toast.show();
 
+                        HomeFragment.GetAverageElixir();
                         finish();
 
                     }catch(NullPointerException e){
@@ -74,5 +100,7 @@ public class PopActivity extends AppCompatActivity {
                 }
             });
         }
+
+
     }
 }

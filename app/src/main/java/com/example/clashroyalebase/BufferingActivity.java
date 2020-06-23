@@ -24,6 +24,7 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Map;
 
 
 public class BufferingActivity extends AppCompatActivity {
@@ -167,7 +168,7 @@ public class BufferingActivity extends AppCompatActivity {
                                     url = "baby_dragon";
                                     break;
                             }
-
+                            GalleryFragment.meta_cards.get(i).setTag(url);
 
 //                        try {
                             int id = HomeFragment.drawable_dict.get(url);

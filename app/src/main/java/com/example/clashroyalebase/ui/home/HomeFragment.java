@@ -2,6 +2,8 @@ package com.example.clashroyalebase.ui.home;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,12 +20,14 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.clashroyalebase.Activity2;
 import com.example.clashroyalebase.R;
+import com.example.clashroyalebase.TrialActivity;
 
+import java.util.HashMap;
 import java.util.Hashtable;
 
 public class HomeFragment extends Fragment {
-    public static Hashtable<String, Integer> elixir_dict = new Hashtable<String, Integer>();
-    public static Hashtable<String, Integer> drawable_dict = new Hashtable<String, Integer>();
+    public static HashMap<String, Integer> elixir_dict = new HashMap<String, Integer>();
+    public static HashMap<String, Integer> drawable_dict = new HashMap<String, Integer>();
 
     public static Deck[] decks = new Deck[0];
 
@@ -127,6 +131,7 @@ public class HomeFragment extends Fragment {
  /*
         My Code
          */
+
 
         addButton1 = root.findViewById(R.id.add1);addButton2 = root.findViewById(R.id.add2);addButton3 = root.findViewById(R.id.add3);addButton4 = root.findViewById(R.id.add4);
         addButton5 = root.findViewById(R.id.add5);addButton6 = root.findViewById(R.id.add6);addButton7 = root.findViewById(R.id.add7);addButton8 = root.findViewById(R.id.add8);
@@ -343,6 +348,7 @@ public class HomeFragment extends Fragment {
 
     public static void GetAverageElixir() {
 
+
         for (int j=0; j<decks.length;j++) {
             double total = 0;
             double average;
@@ -408,6 +414,7 @@ public class HomeFragment extends Fragment {
     }
 
     public void openActivity2(int pos){
+
         Intent intent = new Intent(getActivity(), Activity2.class);
         Bundle b = new Bundle();
         b.putInt("key", pos);

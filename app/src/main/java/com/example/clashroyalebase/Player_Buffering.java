@@ -20,12 +20,15 @@ public class Player_Buffering extends AppCompatActivity {
         final ImageView arena = PlayerInfo.arena;
         final ImageView[] chest_buttons = PlayerInfo.chest_buttons;
 
-
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         new Thread(new Runnable() {
             @Override
             public void run() {
-
 
 
 
@@ -145,7 +148,7 @@ public class Player_Buffering extends AppCompatActivity {
 
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            finish();
+                           finish();
                         }
 
                     }
