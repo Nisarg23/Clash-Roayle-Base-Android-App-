@@ -64,6 +64,7 @@ public class Player_Buffering extends AppCompatActivity {
                         SlideshowFragment.chestAt.add((Integer) o.get("index"));
                     }
 
+
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
                     System.out.println("MALFORMEDURL");
@@ -84,7 +85,8 @@ public class Player_Buffering extends AppCompatActivity {
                     @Override
                     public void run() {
 
-                        for (int i=0; i<14;i++){
+                        for (int i=0; i<SlideshowFragment.chest.size();i++){
+                            System.out.println(i);
                             switch (SlideshowFragment.chest.get(i)){
                                 case "Silver Chest":
                                     chest_buttons[i].setImageResource(R.drawable.silver_chest);
@@ -191,6 +193,9 @@ public class Player_Buffering extends AppCompatActivity {
                                     break;
                             }
                             Thread.sleep(1000);
+
+                            SlideshowFragment.chest.clear();
+                            SlideshowFragment.chestAt.clear();
                             finish();
 
                         } catch (JSONException | InterruptedException e) {
