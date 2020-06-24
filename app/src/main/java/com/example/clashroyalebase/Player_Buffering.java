@@ -119,6 +119,7 @@ public class Player_Buffering extends AppCompatActivity {
                             PlayerInfo.player_name.setText( o.get("name").toString());
                             PlayerInfo.tag.setText(o.get("tag").toString());
                             PlayerInfo.trophies.setText(o.get("trophies").toString());
+                            PlayerInfo.lvl_text.setText(o.get("expLevel").toString());
 
                             JSONObject obj = new JSONObject( o.get("arena").toString());
                             String arena_name = obj.get("name").toString();

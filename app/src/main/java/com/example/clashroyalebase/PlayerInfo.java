@@ -25,6 +25,8 @@ public class PlayerInfo extends AppCompatActivity {
     public static TextView[] indexs;
     public static ImageView[] chest_buttons;
 
+    public static TextView lvl_text;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +60,10 @@ public class PlayerInfo extends AppCompatActivity {
     TextView t12 = findViewById(R.id.index12);
     TextView t13 = findViewById(R.id.index13);
     TextView t14 = findViewById(R.id.index14);
+
+    lvl_text = findViewById(R.id.level_text);
+
+
 
      player_name = findViewById(R.id.player_name);
      tag = findViewById(R.id.tag);
