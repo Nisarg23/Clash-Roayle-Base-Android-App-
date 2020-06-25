@@ -57,7 +57,6 @@ public class Player_Buffering extends AppCompatActivity {
                     obj = new JSONObject(response.toString());
 
                     JSONArray array = (JSONArray) obj.get("items");
-                    System.out.println("array "+array);
                     for (int i = 0; i < array.length(); i++) {
                         JSONObject o = new JSONObject(array.get(i).toString());
                         SlideshowFragment.chest.add((String) o.get("name"));
@@ -86,7 +85,6 @@ public class Player_Buffering extends AppCompatActivity {
                     public void run() {
 
                         for (int i=0; i<SlideshowFragment.chest.size();i++){
-                            System.out.println(i);
                             switch (SlideshowFragment.chest.get(i)){
                                 case "Silver Chest":
                                     chest_buttons[i].setImageResource(R.drawable.silver_chest);
@@ -120,11 +118,53 @@ public class Player_Buffering extends AppCompatActivity {
                             PlayerInfo.tag.setText(o.get("tag").toString());
                             PlayerInfo.trophies.setText(o.get("trophies").toString());
                             PlayerInfo.lvl_text.setText(o.get("expLevel").toString());
+                            PlayerInfo.level.setText(o.get("expLevel").toString());
+                            PlayerInfo.highest_best.setText(o.get("bestTrophies").toString());
+                            PlayerInfo.wins.setText(o.get("wins").toString());
+                            PlayerInfo.losses.setText(o.get("losses").toString());
+                            PlayerInfo.battle_count.setText(o.get("battleCount").toString());
+                            PlayerInfo.three_crown_wins.setText(o.get("threeCrownWins").toString());
+                            PlayerInfo.max_wins.setText(o.get("challengeMaxWins").toString());
+                            PlayerInfo.cards_won.setText(o.get("challengeCardsWon").toString());
+                            PlayerInfo.tournament_cards_won.setText(o.get("tournamentCardsWon").toString());
+                            PlayerInfo.battle_count_tournaments.setText(o.get("tournamentBattleCount").toString());
+
+
+                            int wins = Integer.parseInt(o.get("wins").toString());
+                            int losses = Integer.parseInt(o.get("losses").toString());
+                            int total_games = Integer.parseInt(o.get("battleCount").toString());
+
+                            int win_rate = Math.round((wins*100) / total_games);
+                            PlayerInfo.win_rate.setText(Integer.toString(win_rate)+"%");
+                            PlayerInfo.draws.setText(Integer.toString(total_games-wins-losses));
+
+
+                            JSONObject league = (JSONObject) o.get("leagueStatistics");
+                            JSONObject bestSeason = (JSONObject) league.get("bestSeason");
+
+                            PlayerInfo.best_season.setText(bestSeason.get("id").toString());
+                            PlayerInfo.best_season_trophies.setText(bestSeason.get("trophies").toString());
+
+                            JSONObject currentSeason = (JSONObject) league.get("currentSeason");
+                            PlayerInfo.current_trophies.setText(currentSeason.get("trophies").toString());
+
+                            JSONObject previousSeason = (JSONObject) league.get("previousSeason");
+                            PlayerInfo.previous_trophies.setText(previousSeason.get("trophies").toString());
+                            PlayerInfo.previous_season.setText(previousSeason.get("id").toString());
+                            PlayerInfo.highest_previous_trophies.setText(previousSeason.get("bestTrophies").toString());
+
+                            int torunament_games = Integer.parseInt(o.get("tournamentBattleCount").toString());
+
+                            int time = (((total_games + torunament_games)*3)/60)/24;
+                            PlayerInfo.days_played.setText(Integer.toString(time));
+
+
+
+
 
                             JSONObject obj = new JSONObject( o.get("arena").toString());
                             String arena_name = obj.get("name").toString();
-
-
+                            PlayerInfo.league.setText(arena_name);
                             switch (arena_name){
                                 case "Arena 1":
                                     arena.setImageResource(R.drawable.arena1);
@@ -193,7 +233,7 @@ public class Player_Buffering extends AppCompatActivity {
                                     arena.setImageResource(R.drawable.ultimate_champion);
                                     break;
                             }
-                            Thread.sleep(1000);
+                            Thread.sleep(500);
 
                             SlideshowFragment.chest.clear();
                             SlideshowFragment.chestAt.clear();

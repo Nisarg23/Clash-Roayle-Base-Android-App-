@@ -4,14 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.example.clashroyalebase.ui.slideshow.SlideshowFragment;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class PlayerInfo extends AppCompatActivity {
 
@@ -26,6 +20,35 @@ public class PlayerInfo extends AppCompatActivity {
     public static ImageView[] chest_buttons;
 
     public static TextView lvl_text;
+
+    public static TextView best_season;
+    public static TextView level;
+
+    public static TextView best_season_trophies;
+    public static TextView highest_previous_trophies;
+    public static TextView current_trophies;
+    public static TextView previous_season;
+    public static TextView highest_best;
+    public static TextView previous_trophies;
+
+    public static TextView league;
+    public static TextView wins;
+    public static TextView max_wins;
+    public static TextView three_crown_wins;
+    public static TextView losses;
+    public static TextView battle_count;
+    public static TextView draws;
+    public static TextView win_rate;
+    public static TextView cards_won;
+    public static TextView battle_count_tournaments;
+    public static TextView days_played;
+
+    public static TextView tournament_cards_won;
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +84,7 @@ public class PlayerInfo extends AppCompatActivity {
     TextView t13 = findViewById(R.id.index13);
     TextView t14 = findViewById(R.id.index14);
 
-    lvl_text = findViewById(R.id.level_text);
+    lvl_text = findViewById(R.id.star_text);
 
 
 
@@ -82,6 +105,27 @@ public class PlayerInfo extends AppCompatActivity {
     };
 
       arena = findViewById(R.id.arena);
+
+      best_season = findViewById(R.id.best_season_txt);
+        level = findViewById(R.id.level_txt);
+        best_season_trophies = findViewById(R.id.best_season_trophies_txt);
+        current_trophies = findViewById(R.id.current_trophies_txt);
+        previous_season = findViewById(R.id.previeous_season_txt);
+        highest_best = findViewById(R.id.personal_best_txt);
+        previous_trophies = findViewById(R.id.previous_season_trophies_txt);
+        highest_previous_trophies = findViewById(R.id.best_trophies_txt);
+        league = findViewById(R.id.league_txt);
+        wins = findViewById(R.id.wins_txt);
+        max_wins = findViewById(R.id.max_wins_txt);
+        cards_won = findViewById(R.id.cards_won_txt);
+        three_crown_wins = findViewById(R.id.three_crown_wins_txt);
+        losses = findViewById(R.id.losses_txt);
+        battle_count = findViewById(R.id.battle_count_txt);
+        days_played = findViewById(R.id.days_spent_playing_txt);
+        win_rate = findViewById(R.id.win_rate_txt);
+        draws = findViewById(R.id.draws_txt);
+        battle_count_tournaments = findViewById(R.id.tournament_battle_count_txt);
+        tournament_cards_won = findViewById(R.id.tournament_cards_won_txt);
 
         startActivity(new Intent(this, Player_Buffering.class));
 

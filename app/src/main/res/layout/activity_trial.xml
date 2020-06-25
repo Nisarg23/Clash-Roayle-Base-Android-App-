@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/level" />
 
     <TextView
-        android:id="@+id/level_text"
+        android:id="@+id/star_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
