@@ -13,9 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".TrialActivity"></activity>
-        <activity android:name=".Player_Buffering" />
-        <activity android:name=".PlayerInfo" />
+        <activity android:name=".TrialActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".Player_Buffering"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PlayerInfo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.CustomTheme"/>
         <activity
             android:name=".PopActivity"
             android:screenOrientation="portrait"

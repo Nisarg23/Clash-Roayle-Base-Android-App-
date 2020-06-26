@@ -13,10 +13,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.clashroyalebase.Fragment1;
 import com.example.clashroyalebase.PlayerInfo;
 import com.example.clashroyalebase.Player_Buffering;
 import com.example.clashroyalebase.R;
@@ -64,6 +69,18 @@ public class SlideshowFragment extends Fragment {
 
         player_tag = root.findViewById(R.id.player_tag);
         search_player = root.findViewById(R.id.search_player);
+
+
+//        Fragment f1 = new Fragment1();
+//        FragmentTransaction fm = getChildFragmentManager().beginTransaction();
+//        fm.add(R.id.child_fragment_container,f1).commitNow();
+//        fm.hide(f1).commitNow();
+
+        getChildFragmentManager().beginTransaction().add(R.id.child_fragment_container,new Fragment1(),"fragment1").commitNow();
+        Fragment f3 = getChildFragmentManager().findFragmentByTag("fragment1");
+        //getChildFragmentManager().beginTransaction().hide(f3).commitNow();
+
+
 
 
 

@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class PlayerInfo extends AppCompatActivity {
@@ -128,6 +132,24 @@ public class PlayerInfo extends AppCompatActivity {
         tournament_cards_won = findViewById(R.id.tournament_cards_won_txt);
 
         startActivity(new Intent(this, Player_Buffering.class));
+
+        Button b = findViewById(R.id.save_tag);
+
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DisplayMetrics dm = new DisplayMetrics();
+                getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+                int width = (int) (dm.widthPixels*.95);
+                int height = (int) (dm.heightPixels*.4);
+
+                getWindow().setLayout(width,height);
+
+                ScrollView scrollView = findViewById(R.id.scrollview);
+                scrollView.scrollTo(0,0);
+            }
+        });
 
 
     }
