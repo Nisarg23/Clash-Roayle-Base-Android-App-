@@ -237,6 +237,13 @@ public class Player_Buffering extends AppCompatActivity {
 
                             SlideshowFragment.chest.clear();
                             SlideshowFragment.chestAt.clear();
+
+                            if (PlayerInfo.triggered_refresh == true){
+                                System.out.println("REFRESHING");
+                                PlayerInfo.triggered_refresh = false;
+                                refresh();
+
+                            }
                             finish();
 
                         } catch (JSONException | InterruptedException e) {
@@ -249,6 +256,69 @@ public class Player_Buffering extends AppCompatActivity {
             }
 
         }).start();
+
+
+    }
+    public  void refresh(){
+        Fragment1.player_name.setText(PlayerInfo.player_name.getText());
+        Fragment1.best_season.setText(PlayerInfo.best_season.getText());
+        Fragment1.level.setText(PlayerInfo.level.getText());
+        Fragment1.best_season_trophies.setText(PlayerInfo.best_season_trophies.getText());
+        Fragment1.current_trophies.setText(PlayerInfo.current_trophies.getText());
+        Fragment1.previous_season.setText(PlayerInfo.previous_season.getText());
+        Fragment1.highest_previous_trophies.setText(PlayerInfo.highest_previous_trophies.getText());
+        Fragment1.league.setText(PlayerInfo.league.getText());
+        Fragment1.wins.setText(PlayerInfo.wins.getText());
+        Fragment1.max_wins.setText(PlayerInfo.max_wins.getText());
+        Fragment1.cards_won.setText(PlayerInfo.cards_won.getText());
+        Fragment1.three_crown_wins.setText(PlayerInfo.three_crown_wins.getText());
+        Fragment1.losses.setText(PlayerInfo.losses.getText());
+        Fragment1.battle_count.setText(PlayerInfo.battle_count.getText());
+        Fragment1.days_played.setText(PlayerInfo.days_played.getText());
+        Fragment1.win_rate.setText(PlayerInfo.win_rate.getText());
+        Fragment1.draws.setText(PlayerInfo.draws.getText());
+        Fragment1.battle_count_tournaments.setText(PlayerInfo.battle_count_tournaments.getText());
+        Fragment1.tournament_cards_won.setText(PlayerInfo.tournament_cards_won.getText());
+        Fragment1.highest_best.setText(PlayerInfo.highest_best.getText());
+        Fragment1.previous_trophies.setText(PlayerInfo.previous_trophies.getText());
+        Fragment1.tag.setText(PlayerInfo.tag.getText());
+        Fragment1.trophies.setText(PlayerInfo.trophies.getText());
+        Fragment1.star_txt.setText(PlayerInfo.lvl_text.getText());
+
+        Fragment1.t1.setText(PlayerInfo.t1.getText());
+        Fragment1.t2.setText(PlayerInfo.t2.getText());
+        Fragment1.t3.setText(PlayerInfo.t3.getText());
+        Fragment1.t4.setText(PlayerInfo.t4.getText());
+        Fragment1.t5.setText(PlayerInfo.t5.getText());
+        Fragment1.t6.setText(PlayerInfo.t6.getText());
+        Fragment1.t7.setText(PlayerInfo.t7.getText());
+        Fragment1.t8.setText(PlayerInfo.t8.getText());
+        Fragment1.t9.setText(PlayerInfo.t9.getText());
+        Fragment1.t10.setText(PlayerInfo.t10.getText());
+        Fragment1.t11.setText(PlayerInfo.t11.getText());
+        Fragment1.t12.setText(PlayerInfo.t12.getText());
+        Fragment1.t13.setText(PlayerInfo.t13.getText());
+        Fragment1.t14.setText(PlayerInfo.t14.getText());
+
+
+        Fragment1.arena.setImageDrawable(PlayerInfo.arena.getDrawable());
+        Fragment1.chest1.setImageDrawable(PlayerInfo.chest1.getDrawable());
+        Fragment1.chest2.setImageDrawable(PlayerInfo.chest2.getDrawable());
+        Fragment1.chest3.setImageDrawable(PlayerInfo.chest3.getDrawable());
+        Fragment1.chest4.setImageDrawable(PlayerInfo.chest4.getDrawable());
+        Fragment1.chest5.setImageDrawable(PlayerInfo.chest5.getDrawable());
+        Fragment1.chest6.setImageDrawable(PlayerInfo.chest6.getDrawable());
+        Fragment1.chest7.setImageDrawable(PlayerInfo.chest7.getDrawable());
+        Fragment1.chest8.setImageDrawable(PlayerInfo.chest8.getDrawable());
+        Fragment1.chest9.setImageDrawable(PlayerInfo.chest9.getDrawable());
+        Fragment1.chest10.setImageDrawable(PlayerInfo.chest10.getDrawable());
+        Fragment1.chest11.setImageDrawable(PlayerInfo.chest11.getDrawable());
+        Fragment1.chest12.setImageDrawable(PlayerInfo.chest12.getDrawable());
+        Fragment1.chest13.setImageDrawable(PlayerInfo.chest13.getDrawable());
+        Fragment1.chest14.setImageDrawable(PlayerInfo.chest14.getDrawable());
+
+
+        finish();
 
 
     }

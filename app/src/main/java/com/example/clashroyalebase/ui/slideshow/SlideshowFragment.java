@@ -48,6 +48,8 @@ public class SlideshowFragment extends Fragment {
     static Boolean invalid;
     public static JSONArray arr;
 
+    public static Button refresh;
+
 
     JSONObject obj;
     public static JSONObject obj_player;
@@ -58,6 +60,9 @@ public class SlideshowFragment extends Fragment {
 
     public static ArrayList<String> chest = new ArrayList<String>();
     public static ArrayList<Integer> chestAt = new ArrayList<Integer>();
+
+    public static Fragment fragment1;
+    public static FragmentTransaction fm;
 
     public static final String key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjVmYjEyNDI0LWIwODEtNDMwNC05MWQ0LTlkNjIyYmEwN2M5OSIsImlhdCI6MTU5MjIzNDk3MSwic3ViIjoiZGV2ZWxvcGVyLzBlZjM4ZDg5LWI1MjItYThhMC01YWE2LTQ1OGZlNjZmMTM4ZSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIyNC4yMzUuMjEwLjc2Il0sInR5cGUiOiJjbGllbnQifV19.aCOBc9Gg2fyKCcd4GiyO3kKvG5tPWp52vWWLdJ_L8e_8WB9WVAorbx3fTiej3dfIbIK7rCKveNVwTUdWCLBJ3w";
 
@@ -77,12 +82,26 @@ public class SlideshowFragment extends Fragment {
 //        fm.hide(f1).commitNow();
 
         getChildFragmentManager().beginTransaction().add(R.id.child_fragment_container,new Fragment1(),"fragment1").commitNow();
-        Fragment f3 = getChildFragmentManager().findFragmentByTag("fragment1");
-        //getChildFragmentManager().beginTransaction().hide(f3).commitNow();
+        fragment1 = getChildFragmentManager().findFragmentByTag("fragment1");
+         fm = getChildFragmentManager().beginTransaction();
+        fm.hide(fragment1).commitNow();
 
 
 
+        refresh = root.findViewById(R.id.refresh);
 
+
+        refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String s = (String) Fragment1.tag.getText();
+                s = s.substring(1);
+                SlideshowFragment.player_tag.setText(s);
+                PlayerInfo.triggered_refresh = true;
+                search_player.performClick();
+
+            }
+        });
 
 
         searchButtonListener();
