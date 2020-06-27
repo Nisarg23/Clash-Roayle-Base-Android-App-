@@ -320,28 +320,7 @@ public class HomeFragment extends Fragment {
          decks = new Deck[]{deck1,deck2,deck3,deck4,deck5,deck6,deck7,deck8,deck9,deck10};
 
 
-        cardView1.setImageResource(R.drawable.arena1);
-        cardView2.setImageResource(R.drawable.arena2);
-        cardView3.setImageResource(R.drawable.arena3);
-        cardView4.setImageResource(R.drawable.arena4);
-        cardView5.setImageResource(R.drawable.arena5);
-        cardView6.setImageResource(R.drawable.arena6);
-        cardView7.setImageResource(R.drawable.arena7);
-        cardView8.setImageResource(R.drawable.arena8);
-        cardView9.setImageResource(R.drawable.arena9);
-        cardView10.setImageResource(R.drawable.arena10);
-        cardView11.setImageResource(R.drawable.arena11);
-        cardView12.setImageResource(R.drawable.arena12);
-        cardView13.setImageResource(R.drawable.league1);
-        cardView14.setImageResource(R.drawable.league2);
-        cardView15.setImageResource(R.drawable.league3);
-        cardView16.setImageResource(R.drawable.league4);
-        cardView17.setImageResource(R.drawable.league5);
-        cardView18.setImageResource(R.drawable.league6);
-        cardView19.setImageResource(R.drawable.league7);
-        cardView17.setImageResource(R.drawable.league8);
-        cardView18.setImageResource(R.drawable.league9);
-        cardView19.setImageResource(R.drawable.league10);
+
 
         AddClick();
         CardClick();
