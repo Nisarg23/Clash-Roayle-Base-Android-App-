@@ -203,34 +203,34 @@ public class Player_Buffering extends AppCompatActivity {
                                     arena.setImageResource(R.drawable.arena12);
                                     break;
                                 case "Challenger I":
-                                    arena.setImageResource(R.drawable.challenger1);
+                                    arena.setImageResource(R.drawable.league1);
                                     break;
                                 case "Challenger II":
-                                    arena.setImageResource(R.drawable.challenger2);
+                                    arena.setImageResource(R.drawable.league2);
                                     break;
                                 case "Challenger III":
-                                    arena.setImageResource(R.drawable.challenger3);
+                                    arena.setImageResource(R.drawable.league3);
                                     break;
                                 case "Master I":
-                                    arena.setImageResource(R.drawable.master1);
+                                    arena.setImageResource(R.drawable.league4);
                                     break;
                                 case "Master II":
-                                    arena.setImageResource(R.drawable.master2);
+                                    arena.setImageResource(R.drawable.league5);
                                     break;
                                 case "Master III":
-                                    arena.setImageResource(R.drawable.master3);
+                                    arena.setImageResource(R.drawable.league6);
                                     break;
                                 case "Champion":
-                                    arena.setImageResource(R.drawable.champion);
+                                    arena.setImageResource(R.drawable.league7);
                                     break;
                                 case "Grand Champion":
-                                    arena.setImageResource(R.drawable.grand_champion);
+                                    arena.setImageResource(R.drawable.league8);
                                     break;
                                 case "Royal Champion":
-                                    arena.setImageResource(R.drawable.royal_champion);
+                                    arena.setImageResource(R.drawable.league9);
                                     break;
                                 case "Ultimate Champion":
-                                    arena.setImageResource(R.drawable.ultimate_champion);
+                                    arena.setImageResource(R.drawable.league10);
                                     break;
                             }
                             Thread.sleep(500);
