@@ -1,7 +1,9 @@
 package com.example.clashroyalebase.ui.gallery;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -56,7 +58,7 @@ public class GalleryFragment extends Fragment {
     public static int share_button = -1;
     public static Boolean empty_decks = true;
 
-    public Spinner spinner;
+    public static Spinner spinner;
 
 
 
@@ -194,6 +196,68 @@ public class GalleryFragment extends Fragment {
         constraintSet.applyTo(constraintLayout);
         spinner_click();
         deck_copy_click();
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("AppData", Context.MODE_PRIVATE);
+        String spinner_value = sharedPreferences.getString("spinner","");
+        switch (spinner_value){
+            case "Legendary Arena":
+                spinner.setSelection(13);
+                empty_decks = false;
+                break;
+            case "Tournaments":
+                spinner.setSelection(14);
+                empty_decks = false;
+                break;
+            case "Arena 12":
+                spinner.setSelection(12);
+                empty_decks = false;
+                break;
+            case "Arena 11":
+                spinner.setSelection(11);
+                empty_decks = false;
+                break;
+            case "Arena 10":
+                spinner.setSelection(10);
+                empty_decks = false;
+                break;
+            case "Arena 9":
+                spinner.setSelection(9);
+                empty_decks = false;
+                break;
+            case "Arena 8":
+                spinner.setSelection(8);
+                empty_decks = false;
+                break;
+            case "Arena 7":
+                spinner.setSelection(7);
+                empty_decks = false;
+                break;
+            case "Arena 6":
+                spinner.setSelection(6);
+                empty_decks = false;
+                break;
+            case "Arena 5":
+                spinner.setSelection(5);
+                empty_decks = false;
+                break;
+            case "Arena 4":
+                spinner.setSelection(4);
+                empty_decks = false;
+                break;
+            case "Arena 3":
+                spinner.setSelection(3);
+                empty_decks = false;
+                break;
+            case "Arena 2":
+                spinner.setSelection(2);
+                empty_decks = false;
+                break;
+            case "Arena 1":
+                spinner.setSelection(1);
+                empty_decks = false;
+                break;
+
+
+        }
 
 
         return root;

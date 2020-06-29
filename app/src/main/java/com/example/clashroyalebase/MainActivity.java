@@ -223,7 +223,25 @@ public class MainActivity extends AppCompatActivity implements
     private void save(){
         SharedPreferences sharedPreferences = getSharedPreferences("AppData", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("card1",HomeFragment.cardView1.getTag().toString());
+
+        for (int i=0; i<HomeFragment.cardViews.length;i++){
+            String key = "card" + Integer.toString((i+1));
+            editor.putString(key,HomeFragment.cardViews[i].getTag().toString());
+
+        }
+
+        for (int i=0; i<HomeFragment.decks.length;i++){
+            String deck_text = HomeFragment.decks[i].deck_text_view.getText().toString();
+            String elixir_text = HomeFragment.decks[i].elixir_text_view.getText().toString();
+            String deck = "deck" + Integer.toString((i+1));
+            String elixir = "elixir" + Integer.toString((i+1));
+            editor.putString(deck,deck_text);
+            editor.putString(elixir,elixir_text);
+
+        }
+
+        String spinner =  GalleryFragment.spinner.getSelectedItem().toString();
+        editor.putString("spinner",spinner);
         editor.commit();
 
     }

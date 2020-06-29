@@ -507,12 +507,26 @@ public class HomeFragment extends Fragment {
     }
     protected void Start()  {
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("AppData", Context.MODE_PRIVATE);
-        String card1 = sharedPreferences.getString("card1","");
 
+        for (int i=0; i<HomeFragment.cardViews.length;i++){
+            String key = "card" + Integer.toString((i+1));
+            String value = sharedPreferences.getString(key,"");
+            if (!value.equals("")){
+                HomeFragment.cardViews[i].setImageResource(drawable_dict.get(value));
+                HomeFragment.cardViews[i].setTag(value);
+            }
 
-        if (!card1.equals("")){
-            HomeFragment.cardView1.setImageResource(drawable_dict.get(card1));
         }
+        for (int i=0; i<HomeFragment.decks.length;i++){
+            String deck_key = "deck" + Integer.toString((i+1));
+            String elixir_key = "elixir" + Integer.toString((i+1));
+            String deck_value = sharedPreferences.getString(deck_key,"");
+            String elixir_value = sharedPreferences.getString(elixir_key,"");
+            HomeFragment.decks[i].deck_text_view.setText(deck_value);
+            HomeFragment.decks[i].elixir_text_view.setText(elixir_value);
+        }
+
+
     }
 
 }
