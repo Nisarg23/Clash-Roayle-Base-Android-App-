@@ -34,4 +34,8 @@ public class LoadScreen extends AppCompatActivity {
         anim.setDuration(1000);
         progressBar.setAnimation(anim);
     }
+
+    public void onBackPressed(){
+
+    }
 }

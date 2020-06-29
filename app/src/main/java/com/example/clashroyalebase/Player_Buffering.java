@@ -322,4 +322,7 @@ public class Player_Buffering extends AppCompatActivity {
 
 
     }
+    public void onBackPressed(){
+
+    }
 }

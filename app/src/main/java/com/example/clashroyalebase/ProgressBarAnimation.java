@@ -35,4 +35,6 @@ public class ProgressBarAnimation extends Animation {
                 context.startActivity(new Intent(context,MainActivity.class));
             }
         }
+
+
 }
