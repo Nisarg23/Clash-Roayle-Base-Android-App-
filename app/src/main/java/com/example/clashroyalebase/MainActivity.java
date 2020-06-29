@@ -1,5 +1,7 @@
 package com.example.clashroyalebase;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -86,6 +88,10 @@ public class MainActivity extends AppCompatActivity implements
 
 
 
+
+
+
+
     }
 //    public void selectItem(int position){
 //        FragmentManager fragmentManager = getSupportFragmentManager();
@@ -127,14 +133,14 @@ public class MainActivity extends AppCompatActivity implements
 //        selectItem(position);
 //    }
 
-    public boolean onOptionsItemSelected(MenuItem item){
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings){
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    public boolean onOptionsItemSelected(MenuItem item){
+//        int id = item.getItemId();
+//
+//        if (id == R.id.action_settings){
+//            return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -179,7 +185,11 @@ public class MainActivity extends AppCompatActivity implements
         fragment_selected.replace(tag,true);
 
         drawer.closeDrawer(GravityCompat.START);
+
+
     }
+
+
 
 
 
@@ -209,6 +219,21 @@ public class MainActivity extends AppCompatActivity implements
     public void onBackPressed() {
         moveTaskToBack(true);
     }
+
+    private void save(){
+        SharedPreferences sharedPreferences = getSharedPreferences("AppData", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("card1",HomeFragment.cardView1.getTag().toString());
+        editor.commit();
+
+    }
+    public void onStop(){
+        save();
+        super.onStop();
+
+    }
+
+
 
 
 

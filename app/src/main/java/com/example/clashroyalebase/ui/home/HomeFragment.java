@@ -1,7 +1,9 @@
 package com.example.clashroyalebase.ui.home;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -326,6 +328,7 @@ public class HomeFragment extends Fragment {
         CardClick();
         DeckName();
         GetAverageElixir();
+        Start();
         return root;
     }
 
@@ -502,5 +505,15 @@ public class HomeFragment extends Fragment {
 
         }
     }
+    protected void Start()  {
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("AppData", Context.MODE_PRIVATE);
+        String card1 = sharedPreferences.getString("card1","");
+
+
+        if (!card1.equals("")){
+            HomeFragment.cardView1.setImageResource(drawable_dict.get(card1));
+        }
+    }
+
 }
 
