@@ -31,6 +31,7 @@ public class HomeFragment extends Fragment {
     public static HashMap<String, Integer> elixir_dict = new HashMap<String, Integer>();
     public static HashMap<String, Integer> drawable_dict = new HashMap<String, Integer>();
 
+
     public static Deck[] decks = new Deck[0];
 
 

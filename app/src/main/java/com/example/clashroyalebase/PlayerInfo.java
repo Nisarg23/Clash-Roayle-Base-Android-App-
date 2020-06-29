@@ -16,7 +16,7 @@ import com.example.clashroyalebase.ui.slideshow.SlideshowFragment;
 
 public class PlayerInfo extends AppCompatActivity {
 
-    public static Boolean player_info;
+
 
     public static ImageView arena;
     public static TextView player_name;
@@ -217,20 +217,36 @@ public class PlayerInfo extends AppCompatActivity {
 
 
                 Fragment1.arena.setImageDrawable(arena.getDrawable());
+                Fragment1.arena.setTag(arena.getTag());
                 Fragment1.chest1.setImageDrawable(chest1.getDrawable());
+                Fragment1.chest1.setTag(chest1.getTag());
                 Fragment1.chest2.setImageDrawable(chest2.getDrawable());
+                Fragment1.chest2.setTag(chest2.getTag());
                 Fragment1.chest3.setImageDrawable(chest3.getDrawable());
+                Fragment1.chest3.setTag(chest3.getTag());
                 Fragment1.chest4.setImageDrawable(chest4.getDrawable());
+                Fragment1.chest4.setTag(chest4.getTag());
                 Fragment1.chest5.setImageDrawable(chest5.getDrawable());
+                Fragment1.chest5.setTag(chest5.getTag());
                 Fragment1.chest6.setImageDrawable(chest6.getDrawable());
+                Fragment1.chest6.setTag(chest6.getTag());
                 Fragment1.chest7.setImageDrawable(chest7.getDrawable());
+                Fragment1.chest7.setTag(chest7.getTag());
                 Fragment1.chest8.setImageDrawable(chest8.getDrawable());
+                Fragment1.chest8.setTag(chest8.getTag());
                 Fragment1.chest9.setImageDrawable(chest9.getDrawable());
+                Fragment1.chest9.setTag(chest9.getTag());
                 Fragment1.chest10.setImageDrawable(chest10.getDrawable());
+                Fragment1.chest10.setTag(chest10.getTag());
                 Fragment1.chest11.setImageDrawable(chest11.getDrawable());
+                Fragment1.chest11.setTag(chest11.getTag());
                 Fragment1.chest12.setImageDrawable(chest12.getDrawable());
+                Fragment1.chest12.setTag(chest12.getTag());
                 Fragment1.chest13.setImageDrawable(chest13.getDrawable());
+                Fragment1.chest13.setTag(chest13.getTag());
                 Fragment1.chest14.setImageDrawable(chest14.getDrawable());
+                Fragment1.chest14.setTag(chest14.getTag());
+
 
 
                 SlideshowFragment.refresh.setVisibility(View.VISIBLE);

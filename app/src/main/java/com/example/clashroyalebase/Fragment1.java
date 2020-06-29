@@ -1,5 +1,7 @@
 package com.example.clashroyalebase;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -14,11 +16,7 @@ import android.widget.TextView;
 import com.example.clashroyalebase.ui.slideshow.SlideshowFragment;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Fragment1#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class Fragment1 extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -98,36 +96,7 @@ public class Fragment1 extends Fragment {
     public static TextView t14;
 
     public static Button refresh;
-    public Fragment1() {
-        // Required empty public constructor
-    }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment1.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Fragment1 newInstance(String param1, String param2) {
-        Fragment1 fragment = new Fragment1();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -192,9 +161,99 @@ public class Fragment1 extends Fragment {
          t13 = root.findViewById(R.id.index13);
          t14 = root.findViewById(R.id.index14);
 
+         if (SlideshowFragment.saved == true) {
+             player_name.setText(SlideshowFragment.player_name);
+             best_season.setText(SlideshowFragment.best_season);
+             level.setText(SlideshowFragment.level);
+             best_season_trophies.setText(SlideshowFragment.best_season_trophies);
+             current_trophies.setText(SlideshowFragment.current_trophies);
+             previous_season.setText(SlideshowFragment.previous_season);
+             highest_previous_trophies.setText(SlideshowFragment.highest_previous_trophies);
+             league.setText(SlideshowFragment.league);
+             wins.setText(SlideshowFragment.wins);
+             max_wins.setText(SlideshowFragment.max_wins);
+             cards_won.setText(SlideshowFragment.cards_won);
+             three_crown_wins.setText(SlideshowFragment.three_crown_wins);
+             losses.setText(SlideshowFragment.losses);
+             battle_count.setText(SlideshowFragment.battle_count);
+             days_played.setText(SlideshowFragment.days_played);
+             win_rate.setText(SlideshowFragment.win_rate);
+             draws.setText(SlideshowFragment.draws);
+             battle_count_tournaments.setText(SlideshowFragment.battle_count_tournaments);
+             tournament_cards_won.setText(SlideshowFragment.tournament_cards_won);
+             highest_best.setText(SlideshowFragment.highest_best);
+             previous_trophies.setText(SlideshowFragment.previous_trophies);
+             tag.setText(SlideshowFragment.tag);
+             trophies.setText(SlideshowFragment.trophies);
+             star_txt.setText(SlideshowFragment.lvl_text);
+
+
+             t1.setText(SlideshowFragment.t1);
+             t2.setText(SlideshowFragment.t2);
+             t3.setText(SlideshowFragment.t3);
+             t4.setText(SlideshowFragment.t4);
+             t5.setText(SlideshowFragment.t5);
+             t6.setText(SlideshowFragment.t6);
+             t7.setText(SlideshowFragment.t7);
+             t8.setText(SlideshowFragment.t8);
+             t9.setText(SlideshowFragment.t9);
+             t10.setText(SlideshowFragment.t10);
+             t11.setText(SlideshowFragment.t11);
+             t12.setText(SlideshowFragment.t12);
+             t13.setText(SlideshowFragment.t13);
+             t14.setText(SlideshowFragment.t14);
+
+             if (SlideshowFragment.chest1 !=0){
+                 chest1.setImageResource(SlideshowFragment.chest1);
+             }
+             if (SlideshowFragment.chest2 !=0){
+                 chest2.setImageResource(SlideshowFragment.chest2);
+             }
+             if (SlideshowFragment.chest3 !=0){
+                 chest3.setImageResource(SlideshowFragment.chest3);
+             }
+             if (SlideshowFragment.chest4 !=0){
+                 chest4.setImageResource(SlideshowFragment.chest4);
+             }
+             if (SlideshowFragment.chest5 !=0){
+                 chest5.setImageResource(SlideshowFragment.chest5);
+             }
+             if (SlideshowFragment.chest6 !=0){
+                 chest6.setImageResource(SlideshowFragment.chest6);
+             }
+             if (SlideshowFragment.chest7 !=0){
+                 chest7.setImageResource(SlideshowFragment.chest7);
+             }
+             if (SlideshowFragment.chest8 !=0){
+                 chest8.setImageResource(SlideshowFragment.chest8);
+             }
+             if (SlideshowFragment.chest9 !=0){
+                 chest9.setImageResource(SlideshowFragment.chest9);
+             }
+             if (SlideshowFragment.chest10 !=0){
+                 chest10.setImageResource(SlideshowFragment.chest10);
+             }
+             if (SlideshowFragment.chest11 !=0){
+                 chest11.setImageResource(SlideshowFragment.chest11);
+             }
+             if (SlideshowFragment.chest12 !=0){
+                 chest12.setImageResource(SlideshowFragment.chest12);
+             }
+             if (SlideshowFragment.chest13 !=0){
+                 chest13.setImageResource(SlideshowFragment.chest13);
+             }
+             if (SlideshowFragment.chest14 !=0){
+                 chest14.setImageResource(SlideshowFragment.chest14);
+             }
+
+             if (SlideshowFragment.arena !=0){
+                 arena.setImageResource(SlideshowFragment.arena);
+             }
+         }
 
 
 
         return root;
     }
+
 }

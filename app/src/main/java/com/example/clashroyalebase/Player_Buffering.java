@@ -88,24 +88,31 @@ public class Player_Buffering extends AppCompatActivity {
                             switch (SlideshowFragment.chest.get(i)){
                                 case "Silver Chest":
                                     chest_buttons[i].setImageResource(R.drawable.silver_chest);
+                                    chest_buttons[i].setTag("silver");
                                     break;
                                 case "Giant Chest":
                                     chest_buttons[i].setImageResource(R.drawable.giant_chest);
+                                    chest_buttons[i].setTag("giant");
                                     break;
                                 case "Magical Chest":
                                     chest_buttons[i].setImageResource(R.drawable.magical_chest);
+                                    chest_buttons[i].setTag("magical");
                                     break;
                                 case "Legendary Chest":
                                     chest_buttons[i].setImageResource(R.drawable.legendary_chest);
+                                    chest_buttons[i].setTag("legendary");
                                     break;
                                 case "Golden Chest":
                                     chest_buttons[i].setImageResource(R.drawable.gold_chest);
+                                    chest_buttons[i].setTag("gold");
                                     break;
                                 case "Epic Chest":
                                     chest_buttons[i].setImageResource(R.drawable.epic_chest);
+                                    chest_buttons[i].setTag("epic");
                                     break;
                                 case "Mega Lightning Chest":
                                     chest_buttons[i].setImageResource(R.drawable.mega_lightning_chest);
+                                    chest_buttons[i].setTag("mega_lightning");
                                     break;
                             }
 
@@ -168,69 +175,91 @@ public class Player_Buffering extends AppCompatActivity {
                             switch (arena_name){
                                 case "Arena 1":
                                     arena.setImageResource(R.drawable.arena1);
+                                    arena.setTag("arena1");
                                     break;
                                 case "Arena 2":
                                     arena.setImageResource(R.drawable.arena2);
+                                    arena.setTag("arena2");
                                     break;
                                 case "Arena 3":
                                     arena.setImageResource(R.drawable.arena3);
+                                    arena.setTag("arena3");
                                     break;
                                 case "Arena 4":
                                     arena.setImageResource(R.drawable.arena4);
+                                    arena.setTag("arena4");
                                     break;
                                 case "Arena 5":
                                     arena.setImageResource(R.drawable.arena5);
+                                    arena.setTag("arena5");
                                     break;
                                 case "Arena 6":
                                     arena.setImageResource(R.drawable.arena6);
+                                    arena.setTag("arena6");
                                     break;
                                 case "Arena 7":
                                     arena.setImageResource(R.drawable.arena7);
+                                    arena.setTag("arena7");
                                     break;
                                 case "Arena 8":
                                     arena.setImageResource(R.drawable.arena8);
+                                    arena.setTag("arena8");
                                     break;
                                 case "Arena 9":
                                     arena.setImageResource(R.drawable.arena9);
+                                    arena.setTag("arena9");
                                     break;
                                 case "Arena 10":
                                     arena.setImageResource(R.drawable.arena10);
+                                    arena.setTag("arena10");
                                     break;
                                 case "Arena 11":
                                     arena.setImageResource(R.drawable.arena11);
+                                    arena.setTag("arena11");
                                     break;
                                 case "Arena 12":
                                     arena.setImageResource(R.drawable.arena12);
+                                    arena.setTag("arena2");
                                     break;
                                 case "Challenger I":
                                     arena.setImageResource(R.drawable.league1);
+                                    arena.setTag("league1");
                                     break;
                                 case "Challenger II":
                                     arena.setImageResource(R.drawable.league2);
+                                    arena.setTag("league2");
                                     break;
                                 case "Challenger III":
                                     arena.setImageResource(R.drawable.league3);
+                                    arena.setTag("league3");
                                     break;
                                 case "Master I":
                                     arena.setImageResource(R.drawable.league4);
+                                    arena.setTag("league4");
                                     break;
                                 case "Master II":
                                     arena.setImageResource(R.drawable.league5);
+                                    arena.setTag("league5");
                                     break;
                                 case "Master III":
                                     arena.setImageResource(R.drawable.league6);
+                                    arena.setTag("league6");
                                     break;
                                 case "Champion":
                                     arena.setImageResource(R.drawable.league7);
+                                    arena.setTag("league7");
                                     break;
                                 case "Grand Champion":
                                     arena.setImageResource(R.drawable.league8);
+                                    arena.setTag("league8");
                                     break;
                                 case "Royal Champion":
                                     arena.setImageResource(R.drawable.league9);
+                                    arena.setTag("league9");
                                     break;
                                 case "Ultimate Champion":
                                     arena.setImageResource(R.drawable.league10);
+                                    arena.setTag("league10");
                                     break;
                             }
                             Thread.sleep(500);
