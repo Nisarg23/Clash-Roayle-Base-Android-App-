@@ -49,7 +49,7 @@ public class Activity2 extends AppCompatActivity {
     public static ImageView barbarians;public static ImageView executioner;public static ImageView giant;public static ImageView balloon;public static ImageView bowler;public static ImageView electro_dragon;public static ImageView goblin_giant;
     public static ImageView ginat_skeleton;public static ImageView elixir_collector;public static ImageView xbow;public static ImageView royal_giant;public static ImageView elite_barbarians;public static ImageView rocket;public static ImageView sparky;
     public static ImageView lightning;public static ImageView barbarian_hut;public static ImageView pekka;public static ImageView mega_knight;public static ImageView royal_recruits;public static ImageView lava_hound;public static ImageView golem;
-    public static ImageView three_musketeers;
+    public static ImageView three_musketeers; public static ImageView skeleton_dragons;
 
 
     public static Button mirror_button;public static Button heal_spirit_button;public static Button ice_spirit_button;public static Button skeletons_button;public static Button barbarian_barrel_button;public static Button goblins_button;
@@ -67,6 +67,7 @@ public class Activity2 extends AppCompatActivity {
     public static Button bowler_button;public static Button electro_dragon_button;public static Button goblin_giant_button;public static Button ginat_skeleton_button;public static Button elixir_collector_button;public static Button xbow_button;
     public static Button royal_giant_button;public static Button elite_barbarians_button;public static Button rocket_button;public static Button sparky_button;public static Button lightning_button;public static Button barbarian_hut_button;
     public static Button pekka_button;public static Button mega_knight_button;public static Button royal_recruits_button;public static Button lava_hound_button;public static Button golem_button;public static Button three_musketeers_button;
+    public static Button skeleton_dragons_button;
 
 
 
@@ -100,6 +101,7 @@ public class Activity2 extends AppCompatActivity {
         rocket  = findViewById(R.id.rocket);sparky = findViewById(R.id.sparky);lightning = findViewById(R.id.lightning);barbarian_hut = findViewById(R.id.barbarian_hut);
         pekka = findViewById(R.id.pekka);mega_knight = findViewById(R.id.mega_knight);royal_recruits = findViewById(R.id.royal_recruits);lava_hound = findViewById(R.id.lava_hound);
         golem = findViewById(R.id.golem);three_musketeers = findViewById(R.id.three_musketeers);
+        skeleton_dragons = findViewById(R.id.skeleton_dragons);
 
         mirror_button = findViewById(R.id.mirror_button);heal_spirit_button = findViewById(R.id.heal_spirit_button);ice_spirit_button = findViewById(R.id.ice_spirit_button);
         skeletons_button = findViewById(R.id.skeletons_button);barbarian_barrel_button = findViewById(R.id.barbarian_barrel_button);
@@ -135,13 +137,15 @@ public class Activity2 extends AppCompatActivity {
         barbarian_hut_button = findViewById(R.id.barbarian_hut_button);pekka_button = findViewById(R.id.pekka_button);mega_knight_button = findViewById(R.id.mega_knight_button);
         royal_recruits_button = findViewById(R.id.royal_recruits_button);lava_hound_button = findViewById(R.id.lava_hound_button);
         golem_button = findViewById(R.id.golem_button);three_musketeers_button = findViewById(R.id.three_musketeers_button);
+        skeleton_dragons_button = findViewById(R.id.skeleton_dragons_button);
+
 
         allCards = new ImageView[]{mirror, heal_spirit, ice_spirit, skeletons, barbarian_barrel, goblins, the_log,
                 zap, rage, wall_breakers, bats, ice_golem, fire_spirits, spear_goblins, giant_snowball,
                 royal_delievery, goblin_barrel, arrows, skeleton_army, bomber, tombstone, cannon,
                 elixir_golem, firecracker, fisherman, tornado, skeleton_barrel, clone, earthquake, ice_wizard,
                 royal_ghost, guards, princess, bandit, knight, archers, goblin_gang, miner,
-                dart_goblin, mega_minion, minions, battle_ram, inferno_dragon, lumberjack, poison,
+                dart_goblin, mega_minion, minions, battle_ram, inferno_dragon,skeleton_dragons, lumberjack, poison,
                 freeze, zappies, electro_wizard, valkyrie, hunter, fireball, dark_prince, goblin_cage,
                 night_witch, furncae, musketeer, tesla, bomb_tower, mortar, hog_rider, baby_dragon,
                 flying_machine, battle_healer, magic_archer, mini_pekka, royal_hogs, wizard, prince,
@@ -155,7 +159,7 @@ public class Activity2 extends AppCompatActivity {
                 royal_delievery_button, goblin_barrel_button, arrows_button, skeleton_army_button, bomber_button, tombstone_button, cannon_button,
                 elixir_golem_button, firecracker_button, fisherman_button, tornado_button, skeleton_barrel_button, clone_button, earthquake_button, ice_wizard_button,
                 royal_ghost_button, guards_button, princess_button, bandit_button, knight_button, archers_button, goblin_gang_button, miner_button,
-                dart_goblin_button, mega_minion_button, minions_button, battle_ram_button, inferno_dragon_button, lumberjack_button, poison_button,
+                dart_goblin_button, mega_minion_button, minions_button, battle_ram_button, inferno_dragon_button,skeleton_dragons_button, lumberjack_button, poison_button,
                 freeze_button, zappies_button, electro_wizard_button, valkyrie_button, hunter_button, fireball_button, dark_prince_button, goblin_cage_button,
                 night_witch_button, furncae_button, musketeer_button, tesla_button, bomb_tower_button, mortar_button, hog_rider_button, baby_dragon_button,
                 flying_machine_button, battle_healer_button, magic_archer_button, mini_pekka_button, royal_hogs_button, wizard_button, prince_button,
@@ -289,6 +293,7 @@ public class Activity2 extends AppCompatActivity {
         for (int i =0; i<allCards.length;i++) {
             final Button b = allButtons[i];
             final ImageView c = allCards[i];
+            System.out.println("i " + i);
             c.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

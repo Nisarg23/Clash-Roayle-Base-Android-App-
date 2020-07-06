@@ -169,7 +169,7 @@ public class BufferingActivity extends AppCompatActivity {
                                     url = "night_witch";
                                     break;
                                 case "skeletondragon":
-                                    url = "baby_dragon";
+                                    url = "skeleton_dragons";
                                     break;
                             }
                             GalleryFragment.meta_cards.get(i).setTag(url);

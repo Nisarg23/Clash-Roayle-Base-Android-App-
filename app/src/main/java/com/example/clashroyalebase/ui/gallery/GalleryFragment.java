@@ -83,7 +83,7 @@ public class GalleryFragment extends Fragment {
 
 
         ConstraintLayout gallery_constraint = root.findViewById(R.id.gallery_constraint);
-        int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 90, getResources().getDisplayMetrics());
+        int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 100, getResources().getDisplayMetrics());
         int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 85, getResources().getDisplayMetrics());
 
         LinearLayout.LayoutParams layoutParams_img = new LinearLayout.LayoutParams(width, height);

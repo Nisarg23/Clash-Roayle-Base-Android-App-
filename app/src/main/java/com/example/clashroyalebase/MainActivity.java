@@ -1,6 +1,7 @@
 package com.example.clashroyalebase;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -122,6 +123,8 @@ public class MainActivity extends AppCompatActivity implements
         drawable_arena.put("league8",R.drawable.league8);
         drawable_arena.put("league9",R.drawable.league9);
         drawable_arena.put("league10",R.drawable.league10);
+
+
 
 
     }
@@ -268,22 +271,69 @@ public class MainActivity extends AppCompatActivity implements
         editor.putString("t14",Fragment1.t14.getText().toString());
 
         try{
-            editor.putInt("chest1",drawable_chest.get((Fragment1.chest1.getTag())));
-            editor.putInt("chest2",drawable_chest.get((Fragment1.chest2.getTag())));
-            editor.putInt("chest3",drawable_chest.get((Fragment1.chest3.getTag())));
-            editor.putInt("chest4",drawable_chest.get((Fragment1.chest4.getTag())));
-            editor.putInt("chest5",drawable_chest.get((Fragment1.chest5.getTag())));
-            editor.putInt("chest6",drawable_chest.get((Fragment1.chest6.getTag())));
-            editor.putInt("chest7",drawable_chest.get((Fragment1.chest7.getTag())));
-            editor.putInt("chest8",drawable_chest.get((Fragment1.chest8.getTag())));
-            editor.putInt("chest9",drawable_chest.get((Fragment1.chest9.getTag())));
-            editor.putInt("chest10",drawable_chest.get((Fragment1.chest10.getTag())));
-            editor.putInt("chest11",drawable_chest.get((Fragment1.chest11.getTag())));
-            editor.putInt("chest12",drawable_chest.get((Fragment1.chest12.getTag())));
-            editor.putInt("chest13",drawable_chest.get((Fragment1.chest13.getTag())));
-            editor.putInt("chest14",drawable_chest.get((Fragment1.chest14.getTag())));
+            Integer f1 = drawable_chest.get((Fragment1.chest1.getTag()));
+            if (f1 != null){
+                editor.putInt("chest1",f1);
+            }
+            Integer f2 = drawable_chest.get((Fragment1.chest2.getTag()));
+            if (f2 != null){
+                editor.putInt("chest2",f2);
+            }
+            Integer f3 = drawable_chest.get((Fragment1.chest3.getTag()));
+            if (f3 != null){
+                editor.putInt("chest3",f3);
+            }
+            Integer f4 = drawable_chest.get((Fragment1.chest4.getTag()));
+            if (f4 != null){
+                editor.putInt("chest4",f4);
+            }
+            Integer f5 = drawable_chest.get((Fragment1.chest5.getTag()));
+            if (f5 != null){
+                editor.putInt("chest1",f5);
+            }
+            Integer f6 = drawable_chest.get((Fragment1.chest6.getTag()));
+            if (f6 != null){
+                editor.putInt("chest6",f6);
+            }
+            Integer f7 = drawable_chest.get((Fragment1.chest7.getTag()));
+            if (f7 != null){
+                editor.putInt("chest7",f7);
+            }
+            Integer f8 = drawable_chest.get((Fragment1.chest8.getTag()));
+            if (f8 != null){
+                editor.putInt("chest8",f8);
+            }
+            Integer f9 = drawable_chest.get((Fragment1.chest9.getTag()));
+            if (f9 != null){
+                editor.putInt("chest9",f9);
+            }
+            Integer f10 = drawable_chest.get((Fragment1.chest10.getTag()));
+            if (f10 != null){
+                editor.putInt("chest10",f10);
+            }
+            Integer f11 = drawable_chest.get((Fragment1.chest11.getTag()));
+            if (f11 != null){
+                editor.putInt("chest11",f11);
+            }
+            Integer f12 = drawable_chest.get((Fragment1.chest12.getTag()));
+            if (f12 != null){
+                editor.putInt("chest12",f12);
+            }
+            Integer f13 = drawable_chest.get((Fragment1.chest13.getTag()));
+            if (f13 != null){
+                editor.putInt("chest13",f13);
+            }
+            Integer f14 = drawable_chest.get((Fragment1.chest14.getTag()));
+            if (f14 != null){
+                editor.putInt("chest14",f14);
+            }
 
-            editor.putInt("arena",drawable_arena.get((Fragment1.arena.getTag())));
+            Integer are = drawable_chest.get((Fragment1.arena.getTag()));
+            if (are != null){
+                editor.putInt("arena",are);
+            }
+
+
         }
         catch (NullPointerException e){
             e.printStackTrace();
@@ -298,6 +348,7 @@ public class MainActivity extends AppCompatActivity implements
         super.onStop();
 
     }
+
 
 
 

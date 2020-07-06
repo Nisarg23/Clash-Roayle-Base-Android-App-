@@ -257,6 +257,7 @@ public class HomeFragment extends Fragment {
         elixir_dict.put("xbow",6);elixir_dict.put("royal_giant",6);elixir_dict.put("elite_barbarians",6);elixir_dict.put("rocket",6);elixir_dict.put("sparky",6);
         elixir_dict.put("lightning",6);elixir_dict.put("barbarian_hut",6);elixir_dict.put("pekka",7);elixir_dict.put("mega_knight",7);
         elixir_dict.put("lava_hound",7);elixir_dict.put("golem",8);elixir_dict.put("three_musketeers",9);elixir_dict.put("royal_recruits",7);
+        elixir_dict.put("skeleton_dragons",4);
 
         drawable_dict.put("mirror",R.drawable.mirror);drawable_dict.put("heal_spirit",R.drawable.heal_spirit);drawable_dict.put("ice_spirit",R.drawable.ice_spirit);drawable_dict.put("skeletons",R.drawable.skeletons);drawable_dict.put("barbarian_barrel",R.drawable.barbarian_barrel);
         drawable_dict.put("goblins",R.drawable.goblins);drawable_dict.put("the_log",R.drawable.the_log);drawable_dict.put("zap",R.drawable.zap);drawable_dict.put("rage",R.drawable.rage);drawable_dict.put("wall_breakers",R.drawable.wall_breakers);
@@ -278,7 +279,7 @@ public class HomeFragment extends Fragment {
         drawable_dict.put("xbow",R.drawable.xbow);drawable_dict.put("royal_giant",R.drawable.royal_giant);drawable_dict.put("elite_barbarians",R.drawable.elite_barbarians);drawable_dict.put("rocket",R.drawable.rocket);drawable_dict.put("sparky",R.drawable.sparky);
         drawable_dict.put("lightning",R.drawable.lightning);drawable_dict.put("barbarian_hut",R.drawable.barbarian_hut);drawable_dict.put("pekka",R.drawable.pekka);drawable_dict.put("mega_knight",R.drawable.mega_knight);
         drawable_dict.put("lava_hound",R.drawable.lava_hound);drawable_dict.put("golem",R.drawable.golem);drawable_dict.put("three_musketeers",R.drawable.three_musketeers);drawable_dict.put("royal_recruits",R.drawable.royal_recruits);
-
+        drawable_dict.put("skeleton_dragons",R.drawable.skeleton_dragons);
 
 
         Deck deck1 = new Deck(textView1,elixir_cost_text_view1,cardView1,
@@ -457,6 +458,7 @@ public class HomeFragment extends Fragment {
                 b.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+
                         b.setTag("selected");
                         deck_selected = k;
                         for (int m=0; m<8;m++) {
