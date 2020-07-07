@@ -24,8 +24,8 @@
 
             <ImageView
                 android:id="@+id/card11"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -39,11 +39,10 @@
 
             <TextView
                 android:id="@+id/deck_text2"
-                android:layout_width="426dp"
-                android:layout_height="60dp"
+                android:layout_width="406dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
                 android:clickable="true"
                 android:ellipsize="end"
                 android:gravity="bottom|left"
@@ -58,7 +57,7 @@
             <TextView
                 android:id="@+id/text_view2"
                 android:layout_width="130dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:autoText="false"
                 android:gravity="center|left"
@@ -70,8 +69,8 @@
 
             <ImageView
                 android:id="@+id/card14"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -83,8 +82,8 @@
 
             <ImageView
                 android:id="@+id/card13"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -96,8 +95,8 @@
 
             <ImageView
                 android:id="@+id/card9"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -110,8 +109,8 @@
 
             <ImageView
                 android:id="@+id/card15"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -123,8 +122,8 @@
 
             <ImageView
                 android:id="@+id/card16"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -136,8 +135,8 @@
 
             <ImageView
                 android:id="@+id/card10"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -266,8 +265,8 @@
 
             <ImageView
                 android:id="@+id/card12"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -279,13 +278,10 @@
 
             <TextView
                 android:id="@+id/deck_text1"
-                android:layout_width="426dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginLeft="32dp"
+                android:layout_width="406dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
                 android:clickable="true"
                 android:ellipsize="end"
                 android:gravity="bottom|left"
@@ -300,9 +296,7 @@
             <TextView
                 android:id="@+id/text_view1"
                 android:layout_width="130dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginLeft="55dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:autoText="false"
                 android:gravity="center|left"
@@ -315,8 +309,8 @@
 
             <ImageView
                 android:id="@+id/card6"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -328,8 +322,8 @@
 
             <ImageView
                 android:id="@+id/card5"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginTop="16dp"
                 android:scaleType="centerCrop"
                 android:tag=""
@@ -339,10 +333,8 @@
 
             <ImageView
                 android:id="@+id/card1"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginLeft="55dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginTop="16dp"
                 android:scaleType="centerCrop"
                 android:tag=""
@@ -353,8 +345,8 @@
 
             <ImageView
                 android:id="@+id/card7"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -366,8 +358,8 @@
 
             <ImageView
                 android:id="@+id/card8"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -379,10 +371,10 @@
 
             <ImageView
                 android:id="@+id/card2"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginLeft="55dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="16dp"
                 android:scaleType="centerCrop"
                 android:tag=""
@@ -392,10 +384,10 @@
 
             <ImageView
                 android:id="@+id/card3"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginLeft="55dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="16dp"
                 android:adjustViewBounds="false"
                 android:cropToPadding="false"
@@ -407,10 +399,10 @@
 
             <ImageView
                 android:id="@+id/card4"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginLeft="55dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="16dp"
                 android:scaleType="centerCrop"
                 android:tag=""
@@ -420,10 +412,10 @@
 
             <Button
                 android:id="@+id/add2"
-                android:layout_width="130dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginLeft="55dp"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:background="@drawable/button_background"
                 android:tag="unselected"
                 android:text="ADD"
@@ -433,10 +425,10 @@
 
             <Button
                 android:id="@+id/add3"
-                android:layout_width="130dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginLeft="55dp"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:background="@drawable/button_background"
                 android:tag="unselected"
                 android:text="ADD"
@@ -446,10 +438,10 @@
 
             <Button
                 android:id="@+id/add4"
-                android:layout_width="130dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginLeft="55dp"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:background="@drawable/button_background"
                 android:tag="unselected"
                 android:text="ADD"
@@ -459,10 +451,8 @@
 
             <Button
                 android:id="@+id/add1"
-                android:layout_width="130dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginLeft="55dp"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
                 android:background="@drawable/button_background"
                 android:tag="unselected"
                 android:text="ADD"
@@ -472,10 +462,8 @@
 
             <Button
                 android:id="@+id/add5"
-                android:layout_width="130dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="55dp"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
                 android:background="@drawable/button_background"
                 android:tag="unselected"
                 android:text="ADD"
@@ -485,10 +473,10 @@
 
             <Button
                 android:id="@+id/add6"
-                android:layout_width="130dp"
-                android:layout_height="45dp"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="55dp"
+                android:layout_marginLeft="8dp"
                 android:background="@drawable/button_background"
                 android:tag="unselected"
                 android:text="ADD"
@@ -498,10 +486,10 @@
 
             <Button
                 android:id="@+id/add7"
-                android:layout_width="130dp"
-                android:layout_height="45dp"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="55dp"
+                android:layout_marginLeft="8dp"
                 android:background="@drawable/button_background"
                 android:tag="unselected"
                 android:text="ADD"
@@ -511,10 +499,10 @@
 
             <Button
                 android:id="@+id/add8"
-                android:layout_width="130dp"
-                android:layout_height="45dp"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="55dp"
+                android:layout_marginLeft="8dp"
                 android:background="@drawable/button_background"
                 android:tag="unselected"
                 android:text="ADD"
@@ -537,11 +525,10 @@
 
             <TextView
                 android:id="@+id/deck_text4"
-                android:layout_width="426dp"
-                android:layout_height="60dp"
+                android:layout_width="406dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
                 android:clickable="true"
                 android:ellipsize="end"
                 android:gravity="bottom|left"
@@ -556,7 +543,7 @@
             <TextView
                 android:id="@+id/text_view4"
                 android:layout_width="130dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:autoText="false"
                 android:gravity="center|left"
@@ -568,8 +555,8 @@
 
             <ImageView
                 android:id="@+id/card25"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -581,8 +568,8 @@
 
             <ImageView
                 android:id="@+id/card26"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -594,8 +581,8 @@
 
             <ImageView
                 android:id="@+id/card27"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -608,8 +595,8 @@
 
             <ImageView
                 android:id="@+id/card28"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -673,8 +660,8 @@
 
             <ImageView
                 android:id="@+id/card29"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -686,8 +673,8 @@
 
             <ImageView
                 android:id="@+id/card30"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -699,8 +686,8 @@
 
             <ImageView
                 android:id="@+id/card31"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -712,8 +699,8 @@
 
             <ImageView
                 android:id="@+id/card32"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -790,11 +777,10 @@
 
             <TextView
                 android:id="@+id/deck_text3"
-                android:layout_width="426dp"
-                android:layout_height="60dp"
+                android:layout_width="406dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
                 android:clickable="true"
                 android:ellipsize="end"
                 android:gravity="bottom|left"
@@ -809,7 +795,7 @@
             <TextView
                 android:id="@+id/text_view3"
                 android:layout_width="130dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:autoText="false"
                 android:gravity="center|left"
@@ -821,8 +807,8 @@
 
             <ImageView
                 android:id="@+id/card17"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -834,8 +820,8 @@
 
             <ImageView
                 android:id="@+id/card18"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -847,8 +833,8 @@
 
             <ImageView
                 android:id="@+id/card19"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -861,8 +847,8 @@
 
             <ImageView
                 android:id="@+id/card20"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -926,8 +912,8 @@
 
             <ImageView
                 android:id="@+id/card21"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -939,8 +925,8 @@
 
             <ImageView
                 android:id="@+id/card22"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -952,8 +938,8 @@
 
             <ImageView
                 android:id="@+id/card23"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -965,8 +951,8 @@
 
             <ImageView
                 android:id="@+id/card24"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1043,11 +1029,10 @@
 
             <TextView
                 android:id="@+id/deck_text6"
-                android:layout_width="426dp"
-                android:layout_height="60dp"
+                android:layout_width="406dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
                 android:clickable="true"
                 android:ellipsize="end"
                 android:gravity="bottom|left"
@@ -1062,7 +1047,7 @@
             <TextView
                 android:id="@+id/text_view6"
                 android:layout_width="130dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:autoText="false"
                 android:gravity="center|left"
@@ -1074,8 +1059,8 @@
 
             <ImageView
                 android:id="@+id/card41"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1087,8 +1072,8 @@
 
             <ImageView
                 android:id="@+id/card42"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1100,8 +1085,8 @@
 
             <ImageView
                 android:id="@+id/card43"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1114,8 +1099,8 @@
 
             <ImageView
                 android:id="@+id/card44"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1179,8 +1164,8 @@
 
             <ImageView
                 android:id="@+id/card45"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1192,8 +1177,8 @@
 
             <ImageView
                 android:id="@+id/card46"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1205,8 +1190,8 @@
 
             <ImageView
                 android:id="@+id/card47"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1218,8 +1203,8 @@
 
             <ImageView
                 android:id="@+id/card48"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1296,11 +1281,10 @@
 
             <TextView
                 android:id="@+id/deck_text5"
-                android:layout_width="426dp"
-                android:layout_height="60dp"
+                android:layout_width="406dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
                 android:clickable="true"
                 android:ellipsize="end"
                 android:gravity="bottom|left"
@@ -1315,7 +1299,7 @@
             <TextView
                 android:id="@+id/text_view5"
                 android:layout_width="130dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:autoText="false"
                 android:gravity="center|left"
@@ -1327,8 +1311,8 @@
 
             <ImageView
                 android:id="@+id/card33"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1340,8 +1324,8 @@
 
             <ImageView
                 android:id="@+id/card34"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1353,8 +1337,8 @@
 
             <ImageView
                 android:id="@+id/card35"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1367,8 +1351,8 @@
 
             <ImageView
                 android:id="@+id/card36"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1432,8 +1416,8 @@
 
             <ImageView
                 android:id="@+id/card37"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1445,8 +1429,8 @@
 
             <ImageView
                 android:id="@+id/card38"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1458,8 +1442,8 @@
 
             <ImageView
                 android:id="@+id/card39"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1471,8 +1455,8 @@
 
             <ImageView
                 android:id="@+id/card40"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1549,11 +1533,10 @@
 
             <TextView
                 android:id="@+id/deck_text7"
-                android:layout_width="426dp"
-                android:layout_height="60dp"
+                android:layout_width="406dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
                 android:clickable="true"
                 android:ellipsize="end"
                 android:gravity="bottom|left"
@@ -1568,7 +1551,7 @@
             <TextView
                 android:id="@+id/text_view7"
                 android:layout_width="130dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:autoText="false"
                 android:gravity="center|left"
@@ -1580,8 +1563,8 @@
 
             <ImageView
                 android:id="@+id/card49"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1593,8 +1576,8 @@
 
             <ImageView
                 android:id="@+id/card50"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1606,8 +1589,8 @@
 
             <ImageView
                 android:id="@+id/card51"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1620,8 +1603,8 @@
 
             <ImageView
                 android:id="@+id/card52"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1685,8 +1668,8 @@
 
             <ImageView
                 android:id="@+id/card53"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1698,8 +1681,8 @@
 
             <ImageView
                 android:id="@+id/card54"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1711,8 +1694,8 @@
 
             <ImageView
                 android:id="@+id/card55"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1724,8 +1707,8 @@
 
             <ImageView
                 android:id="@+id/card56"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1802,11 +1785,10 @@
 
             <TextView
                 android:id="@+id/deck_text8"
-                android:layout_width="426dp"
-                android:layout_height="60dp"
+                android:layout_width="406dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
                 android:clickable="true"
                 android:ellipsize="end"
                 android:gravity="bottom|left"
@@ -1821,7 +1803,7 @@
             <TextView
                 android:id="@+id/text_view8"
                 android:layout_width="130dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:autoText="false"
                 android:gravity="center|left"
@@ -1833,8 +1815,8 @@
 
             <ImageView
                 android:id="@+id/card57"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1846,8 +1828,8 @@
 
             <ImageView
                 android:id="@+id/card58"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1859,8 +1841,8 @@
 
             <ImageView
                 android:id="@+id/card59"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1873,8 +1855,8 @@
 
             <ImageView
                 android:id="@+id/card60"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1938,8 +1920,8 @@
 
             <ImageView
                 android:id="@+id/card61"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1951,8 +1933,8 @@
 
             <ImageView
                 android:id="@+id/card62"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1964,8 +1946,8 @@
 
             <ImageView
                 android:id="@+id/card63"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -1977,8 +1959,8 @@
 
             <ImageView
                 android:id="@+id/card64"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2055,11 +2037,10 @@
 
             <TextView
                 android:id="@+id/deck_text9"
-                android:layout_width="426dp"
-                android:layout_height="60dp"
+                android:layout_width="406dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
                 android:clickable="true"
                 android:ellipsize="end"
                 android:gravity="bottom|left"
@@ -2074,7 +2055,7 @@
             <TextView
                 android:id="@+id/text_view9"
                 android:layout_width="130dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:autoText="false"
                 android:gravity="center|left"
@@ -2086,8 +2067,8 @@
 
             <ImageView
                 android:id="@+id/card65"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2099,8 +2080,8 @@
 
             <ImageView
                 android:id="@+id/card66"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2112,8 +2093,8 @@
 
             <ImageView
                 android:id="@+id/card67"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2126,8 +2107,8 @@
 
             <ImageView
                 android:id="@+id/card68"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2191,8 +2172,8 @@
 
             <ImageView
                 android:id="@+id/card69"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2204,8 +2185,8 @@
 
             <ImageView
                 android:id="@+id/card70"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2217,8 +2198,8 @@
 
             <ImageView
                 android:id="@+id/card71"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2230,8 +2211,8 @@
 
             <ImageView
                 android:id="@+id/card72"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2308,11 +2289,10 @@
 
             <TextView
                 android:id="@+id/deck_text10"
-                android:layout_width="426dp"
-                android:layout_height="60dp"
+                android:layout_width="406dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
                 android:clickable="true"
                 android:ellipsize="end"
                 android:gravity="bottom|left"
@@ -2327,7 +2307,7 @@
             <TextView
                 android:id="@+id/text_view10"
                 android:layout_width="130dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:autoText="false"
                 android:gravity="center|left"
@@ -2339,8 +2319,8 @@
 
             <ImageView
                 android:id="@+id/card73"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2352,8 +2332,8 @@
 
             <ImageView
                 android:id="@+id/card74"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2365,8 +2345,8 @@
 
             <ImageView
                 android:id="@+id/card75"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2379,8 +2359,8 @@
 
             <ImageView
                 android:id="@+id/card76"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2444,8 +2424,8 @@
 
             <ImageView
                 android:id="@+id/card77"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2457,8 +2437,8 @@
 
             <ImageView
                 android:id="@+id/card78"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2470,8 +2450,8 @@
 
             <ImageView
                 android:id="@+id/card79"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"
@@ -2483,8 +2463,8 @@
 
             <ImageView
                 android:id="@+id/card80"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="16dp"

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -81,20 +82,57 @@ public class GalleryFragment extends Fragment {
         spinner = root.findViewById(R.id.spinner);
         spinner.setAdapter(adapter);
 
+        int screenSize = getResources().getConfiguration().screenLayout &
+                Configuration.SCREENLAYOUT_SIZE_MASK;
+
+        int tmp_width_card;
+        int tmp_height_card;
+        int tmp_width_txt;
+        int tmp_height_txt;
+        int tmp_width_button;
+        int tmp_height_button;
+        switch(screenSize) {
+            case Configuration.SCREENLAYOUT_SIZE_LARGE:
+                tmp_width_card = 110;
+                tmp_height_card = 120;
+                tmp_width_txt = 370;
+                tmp_height_txt = 60;
+                tmp_width_button = 50;
+                tmp_height_button = 50;
+
+                break;
+            case Configuration.SCREENLAYOUT_SIZE_XLARGE:
+                tmp_width_card = 130;
+                tmp_height_card = 150;
+                tmp_width_txt = 390;
+                tmp_height_txt = 70;
+                tmp_width_button = 70;
+                tmp_height_button = 70;
+
+                break;
+            default:
+                tmp_width_card = 85;
+                tmp_height_card = 100;
+                tmp_width_txt = 350;
+                tmp_height_txt = 50;
+                tmp_width_button = 40;
+                tmp_height_button = 40;
+        }
+
 
         ConstraintLayout gallery_constraint = root.findViewById(R.id.gallery_constraint);
-        int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 100, getResources().getDisplayMetrics());
-        int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 85, getResources().getDisplayMetrics());
+        int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, tmp_height_card, getResources().getDisplayMetrics());
+        int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, tmp_width_card, getResources().getDisplayMetrics());
 
         LinearLayout.LayoutParams layoutParams_img = new LinearLayout.LayoutParams(width, height);
 
-        int h = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());
-        int w = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 350, getResources().getDisplayMetrics());
+        int h = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, tmp_height_txt, getResources().getDisplayMetrics());
+        int w = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, tmp_width_txt, getResources().getDisplayMetrics());
 
         layoutParams_text = new LinearLayout.LayoutParams(w, h);
 
-        int he = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40, getResources().getDisplayMetrics());
-        int wi = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40, getResources().getDisplayMetrics());
+        int he = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, tmp_height_button, getResources().getDisplayMetrics());
+        int wi = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, tmp_width_button, getResources().getDisplayMetrics());
 
         layoutParams_button = new LinearLayout.LayoutParams(he, wi);
 

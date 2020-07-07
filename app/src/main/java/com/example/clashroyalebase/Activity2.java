@@ -293,7 +293,7 @@ public class Activity2 extends AppCompatActivity {
         for (int i =0; i<allCards.length;i++) {
             final Button b = allButtons[i];
             final ImageView c = allCards[i];
-            System.out.println("i " + i);
+
             c.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
