@@ -125,14 +125,11 @@ public class Player_Buffering extends AppCompatActivity {
                             PlayerInfo.tag.setText(o.get("tag").toString());
                             PlayerInfo.trophies.setText(o.get("trophies").toString());
                             PlayerInfo.lvl_text.setText(o.get("expLevel").toString());
-                            PlayerInfo.level.setText(o.get("expLevel").toString());
                             PlayerInfo.highest_best.setText(o.get("bestTrophies").toString());
                             PlayerInfo.wins.setText(o.get("wins").toString());
                             PlayerInfo.losses.setText(o.get("losses").toString());
                             PlayerInfo.battle_count.setText(o.get("battleCount").toString());
                             PlayerInfo.three_crown_wins.setText(o.get("threeCrownWins").toString());
-                            PlayerInfo.max_wins.setText(o.get("challengeMaxWins").toString());
-                            PlayerInfo.cards_won.setText(o.get("challengeCardsWon").toString());
                             PlayerInfo.tournament_cards_won.setText(o.get("tournamentCardsWon").toString());
                             PlayerInfo.battle_count_tournaments.setText(o.get("tournamentBattleCount").toString());
 
@@ -154,11 +151,12 @@ public class Player_Buffering extends AppCompatActivity {
 
                             JSONObject currentSeason = (JSONObject) league.get("currentSeason");
                             PlayerInfo.current_trophies.setText(currentSeason.get("trophies").toString());
+                            PlayerInfo.current_highest.setText(currentSeason.get("bestTrophies").toString());
+                            System.out.println("highest "+PlayerInfo.current_highest.toString());
 
                             JSONObject previousSeason = (JSONObject) league.get("previousSeason");
                             PlayerInfo.previous_trophies.setText(previousSeason.get("trophies").toString());
                             PlayerInfo.previous_season.setText(previousSeason.get("id").toString());
-                            PlayerInfo.highest_previous_trophies.setText(previousSeason.get("bestTrophies").toString());
 
                             int torunament_games = Integer.parseInt(o.get("tournamentBattleCount").toString());
 
@@ -171,7 +169,6 @@ public class Player_Buffering extends AppCompatActivity {
 
                             JSONObject obj = new JSONObject( o.get("arena").toString());
                             String arena_name = obj.get("name").toString();
-                            PlayerInfo.league.setText(arena_name);
                             switch (arena_name){
                                 case "Arena 1":
                                     arena.setImageResource(R.drawable.arena1);
@@ -268,7 +265,6 @@ public class Player_Buffering extends AppCompatActivity {
                             SlideshowFragment.chestAt.clear();
 
                             if (PlayerInfo.triggered_refresh == true){
-                                System.out.println("REFRESHING");
                                 PlayerInfo.triggered_refresh = false;
                                 refresh();
 
@@ -291,15 +287,10 @@ public class Player_Buffering extends AppCompatActivity {
     public  void refresh(){
         Fragment1.player_name.setText(PlayerInfo.player_name.getText());
         Fragment1.best_season.setText(PlayerInfo.best_season.getText());
-        Fragment1.level.setText(PlayerInfo.level.getText());
         Fragment1.best_season_trophies.setText(PlayerInfo.best_season_trophies.getText());
         Fragment1.current_trophies.setText(PlayerInfo.current_trophies.getText());
         Fragment1.previous_season.setText(PlayerInfo.previous_season.getText());
-        Fragment1.highest_previous_trophies.setText(PlayerInfo.highest_previous_trophies.getText());
-        Fragment1.league.setText(PlayerInfo.league.getText());
         Fragment1.wins.setText(PlayerInfo.wins.getText());
-        Fragment1.max_wins.setText(PlayerInfo.max_wins.getText());
-        Fragment1.cards_won.setText(PlayerInfo.cards_won.getText());
         Fragment1.three_crown_wins.setText(PlayerInfo.three_crown_wins.getText());
         Fragment1.losses.setText(PlayerInfo.losses.getText());
         Fragment1.battle_count.setText(PlayerInfo.battle_count.getText());
@@ -313,6 +304,7 @@ public class Player_Buffering extends AppCompatActivity {
         Fragment1.tag.setText(PlayerInfo.tag.getText());
         Fragment1.trophies.setText(PlayerInfo.trophies.getText());
         Fragment1.star_txt.setText(PlayerInfo.lvl_text.getText());
+        Fragment1.current_highest.setText(PlayerInfo.current_highest.getText());
 
         Fragment1.t1.setText(PlayerInfo.t1.getText());
         Fragment1.t2.setText(PlayerInfo.t2.getText());

@@ -1,7 +1,5 @@
 package com.example.clashroyalebase;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -57,6 +55,7 @@ public class Fragment1 extends Fragment {
     public static TextView cards_won;
     public static TextView battle_count_tournaments;
     public static TextView days_played;
+    public static TextView current_highest;
 
     public static TextView tournament_cards_won;
 
@@ -107,17 +106,10 @@ public class Fragment1 extends Fragment {
         player_name = root.findViewById(R.id.player_name);
         arena = root.findViewById(R.id.arena);
         best_season = root.findViewById(R.id.best_season_txt);
-        level = root.findViewById(R.id.level_txt);
         best_season_trophies = root.findViewById(R.id.best_season_trophies_txt);
         current_trophies = root.findViewById(R.id.current_trophies_txt);
-        previous_season = root.findViewById(R.id.previeous_season_txt);
         highest_best = root.findViewById(R.id.personal_best_txt);
-        previous_trophies = root.findViewById(R.id.previous_season_trophies_txt);
-        highest_previous_trophies = root.findViewById(R.id.best_trophies_txt);
-        league = root.findViewById(R.id.league_txt);
         wins = root.findViewById(R.id.wins_txt);
-        max_wins = root.findViewById(R.id.max_wins_txt);
-        cards_won = root.findViewById(R.id.cards_won_txt);
         three_crown_wins = root.findViewById(R.id.three_crown_wins_txt);
         losses = root.findViewById(R.id.losses_txt);
         battle_count = root.findViewById(R.id.battle_count_txt);
@@ -126,10 +118,14 @@ public class Fragment1 extends Fragment {
         draws = root.findViewById(R.id.draws_txt);
         battle_count_tournaments = root.findViewById(R.id.tournament_battle_count_txt);
         tournament_cards_won = root.findViewById(R.id.tournament_cards_won_txt);
-
+        previous_season = root.findViewById(R.id.previous_season_txt);
+        previous_trophies = root.findViewById(R.id.previous_season_trophies);
         tag = root.findViewById(R.id.tag);
-        trophies = root.findViewById(R.id.trophies);
+        trophies = root.findViewById(R.id.current_trophies_txt);
         star_txt = root.findViewById(R.id.star_text);
+        current_highest = root.findViewById(R.id.current_highest_trophies_txt);
+
+
 
          chest1 = root.findViewById(R.id.chest1);
          chest2 = root.findViewById(R.id.chest2);
@@ -164,15 +160,9 @@ public class Fragment1 extends Fragment {
          if (SlideshowFragment.saved == true) {
              player_name.setText(SlideshowFragment.player_name);
              best_season.setText(SlideshowFragment.best_season);
-             level.setText(SlideshowFragment.level);
              best_season_trophies.setText(SlideshowFragment.best_season_trophies);
              current_trophies.setText(SlideshowFragment.current_trophies);
-             previous_season.setText(SlideshowFragment.previous_season);
-             highest_previous_trophies.setText(SlideshowFragment.highest_previous_trophies);
-             league.setText(SlideshowFragment.league);
              wins.setText(SlideshowFragment.wins);
-             max_wins.setText(SlideshowFragment.max_wins);
-             cards_won.setText(SlideshowFragment.cards_won);
              three_crown_wins.setText(SlideshowFragment.three_crown_wins);
              losses.setText(SlideshowFragment.losses);
              battle_count.setText(SlideshowFragment.battle_count);
@@ -186,6 +176,7 @@ public class Fragment1 extends Fragment {
              tag.setText(SlideshowFragment.tag);
              trophies.setText(SlideshowFragment.trophies);
              star_txt.setText(SlideshowFragment.lvl_text);
+             current_highest.setText(SlideshowFragment.current_highest);
 
 
              t1.setText(SlideshowFragment.t1);

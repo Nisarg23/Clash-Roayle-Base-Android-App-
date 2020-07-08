@@ -232,15 +232,10 @@ public class MainActivity extends AppCompatActivity implements
 
         editor.putString("playerName",Fragment1.player_name.getText().toString());
         editor.putString("bestSeason",Fragment1.best_season.getText().toString());
-        editor.putString("level",Fragment1.level.getText().toString());
         editor.putString("bestSeasonTrophies",Fragment1.best_season_trophies.getText().toString());
         editor.putString("currentTrophies",Fragment1.current_trophies.getText().toString());
         editor.putString("previousSeason",Fragment1.previous_season.getText().toString());
-        editor.putString("highestPreviousTrophies",Fragment1.highest_previous_trophies.getText().toString());
-        editor.putString("league",Fragment1.league.getText().toString());
         editor.putString("wins",Fragment1.wins.getText().toString());
-        editor.putString("maxWins",Fragment1.max_wins.getText().toString());
-        editor.putString("cardsWon",Fragment1.cards_won.getText().toString());
         editor.putString("threeCrownWins",Fragment1.three_crown_wins.getText().toString());
         editor.putString("losses",Fragment1.losses.getText().toString());
         editor.putString("daysPlayed",Fragment1.days_played.getText().toString());
@@ -254,6 +249,8 @@ public class MainActivity extends AppCompatActivity implements
         editor.putString("tag",Fragment1.tag.getText().toString());
         editor.putString("trophies",Fragment1.trophies.getText().toString());
         editor.putString("starText",Fragment1.star_txt.getText().toString());
+        editor.putString("currentHighest",Fragment1.current_highest.getText().toString());
+
 
         editor.putString("t1",Fragment1.t1.getText().toString());
         editor.putString("t2",Fragment1.t2.getText().toString());

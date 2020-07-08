@@ -97,6 +97,7 @@ public class SlideshowFragment extends Fragment {
     public static String cards_won;
     public static String battle_count_tournaments;
     public static String days_played;
+    public static String current_highest;
 
     public static String tournament_cards_won;
 
@@ -196,6 +197,7 @@ public class SlideshowFragment extends Fragment {
             trophies = sharedPreferences.getString("trophies","");
             lvl_text = sharedPreferences.getString("starText","");
             league = sharedPreferences.getString("league","");
+            current_highest = sharedPreferences.getString("currentHighest","");
 
             t1 = sharedPreferences.getString("t1","");
             t2 = sharedPreferences.getString("t2","");
