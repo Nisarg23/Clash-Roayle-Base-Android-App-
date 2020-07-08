@@ -6,6 +6,8 @@
     <color name="elixir">#ff33cc</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
+    <color name="grey">#686077</color>
+    <color name="purple">#442679</color>
 
 
 </resources>
