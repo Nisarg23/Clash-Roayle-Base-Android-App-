@@ -469,7 +469,8 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient2">
 
                         <ImageView
                             android:id="@+id/imageView11"
@@ -531,7 +532,8 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient2">
 
                         <ImageView
                             android:id="@+id/imageView10"
@@ -603,7 +605,8 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient2">
 
                         <ImageView
                             android:id="@+id/currentArena"

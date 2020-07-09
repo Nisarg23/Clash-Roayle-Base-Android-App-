@@ -421,34 +421,34 @@ public class Player_Buffering extends AppCompatActivity {
             arena_id = R.drawable.arena12;
         }
         else if (trophies < 4300 && trophies >= 4000){
-            arena_id = R.drawable.challenger1;
+            arena_id = R.drawable.league1;
         }
         else if (trophies < 4600 && trophies >= 4300){
-            arena_id = R.drawable.challenger2;
+            arena_id = R.drawable.league2;
         }
         else if (trophies < 5000 && trophies >= 4600){
-            arena_id = R.drawable.challenger3;
+            arena_id = R.drawable.league3;
         }
         else if (trophies < 5300 && trophies >= 5000){
-            arena_id = R.drawable.master1;
+            arena_id = R.drawable.league4;
         }
         else if (trophies < 5600 && trophies >= 5300){
-            arena_id = R.drawable.master2;
+            arena_id = R.drawable.league5;
         }
         else if (trophies < 6000 && trophies >= 5600){
-            arena_id = R.drawable.master3;
+            arena_id = R.drawable.league6;
         }
         else if (trophies < 6300 && trophies >= 6000){
-            arena_id = R.drawable.champion;
+            arena_id = R.drawable.league7;
         }
         else if (trophies < 6600 && trophies >= 6300){
-            arena_id = R.drawable.grand_champion;
+            arena_id = R.drawable.league8;
         }
         else if (trophies < 7000 && trophies >= 6600){
-            arena_id = R.drawable.royal_champion;
+            arena_id = R.drawable.league9;
         }
         else if (trophies > 7000){
-            arena_id = R.drawable.ultimate_champion;
+            arena_id = R.drawable.league10;
         }
 
         return arena_id;
