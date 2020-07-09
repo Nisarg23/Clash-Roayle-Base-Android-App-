@@ -488,7 +488,7 @@
                         app:layout_constraintEnd_toEndOf="parent" />
 
                     <ImageView
-                        android:id="@+id/imageView8"
+                        android:id="@+id/previousArena"
                         android:layout_width="93dp"
                         android:layout_height="76dp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -550,7 +550,7 @@
                         app:layout_constraintEnd_toEndOf="parent" />
 
                     <ImageView
-                        android:id="@+id/imageView9"
+                        android:id="@+id/bestArena"
                         android:layout_width="93dp"
                         android:layout_height="76dp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -606,7 +606,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imageView7"
+                        android:id="@+id/currentArena"
                         android:layout_width="93dp"
                         android:layout_height="76dp"
                         android:layout_marginEnd="32dp"

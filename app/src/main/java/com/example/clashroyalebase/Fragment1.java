@@ -96,6 +96,10 @@ public class Fragment1 extends Fragment {
 
     public static Button refresh;
 
+    public static ImageView current_arena;
+    public static ImageView previous_arena;
+    public static ImageView best_arena;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -124,6 +128,10 @@ public class Fragment1 extends Fragment {
         trophies = root.findViewById(R.id.current_trophies_txt);
         star_txt = root.findViewById(R.id.star_text);
         current_highest = root.findViewById(R.id.current_highest_trophies_txt);
+
+        current_arena = root.findViewById(R.id.currentArena);
+        best_arena = root.findViewById(R.id.bestArena);
+        previous_arena = root.findViewById(R.id.previousArena);
 
 
 
@@ -177,6 +185,7 @@ public class Fragment1 extends Fragment {
              trophies.setText(SlideshowFragment.trophies);
              star_txt.setText(SlideshowFragment.lvl_text);
              current_highest.setText(SlideshowFragment.current_highest);
+             previous_season.setText(SlideshowFragment.previous_season);
 
 
              t1.setText(SlideshowFragment.t1);
@@ -239,6 +248,15 @@ public class Fragment1 extends Fragment {
 
              if (SlideshowFragment.arena !=0){
                  arena.setImageResource(SlideshowFragment.arena);
+             }
+             if (SlideshowFragment.current_arena !=0){
+                 current_arena.setImageResource(SlideshowFragment.current_arena);
+             }
+             if (SlideshowFragment.previous_arena !=0){
+                 previous_arena.setImageResource(SlideshowFragment.previous_arena);
+             }
+             if (SlideshowFragment.best_arena !=0){
+                 best_arena.setImageResource(SlideshowFragment.best_arena);
              }
          }
 

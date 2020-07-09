@@ -131,6 +131,10 @@ public class SlideshowFragment extends Fragment {
     public static String t13;
     public static String t14;
 
+    public static Integer current_arena;
+    public static Integer previous_arena;
+    public static Integer best_arena;
+
     public static Boolean saved = false;
 
 
@@ -199,6 +203,9 @@ public class SlideshowFragment extends Fragment {
             league = sharedPreferences.getString("league","");
             current_highest = sharedPreferences.getString("currentHighest","");
 
+
+
+
             t1 = sharedPreferences.getString("t1","");
             t2 = sharedPreferences.getString("t2","");
             t3 = sharedPreferences.getString("t3","");
@@ -229,7 +236,12 @@ public class SlideshowFragment extends Fragment {
             chest13 = sharedPreferences.getInt("chest13",0);
             chest14 = sharedPreferences.getInt("chest14",0);
 
+
             arena = sharedPreferences.getInt("arena",0);
+            current_arena = sharedPreferences.getInt("currentArena",0);
+
+            previous_arena = sharedPreferences.getInt("previousArena",0);
+            best_arena = sharedPreferences.getInt("bestArena",0);
 
 
 

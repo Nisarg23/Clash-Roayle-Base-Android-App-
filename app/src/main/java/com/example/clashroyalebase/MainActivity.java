@@ -208,6 +208,15 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     private void save(){
+
+        if (Fragment1.t14.getText().equals("")){
+            Fragment1.chest14.setTag("");
+        }
+        if (Fragment1.t13.getText().equals("")){
+            Fragment1.chest13.setTag("");
+        }
+
+
         SharedPreferences sharedPreferences = getSharedPreferences("AppData", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
@@ -286,7 +295,7 @@ public class MainActivity extends AppCompatActivity implements
             }
             Integer f5 = drawable_chest.get((Fragment1.chest5.getTag()));
             if (f5 != null){
-                editor.putInt("chest1",f5);
+                editor.putInt("chest5",f5);
             }
             Integer f6 = drawable_chest.get((Fragment1.chest6.getTag()));
             if (f6 != null){
@@ -322,12 +331,33 @@ public class MainActivity extends AppCompatActivity implements
             }
             Integer f14 = drawable_chest.get((Fragment1.chest14.getTag()));
             if (f14 != null){
+
                 editor.putInt("chest14",f14);
             }
 
-            Integer are = drawable_chest.get((Fragment1.arena.getTag()));
+
+
+            Integer are = drawable_arena.get((Fragment1.arena.getTag()));
             if (are != null){
                 editor.putInt("arena",are);
+            }
+
+            Integer pre_are = drawable_arena.get((Fragment1.previous_arena.getTag()));
+            if (pre_are != null){
+                editor.putInt("previousArena",pre_are);
+
+            }
+
+            Integer best_are = drawable_arena.get((Fragment1.best_arena.getTag()));
+
+            if (best_are != null){
+                editor.putInt("bestArena",best_are);
+            }
+
+            Integer cur_are = drawable_arena.get((Fragment1.current_arena.getTag()));
+
+            if (cur_are != null){
+                editor.putInt("currentArena",cur_are);
             }
 
 

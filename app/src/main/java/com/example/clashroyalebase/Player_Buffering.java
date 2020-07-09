@@ -23,10 +23,13 @@ import java.net.URL;
 public class Player_Buffering extends AppCompatActivity {
     JSONObject obj;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player__buffering);
+
+
 
         final ImageView arena = PlayerInfo.arena;
         final ImageView[] chest_buttons = PlayerInfo.chest_buttons;
@@ -148,15 +151,21 @@ public class Player_Buffering extends AppCompatActivity {
 
                             PlayerInfo.best_season.setText(bestSeason.get("id").toString());
                             PlayerInfo.best_season_trophies.setText(bestSeason.get("trophies").toString());
+                            PlayerInfo.best_arena.setImageResource(getArenaId((Integer) bestSeason.get("trophies")));
+                            PlayerInfo.best_arena.setTag(getArenaName((Integer) bestSeason.get("trophies")));
+
 
                             JSONObject currentSeason = (JSONObject) league.get("currentSeason");
                             PlayerInfo.current_trophies.setText(currentSeason.get("trophies").toString());
                             PlayerInfo.current_highest.setText(currentSeason.get("bestTrophies").toString());
-                            System.out.println("highest "+PlayerInfo.current_highest.toString());
+                            PlayerInfo.current_arena.setImageResource(getArenaId((Integer) currentSeason.get("trophies")));
+                            PlayerInfo.current_arena.setTag(getArenaName((Integer) currentSeason.get("trophies")));
 
                             JSONObject previousSeason = (JSONObject) league.get("previousSeason");
                             PlayerInfo.previous_trophies.setText(previousSeason.get("trophies").toString());
                             PlayerInfo.previous_season.setText(previousSeason.get("id").toString());
+                            PlayerInfo.previous_arena.setImageResource(getArenaId((Integer) previousSeason.get("trophies")));
+                            PlayerInfo.previous_arena.setTag(getArenaName((Integer) previousSeason.get("trophies")));
 
                             int torunament_games = Integer.parseInt(o.get("tournamentBattleCount").toString());
 
@@ -306,6 +315,7 @@ public class Player_Buffering extends AppCompatActivity {
         Fragment1.star_txt.setText(PlayerInfo.lvl_text.getText());
         Fragment1.current_highest.setText(PlayerInfo.current_highest.getText());
 
+
         Fragment1.t1.setText(PlayerInfo.t1.getText());
         Fragment1.t2.setText(PlayerInfo.t2.getText());
         Fragment1.t3.setText(PlayerInfo.t3.getText());
@@ -338,6 +348,10 @@ public class Player_Buffering extends AppCompatActivity {
         Fragment1.chest13.setImageDrawable(PlayerInfo.chest13.getDrawable());
         Fragment1.chest14.setImageDrawable(PlayerInfo.chest14.getDrawable());
 
+        Fragment1.current_arena.setImageDrawable(PlayerInfo.current_arena.getDrawable());
+        Fragment1.previous_arena.setImageDrawable(PlayerInfo.previous_arena.getDrawable());
+        Fragment1.best_arena.setImageDrawable(PlayerInfo.best_arena.getDrawable());
+
 
         finish();
 
@@ -346,4 +360,149 @@ public class Player_Buffering extends AppCompatActivity {
     public void onBackPressed(){
 
     }
+
+    private int getArenaId(int trophies){
+        int arena_id = R.drawable.ic_launcher_background;
+        if (trophies < 300){
+            arena_id = R.drawable.arena1;
+        }
+        else if (trophies < 600 && trophies >= 300){
+            arena_id = R.drawable.arena2;
+        }
+        else if (trophies < 1000 && trophies >= 600){
+            arena_id = R.drawable.arena3;
+        }
+        else if (trophies < 1300 && trophies >= 1000){
+            arena_id = R.drawable.arena4;
+        }
+        else if (trophies < 1600 && trophies >= 1300){
+            arena_id = R.drawable.arena5;
+        }
+        else if (trophies < 2000 && trophies >= 1600){
+            arena_id = R.drawable.arena6;
+        }
+        else if (trophies < 2300 && trophies >= 2000){
+            arena_id = R.drawable.arena7;
+        }
+        else if (trophies < 2600 && trophies >= 2300){
+            arena_id = R.drawable.arena8;
+        }
+        else if (trophies < 3000 && trophies >= 2600){
+            arena_id = R.drawable.arena9;
+        }
+        else if (trophies < 3300 && trophies >= 3000){
+            arena_id = R.drawable.arena10;
+        }
+        else if (trophies < 3600 && trophies >= 3300){
+            arena_id = R.drawable.arena11;
+        }
+        else if (trophies < 4000 && trophies >= 3300){
+            arena_id = R.drawable.arena12;
+        }
+        else if (trophies < 4300 && trophies >= 4000){
+            arena_id = R.drawable.challenger1;
+        }
+        else if (trophies < 4600 && trophies >= 4300){
+            arena_id = R.drawable.challenger2;
+        }
+        else if (trophies < 5000 && trophies >= 4600){
+            arena_id = R.drawable.challenger3;
+        }
+        else if (trophies < 5300 && trophies >= 5000){
+            arena_id = R.drawable.master1;
+        }
+        else if (trophies < 5600 && trophies >= 5300){
+            arena_id = R.drawable.master2;
+        }
+        else if (trophies < 6000 && trophies >= 5600){
+            arena_id = R.drawable.master3;
+        }
+        else if (trophies < 6300 && trophies >= 6000){
+            arena_id = R.drawable.champion;
+        }
+        else if (trophies < 6600 && trophies >= 6300){
+            arena_id = R.drawable.grand_champion;
+        }
+        else if (trophies < 7000 && trophies >= 6600){
+            arena_id = R.drawable.royal_champion;
+        }
+        else if (trophies > 7000){
+            arena_id = R.drawable.ultimate_champion;
+        }
+
+        return arena_id;
+    }
+
+    public String getArenaName(int trophies){
+        String arena_name = "";
+        if (trophies < 300){
+            arena_name = "arena1";
+        }
+        else if (trophies < 600 && trophies >= 300){
+            arena_name = "arena2";
+        }
+        else if (trophies < 1000 && trophies >= 600){
+            arena_name = "arena3";
+        }
+        else if (trophies < 1300 && trophies >= 1000){
+            arena_name = "arena4";
+        }
+        else if (trophies < 1600 && trophies >= 1300){
+            arena_name = "arena5";
+        }
+        else if (trophies < 2000 && trophies >= 1600){
+            arena_name = "arena6";
+        }
+        else if (trophies < 2300 && trophies >= 2000){
+            arena_name = "arena7";
+        }
+        else if (trophies < 2600 && trophies >= 2300){
+            arena_name = "arena8";
+        }
+        else if (trophies < 3000 && trophies >= 2600){
+            arena_name = "arena9";
+        }
+        else if (trophies < 3300 && trophies >= 3000){
+            arena_name = "arena10";
+        }
+        else if (trophies < 3600 && trophies >= 3300){
+            arena_name = "arena11";
+        }
+        else if (trophies < 4000 && trophies >= 3300){
+            arena_name = "arena12";
+        }
+        else if (trophies < 4300 && trophies >= 4000){
+            arena_name = "league1";
+        }
+        else if (trophies < 4600 && trophies >= 4300){
+            arena_name = "league2";
+        }
+        else if (trophies < 5000 && trophies >= 4600){
+            arena_name = "league3";
+        }
+        else if (trophies < 5300 && trophies >= 5000){
+            arena_name = "league4";
+        }
+        else if (trophies < 5600 && trophies >= 5300){
+            arena_name = "league5";
+        }
+        else if (trophies < 6000 && trophies >= 5600){
+            arena_name = "league6";
+        }
+        else if (trophies < 6300 && trophies >= 6000){
+            arena_name = "league7";
+        }
+        else if (trophies < 6600 && trophies >= 6300){
+            arena_name = "league8";
+        }
+        else if (trophies < 7000 && trophies >= 6600){
+            arena_name = "league9";
+        }
+        else if (trophies > 7000){
+            arena_name = "league10";
+        }
+
+        return arena_name;
+    }
+
 }

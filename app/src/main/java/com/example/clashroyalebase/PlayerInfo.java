@@ -15,7 +15,9 @@ import android.widget.TextView;
 import com.example.clashroyalebase.ui.slideshow.SlideshowFragment;
 
 public class PlayerInfo extends AppCompatActivity {
-
+    public static ImageView current_arena;
+    public static ImageView previous_arena;
+    public static ImageView best_arena;
 
 
     public static ImageView arena;
@@ -158,6 +160,10 @@ public class PlayerInfo extends AppCompatActivity {
         tournament_cards_won = findViewById(R.id.tournament_cards_won_txt);
         current_highest = findViewById(R.id.current_highest_trophies_txt);
 
+        current_arena = findViewById(R.id.currentArena);
+        previous_arena = findViewById(R.id.previousArena);
+        best_arena = findViewById(R.id.bestArena);
+
         startActivity(new Intent(this, Player_Buffering.class));
 
         Button b = findViewById(R.id.save_tag);
@@ -207,7 +213,14 @@ public class PlayerInfo extends AppCompatActivity {
 
 
                 Fragment1.arena.setImageDrawable(arena.getDrawable());
+                Fragment1.current_arena.setImageDrawable(current_arena.getDrawable());
+                Fragment1.best_arena.setImageDrawable(best_arena.getDrawable());
+                Fragment1.previous_arena.setImageDrawable(previous_arena.getDrawable());
                 Fragment1.arena.setTag(arena.getTag());
+                Fragment1.current_arena.setTag(current_arena.getTag());
+                Fragment1.previous_arena.setTag(previous_arena.getTag());
+                Fragment1.best_arena.setTag(best_arena.getTag());
+
                 Fragment1.chest1.setImageDrawable(chest1.getDrawable());
                 Fragment1.chest1.setTag(chest1.getTag());
                 Fragment1.chest2.setImageDrawable(chest2.getDrawable());
