@@ -278,6 +278,7 @@ public class MainActivity extends AppCompatActivity implements
 
         try{
             Integer f1 = drawable_chest.get((Fragment1.chest1.getTag()));
+
             if (f1 != null){
                 editor.putInt("chest1",f1);
             }

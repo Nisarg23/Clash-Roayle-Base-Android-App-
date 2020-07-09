@@ -456,6 +456,14 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/gradient1" >
 
+                <ImageView
+                    android:id="@+id/currentArena"
+                    android:layout_width="93dp"
+                    android:layout_height="76dp"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    app:layout_constraintStart_toEndOf="@+id/textView6"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView2"
                     android:layout_width="150dp"
@@ -491,11 +499,12 @@
                             android:id="@+id/previousArena"
                             android:layout_width="93dp"
                             android:layout_height="76dp"
+                            android:background="@drawable/gradient2"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.508"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/previous_season_txt"
-                            app:srcCompat="@drawable/ic_launcher_background" />
+                            app:srcCompat="@android:drawable/screen_background_light_transparent" />
 
                         <TextView
                             android:id="@+id/textView33"
@@ -602,19 +611,9 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/currentArena"
-                            android:layout_width="93dp"
-                            android:layout_height="76dp"
-                            android:layout_marginEnd="32dp"
-                            android:layout_marginRight="32dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/ic_launcher_background" />
 
                         <ImageView
                             android:id="@+id/imageView6"

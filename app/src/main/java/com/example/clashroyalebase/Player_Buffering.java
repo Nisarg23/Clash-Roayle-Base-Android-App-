@@ -161,6 +161,7 @@ public class Player_Buffering extends AppCompatActivity {
                             PlayerInfo.current_arena.setImageResource(getArenaId((Integer) currentSeason.get("trophies")));
                             PlayerInfo.current_arena.setTag(getArenaName((Integer) currentSeason.get("trophies")));
 
+
                             JSONObject previousSeason = (JSONObject) league.get("previousSeason");
                             PlayerInfo.previous_trophies.setText(previousSeason.get("trophies").toString());
                             PlayerInfo.previous_season.setText(previousSeason.get("id").toString());
@@ -347,6 +348,26 @@ public class Player_Buffering extends AppCompatActivity {
         Fragment1.chest12.setImageDrawable(PlayerInfo.chest12.getDrawable());
         Fragment1.chest13.setImageDrawable(PlayerInfo.chest13.getDrawable());
         Fragment1.chest14.setImageDrawable(PlayerInfo.chest14.getDrawable());
+
+        Fragment1.arena.setTag(PlayerInfo.arena.getTag());
+        Fragment1.chest1.setTag(PlayerInfo.chest1.getTag());
+        Fragment1.chest2.setTag(PlayerInfo.chest2.getTag());
+        Fragment1.chest3.setTag(PlayerInfo.chest3.getTag());
+        Fragment1.chest4.setTag(PlayerInfo.chest4.getTag());
+        Fragment1.chest5.setTag(PlayerInfo.chest5.getTag());
+        Fragment1.chest6.setTag(PlayerInfo.chest6.getTag());
+        Fragment1.chest7.setTag(PlayerInfo.chest7.getTag());
+        Fragment1.chest8.setTag(PlayerInfo.chest8.getTag());
+        Fragment1.chest9.setTag(PlayerInfo.chest9.getTag());
+        Fragment1.chest10.setTag(PlayerInfo.chest10.getTag());
+        Fragment1.chest11.setTag(PlayerInfo.chest11.getTag());
+        Fragment1.chest12.setTag(PlayerInfo.chest12.getTag());
+        Fragment1.chest13.setTag(PlayerInfo.chest13.getTag());
+        Fragment1.chest14.setTag(PlayerInfo.chest14.getTag());
+
+        Fragment1.current_arena.setTag(PlayerInfo.current_arena.getTag());
+        Fragment1.previous_arena.setTag(PlayerInfo.previous_arena.getTag());
+        Fragment1.best_arena.setTag(PlayerInfo.best_arena.getTag());
 
         Fragment1.current_arena.setImageDrawable(PlayerInfo.current_arena.getDrawable());
         Fragment1.previous_arena.setImageDrawable(PlayerInfo.previous_arena.getDrawable());
