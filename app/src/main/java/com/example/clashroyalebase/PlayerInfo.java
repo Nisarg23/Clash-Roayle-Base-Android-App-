@@ -256,16 +256,24 @@ public class PlayerInfo extends AppCompatActivity {
 
 
                 finish();
+                SlideshowFragment.chest.clear();
+                SlideshowFragment.chestAt.clear();
             }
         });
 
         if (triggered_refresh == true){
             finish();
+            SlideshowFragment.chest.clear();
+            SlideshowFragment.chestAt.clear();
         }
 
 
     }
 
-
+public void onBackPressed(){
+        SlideshowFragment.chest.clear();
+        SlideshowFragment.chestAt.clear();
+        super.onBackPressed();
+}
 
 }

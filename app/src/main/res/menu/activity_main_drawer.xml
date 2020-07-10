@@ -18,4 +18,12 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Player Info" />
     </group>
+
+    <item android:title="communicate ">
+        <menu>
+            <item android:id="@+id/email"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Email Me"/>
+        </menu>
+    </item>
 </menu>

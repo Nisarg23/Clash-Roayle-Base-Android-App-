@@ -474,8 +474,8 @@
 
                         <ImageView
                             android:id="@+id/imageView11"
-                            android:layout_width="50dp"
-                            android:layout_height="21dp"
+                            android:layout_width="62dp"
+                            android:layout_height="31dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="@+id/textView31"
                             app:srcCompat="@drawable/trophies" />
@@ -485,6 +485,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="TextView"
+                            android:textSize="20sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -537,8 +538,8 @@
 
                         <ImageView
                             android:id="@+id/imageView10"
-                            android:layout_width="50dp"
-                            android:layout_height="21dp"
+                            android:layout_width="62dp"
+                            android:layout_height="31dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="@+id/textView31"
                             app:srcCompat="@drawable/trophies" />
@@ -548,6 +549,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="TextView"
+                            android:textSize="20sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -588,7 +590,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:text="Current Season"
-                    android:textSize="18sp"
+                    android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -621,8 +623,8 @@
 
                         <ImageView
                             android:id="@+id/imageView6"
-                            android:layout_width="50dp"
-                            android:layout_height="21dp"
+                            android:layout_width="62dp"
+                            android:layout_height="31dp"
                             android:layout_marginTop="16dp"
                             app:layout_constraintStart_toStartOf="@+id/textView31"
                             app:layout_constraintTop_toBottomOf="@+id/textView31"
@@ -633,6 +635,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="TextView"
+                            android:textSize="20sp"
                             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
                             app:layout_constraintStart_toEndOf="@+id/imageView6"
                             app:layout_constraintTop_toTopOf="@+id/imageView6" />
@@ -645,6 +648,7 @@
                             android:layout_marginLeft="32dp"
                             android:layout_marginTop="16dp"
                             android:text="Season Highest"
+                            android:textSize="20sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -687,7 +691,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/view8"
             android:layout_width="410dp"
-            android:layout_height="475dp"
+            android:layout_height="425dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view7">
@@ -702,8 +706,8 @@
                     android:id="@+id/textView39"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="60dp"
-                    android:layout_marginLeft="60dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="24dp"
                     android:text="Battles Played"
                     android:textColor="@color/purple"
@@ -744,8 +748,8 @@
                     android:id="@+id/textView41"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="60dp"
-                    android:layout_marginLeft="60dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="24dp"
                     android:text="Losses"
                     android:textColor="@color/purple"
@@ -784,8 +788,8 @@
                     android:id="@+id/textView43"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="60dp"
-                    android:layout_marginLeft="60dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="24dp"
                     android:text="3 Crown Wins"
                     android:textColor="@color/purple"
@@ -825,8 +829,8 @@
                     android:id="@+id/textView45"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="60dp"
-                    android:layout_marginLeft="60dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="24dp"
                     android:text="Tournament Battles"
                     android:textColor="@color/purple"
@@ -866,8 +870,8 @@
                     android:id="@+id/textView47"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="60dp"
-                    android:layout_marginLeft="60dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="24dp"
                     android:text="Highest Trophies"
                     android:textColor="@color/purple"
@@ -902,20 +906,6 @@
                     android:text="TextView"
                     app:layout_constraintStart_toStartOf="@+id/textView48"
                     app:layout_constraintTop_toBottomOf="@+id/textView48" />
-
-                <Button
-                    android:id="@+id/save_tag"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="173dp"
-                    android:layout_marginLeft="173dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="149dp"
-                    android:layout_marginRight="149dp"
-                    android:text="My Profile"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/personal_best_txt" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

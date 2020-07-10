@@ -7,10 +7,11 @@
     tools:context=".ui.gallery.GalleryFragment">
 
     <ScrollView
-        android:fillViewport="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true"
         tools:context=".MainActivity">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/gallery_constraint_text"
             android:layout_width="match_parent"
@@ -33,7 +34,7 @@
                     android:gravity="right"
                     android:scrollbarSize="100dp"
                     tools:layout_editor_absoluteX="237dp"
-                    tools:layout_editor_absoluteY="16dp"/>
+                    tools:layout_editor_absoluteY="16dp" />
 
 
                 <TextView

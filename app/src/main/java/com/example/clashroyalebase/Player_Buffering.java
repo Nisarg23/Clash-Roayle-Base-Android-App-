@@ -138,10 +138,11 @@ public class Player_Buffering extends AppCompatActivity {
 
 
                             int wins = Integer.parseInt(o.get("wins").toString());
+                            int three_wins = Integer.parseInt(o.get("threeCrownWins").toString());
                             int losses = Integer.parseInt(o.get("losses").toString());
                             int total_games = Integer.parseInt(o.get("battleCount").toString());
 
-                            int win_rate = Math.round((wins*100) / total_games);
+                            int win_rate = Math.round(((wins)*100) / total_games);
                             PlayerInfo.win_rate.setText(Integer.toString(win_rate)+"%");
                             PlayerInfo.draws.setText(Integer.toString(total_games-wins-losses));
 
@@ -156,10 +157,15 @@ public class Player_Buffering extends AppCompatActivity {
 
 
                             JSONObject currentSeason = (JSONObject) league.get("currentSeason");
-                            PlayerInfo.current_trophies.setText(currentSeason.get("trophies").toString());
-                            PlayerInfo.current_highest.setText(currentSeason.get("bestTrophies").toString());
-                            PlayerInfo.current_arena.setImageResource(getArenaId((Integer) currentSeason.get("trophies")));
-                            PlayerInfo.current_arena.setTag(getArenaName((Integer) currentSeason.get("trophies")));
+                            try {
+                                PlayerInfo.current_trophies.setText(currentSeason.get("trophies").toString());
+                                PlayerInfo.current_highest.setText(currentSeason.get("bestTrophies").toString());
+                                PlayerInfo.current_arena.setImageResource(getArenaId((Integer) currentSeason.get("trophies")));
+                                PlayerInfo.current_arena.setTag(getArenaName((Integer) currentSeason.get("trophies")));
+                            }
+                            catch (org.json.JSONException e){
+                                PlayerInfo.current_arena.setTag("");
+                            }
 
 
                             JSONObject previousSeason = (JSONObject) league.get("previousSeason");

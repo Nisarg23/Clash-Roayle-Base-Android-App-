@@ -73,17 +73,21 @@ public class MainActivity extends AppCompatActivity implements
         getSupportFragmentManager().beginTransaction().add(R.id.content_main,new HomeFragment(),"home").commitNow();
         getSupportFragmentManager().beginTransaction().add(R.id.content_main,new GalleryFragment(),"gallery").commitNow();
         getSupportFragmentManager().beginTransaction().add(R.id.content_main,new SlideshowFragment(),"slideshow").commitNow();
+        getSupportFragmentManager().beginTransaction().add(R.id.content_main,new EmailFragment(),"email").commitNow();
 
         Fragment f1 = getSupportFragmentManager().findFragmentByTag("home");
         Fragment f2 = getSupportFragmentManager().findFragmentByTag("gallery");
         Fragment f3 = getSupportFragmentManager().findFragmentByTag("slideshow");
+        Fragment f4 = getSupportFragmentManager().findFragmentByTag("email");
 
         getSupportFragmentManager().beginTransaction().hide(f2).commitNow();
         getSupportFragmentManager().beginTransaction().hide(f3).commitNow();
+        getSupportFragmentManager().beginTransaction().hide(f4).commitNow();
 
         fragment_selected.put("home",true);
         fragment_selected.put("gallery",false);
         fragment_selected.put("slideshow",false);
+        fragment_selected.put("email",false);
 
         Drawable silver = getResources().getDrawable(R.drawable.silver_chest);
         Drawable gold = getResources().getDrawable(R.drawable.silver_chest);
@@ -148,6 +152,10 @@ public class MainActivity extends AppCompatActivity implements
                 tag = "home";
                 select = "home";
                 break;
+            case R.id.email:
+                tag = "email";
+                select = "email";
+                break;
         }
         FragmentManager manager = getSupportFragmentManager();
         if (fragment_selected.get("home").equals(true)){
@@ -162,12 +170,15 @@ public class MainActivity extends AppCompatActivity implements
             fragment_selected.replace("slideshow",false);
             getSupportFragmentManager().beginTransaction().hide(manager.findFragmentByTag("slideshow")).commitNow();
         }
+        else if (fragment_selected.get("email").equals(true)){
+            fragment_selected.replace("email",false);
+            getSupportFragmentManager().beginTransaction().hide(manager.findFragmentByTag("email")).commitNow();
+        }
 
 
 
         if (!tag.equals("")){
             getSupportFragmentManager().beginTransaction().show(manager.findFragmentByTag(tag)).commitNow();
-            //getSupportFragmentManager().beginTransaction().detach(manager.findFragmentByTag("home")).commitNow();
         }
         fragment_selected.replace(tag,true);
 
@@ -184,7 +195,6 @@ public class MainActivity extends AppCompatActivity implements
     @RequiresApi(api = Build.VERSION_CODES.N)
     public boolean onNavigationItemSelected(MenuItem item){
         int id = item.getItemId();
-
             displaySelectedScreen(id);
             return true;
     }
@@ -208,6 +218,8 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     private void save(){
+        SlideshowFragment.chest.clear();
+        SlideshowFragment.chestAt.clear();
 
         if (Fragment1.t14.getText().equals("")){
             Fragment1.chest14.setTag("");
