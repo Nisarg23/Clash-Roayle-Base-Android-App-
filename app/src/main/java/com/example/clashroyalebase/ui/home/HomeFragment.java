@@ -326,6 +326,8 @@ public class HomeFragment extends Fragment {
 
 
 
+
+
         AddClick();
         CardClick();
         DeckName();
@@ -398,6 +400,11 @@ public class HomeFragment extends Fragment {
                         public void onClick(DialogInterface dialog, int which) {
 
                             t.setText(" "+editText1.getText() + "");
+                            if (t.getText().toString().trim().length() == 0){
+                                t.setText(null);
+                                t.setHint("Add Deck Name");
+                            }
+
 
 
                         }
@@ -526,7 +533,19 @@ public class HomeFragment extends Fragment {
             String deck_value = sharedPreferences.getString(deck_key,"");
             String elixir_value = sharedPreferences.getString(elixir_key,"");
             HomeFragment.decks[i].deck_text_view.setText(deck_value);
+            HomeFragment.decks[i].deck_text_view.setHint("Add Deck Name");
             HomeFragment.decks[i].elixir_text_view.setText(elixir_value);
+        }
+
+        for (int i =0; i<textViews.length;i++){
+            TextView t = textViews[i];
+            System.out.println("textView "+i+" "+ t.getText().toString().trim().length());
+
+            if (t.getText().toString().trim().length() == 0){
+                t.setText(null);
+                t.setHint("Add Deck Name");
+                System.out.println("iTs sworking");
+            }
         }
 
 
