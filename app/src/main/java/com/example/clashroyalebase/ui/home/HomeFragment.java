@@ -117,6 +117,12 @@ public class HomeFragment extends Fragment {
     public static ImageView cardView73;public static ImageView cardView74;public static ImageView cardView75;public static ImageView cardView76;
     public static ImageView cardView77;public static ImageView cardView78;public static ImageView cardView79;public static ImageView cardView80;
 
+    private static Button share1;private static Button share2;private static Button share3;private static Button share4;
+    private static Button share5;private static Button share6;private static Button share7;private static Button share8;
+    private static Button share9;private static Button share10;
+
+    private static Button[] share_buttons = new Button[0];
+
     public static int deck_selected = -1;
 
 
@@ -282,7 +288,7 @@ public class HomeFragment extends Fragment {
         drawable_dict.put("skeleton_dragons",R.drawable.skeleton_dragons);
 
 
-        Deck deck1 = new Deck(textView1,elixir_cost_text_view1,cardView1,
+        final Deck deck1 = new Deck(textView1,elixir_cost_text_view1,cardView1,
                 cardView2,cardView3,cardView4,cardView5,cardView6,cardView7,
                 cardView8,addButton1,addButton2,addButton3,addButton4,addButton5,
                 addButton6,addButton7,addButton8);
@@ -323,11 +329,13 @@ public class HomeFragment extends Fragment {
 
          decks = new Deck[]{deck1,deck2,deck3,deck4,deck5,deck6,deck7,deck8,deck9,deck10};
 
+         share1 = root.findViewById(R.id.share1);
 
 
 
 
 
+        shareClick();
         AddClick();
         CardClick();
         DeckName();
@@ -336,6 +344,17 @@ public class HomeFragment extends Fragment {
         return root;
     }
 
+
+    private void shareClick(){
+        share1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (int i=0; i< 8; i++){
+                    System.out.println(decks[0].card_array[i].getTag());
+                }
+            }
+        });
+    }
     @Override
     public void onPause() {
         super.onPause();
@@ -539,12 +558,10 @@ public class HomeFragment extends Fragment {
 
         for (int i =0; i<textViews.length;i++){
             TextView t = textViews[i];
-            System.out.println("textView "+i+" "+ t.getText().toString().trim().length());
 
             if (t.getText().toString().trim().length() == 0){
                 t.setText(null);
                 t.setHint("Add Deck Name");
-                System.out.println("iTs sworking");
             }
         }
 

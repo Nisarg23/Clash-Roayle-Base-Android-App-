@@ -83,6 +83,8 @@
                         android:id="@+id/card1"
                         android:layout_width="85dp"
                         android:layout_height="100dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
                         android:scaleType="centerCrop"
                         android:tag=""
                         app:layout_constraintStart_toStartOf="parent"
@@ -136,6 +138,8 @@
                         android:id="@+id/card5"
                         android:layout_width="85dp"
                         android:layout_height="100dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
                         android:scaleType="centerCrop"
                         android:tag=""
                         app:layout_constraintStart_toStartOf="parent"
@@ -202,7 +206,7 @@
                         android:text="Average Elixir Cost:"
                         android:textColor="@color/elixir"
                         android:textSize="24sp"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/share1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/add5" />
 
@@ -263,11 +267,11 @@
                         app:layout_constraintTop_toBottomOf="@+id/card5" />
 
                     <Button
-                        android:id="@+id/button"
+                        android:id="@+id/share1"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_marginEnd="48dp"
-                        android:layout_marginRight="48dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
                         android:background="@drawable/deck_copy"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent" />
@@ -512,10 +516,23 @@
                 android:text="Average Elixir Cost:"
                 android:textColor="@color/elixir"
                 android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/share2"
                 app:layout_constraintHorizontal_bias="0.454"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/add14" />
+
+            <Button
+                android:id="@+id/share2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/deck_copy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add14" />
+
+
 
             <ImageView
                 android:id="@+id/card12"
@@ -779,9 +796,20 @@
                 android:text="Average Elixir Cost:"
                 android:textColor="@color/elixir"
                 android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/share4"
                 app:layout_constraintHorizontal_bias="0.454"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add32" />
+
+            <Button
+                android:id="@+id/share4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/deck_copy"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/add32" />
 
             <TextView
@@ -1032,9 +1060,20 @@
                 android:text="Average Elixir Cost:"
                 android:textColor="@color/elixir"
                 android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/share3"
                 app:layout_constraintHorizontal_bias="0.454"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add22" />
+
+            <Button
+                android:id="@+id/share3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/deck_copy"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/add22" />
 
             <TextView
