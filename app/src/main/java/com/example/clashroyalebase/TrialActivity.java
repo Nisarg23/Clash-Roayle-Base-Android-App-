@@ -31,34 +31,5 @@ public class TrialActivity extends AppCompatActivity {
         ImageView s = findViewById(R.id.aoc);
 
 
-        s.setOnClickListener(new View.OnClickListener() {
-            @Override
-
-            public void onClick(View v) {
-                Uri app = Uri.parse("clashroyale://copyDeck?deck=26000010;26000014;26000021;26000030;26000038;27000000;28000000;28000011");
-                //Intent intent = getPackageManager().getLaunchIntentForPackage("com.supercell.clashroyale");
-                Intent intent = new Intent(Intent.ACTION_VIEW,app);
-
-                PackageManager packageManager = getPackageManager();
-                List<ResolveInfo> activities = packageManager.queryIntentActivities(intent,
-                        PackageManager.MATCH_DEFAULT_ONLY);
-                boolean isIntentSafe = activities.size() > 0;
-
-                if (isIntentSafe == true) {
-                    startActivity(intent);
-                }
-                else{
-                    Toast t = Toast.makeText(TrialActivity.this,
-                            "You Don't Have Clash Royale",
-                            Toast.LENGTH_SHORT);
-                    t.show();
-
-                }
-            }
-        });
-
-
     }
-
-
 }

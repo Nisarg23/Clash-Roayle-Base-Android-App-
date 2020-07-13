@@ -4,8 +4,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -21,11 +25,13 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.clashroyalebase.Activity2;
+import com.example.clashroyalebase.MainActivity;
 import com.example.clashroyalebase.R;
 import com.example.clashroyalebase.TrialActivity;
 
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.List;
 
 public class HomeFragment extends Fragment {
     public static HashMap<String, Integer> elixir_dict = new HashMap<String, Integer>();
@@ -348,9 +354,9 @@ public class HomeFragment extends Fragment {
         card_id_dict.put("flying_machine" ,"26000057");
         card_id_dict.put("wall_breakers" ,"26000058");
         card_id_dict.put("royal_hogs" ,"26000059");
-        card_id_dict.put("goblin_giants" ,"26000060");
+        card_id_dict.put("goblin_giant" ,"26000060");
         card_id_dict.put("fisherman" ,"26000061");
-        card_id_dict.put("magic_archers" ,"26000062");
+        card_id_dict.put("magic_archer" ,"26000062");
         card_id_dict.put("electro_dragon" ,"26000063");
         card_id_dict.put("firecracker" ,"26000064");
         card_id_dict.put("elixir_golem" ,"26000067");
@@ -461,10 +467,35 @@ public class HomeFragment extends Fragment {
             share_buttons[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    System.out.println("deck "+ (k+1));
+                    String[] id = {"clashroyale://copyDeck?deck="};
                     for (int j = 0; j < 8; j++) {
-                        System.out.println(decks[k].card_array[j].getTag());
+                        id[0] = id[0] + card_id_dict.get(decks[k].card_array[j].getTag().toString());
+                        if (j!=7){
+                            id[0] = id[0] +";";
+                        }
+
                     }
+
+                    if(!id[0].contains("null")) {
+                        Uri app = Uri.parse(id[0]);
+                        Intent intent = new Intent(Intent.ACTION_VIEW, app);
+
+                        PackageManager packageManager = getActivity().getPackageManager();
+                        List<ResolveInfo> activities = packageManager.queryIntentActivities(intent,
+                                PackageManager.MATCH_DEFAULT_ONLY);
+                        boolean isIntentSafe = activities.size() > 0;
+
+                        if (isIntentSafe == true) {
+                            startActivity(intent);
+                        } else {
+                            Toast t = Toast.makeText(getActivity(),
+                                    "You Don't Have Clash Royale",
+                                    Toast.LENGTH_SHORT);
+                            t.show();
+
+                        }
+                    }
+
                 }
             });
         }

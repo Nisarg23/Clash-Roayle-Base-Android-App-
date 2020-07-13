@@ -217,7 +217,7 @@ public class MainActivity extends AppCompatActivity implements
         moveTaskToBack(true);
     }
 
-    private void save(){
+    public void save(){
         SlideshowFragment.chest.clear();
         SlideshowFragment.chestAt.clear();
 
