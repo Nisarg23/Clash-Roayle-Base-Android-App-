@@ -30,6 +30,7 @@ import java.util.Hashtable;
 public class HomeFragment extends Fragment {
     public static HashMap<String, Integer> elixir_dict = new HashMap<String, Integer>();
     public static HashMap<String, Integer> drawable_dict = new HashMap<String, Integer>();
+    public static HashMap<String, String> card_id_dict = new HashMap<String, String>();
 
 
     public static Deck[] decks = new Deck[0];
@@ -121,7 +122,7 @@ public class HomeFragment extends Fragment {
     private static Button share5;private static Button share6;private static Button share7;private static Button share8;
     private static Button share9;private static Button share10;
 
-    private static Button[] share_buttons = new Button[0];
+    private static Button[] share_buttons;
 
     public static int deck_selected = -1;
 
@@ -287,6 +288,108 @@ public class HomeFragment extends Fragment {
         drawable_dict.put("lava_hound",R.drawable.lava_hound);drawable_dict.put("golem",R.drawable.golem);drawable_dict.put("three_musketeers",R.drawable.three_musketeers);drawable_dict.put("royal_recruits",R.drawable.royal_recruits);
         drawable_dict.put("skeleton_dragons",R.drawable.skeleton_dragons);
 
+        card_id_dict.put("knight" ,"26000000");
+        card_id_dict.put("archers" ,"26000001");
+        card_id_dict.put("goblins" ,"26000002");
+        card_id_dict.put("giant" ,"26000003");
+        card_id_dict.put("pekka" ,"26000004");
+        card_id_dict.put("minions" ,"26000005");
+        card_id_dict.put("balloon" ,"26000006");
+        card_id_dict.put("witch" ,"26000007");
+        card_id_dict.put("barbarians" ,"26000008");
+        card_id_dict.put("golem" ,"26000009");
+        card_id_dict.put("skeletons" ,"26000010");
+        card_id_dict.put("valkyrie" ,"26000011");
+        card_id_dict.put("skeleton_army" ,"26000012");
+        card_id_dict.put("bomber" ,"26000013");
+        card_id_dict.put("musketeer" ,"26000014");
+        card_id_dict.put("baby_dragon" ,"26000015");
+        card_id_dict.put("prince" ,"26000016");
+        card_id_dict.put("wizard" ,"26000017");
+        card_id_dict.put("mini_pekka" ,"26000018");
+        card_id_dict.put("spear_goblins" ,"26000019");
+        card_id_dict.put("giant_skeleton" ,"26000020");
+        card_id_dict.put("hog_rider" ,"26000021");
+        card_id_dict.put("minion_horde" ,"26000022");
+        card_id_dict.put("ice_wizard" ,"26000023");
+        card_id_dict.put("royal_giant" ,"26000024");
+        card_id_dict.put("guards" ,"26000025");
+        card_id_dict.put("princess" ,"26000026");
+        card_id_dict.put("dark_prince" ,"26000027");
+        card_id_dict.put("three_musketeers" ,"26000028");
+        card_id_dict.put("lava_hound","26000029");
+        card_id_dict.put("ice_spirit" ,"26000030");
+        card_id_dict.put("fire_spirits" ,"26000031");
+        card_id_dict.put("miner" ,"26000032");
+        card_id_dict.put("sparky" ,"26000033");
+        card_id_dict.put("bowler" ,"26000034");
+        card_id_dict.put("lumberjack" ,"26000035");
+        card_id_dict.put("battle_ram" ,"26000036");
+        card_id_dict.put("inferno_dragon" ,"26000037");
+        card_id_dict.put("ice_golem" ,"26000038");
+        card_id_dict.put("mega_minion" ,"26000039");
+        card_id_dict.put("dart_goblin" ,"26000040");
+        card_id_dict.put("goblin_gang" ,"26000041");
+        card_id_dict.put("electro_wizard" ,"26000042");
+        card_id_dict.put("elite_barbarians" ,"26000043");
+        card_id_dict.put("hunter" ,"26000044");
+        card_id_dict.put("executioner" ,"26000045");
+        card_id_dict.put("bandit" ,"26000046");
+        card_id_dict.put("royal_recruits" ,"26000047");
+        card_id_dict.put("night_witch" ,"26000048");
+        card_id_dict.put("bats" ,"26000049");
+        card_id_dict.put("royal_ghost" ,"26000050");
+        card_id_dict.put("ram_rider" ,"26000051");
+        card_id_dict.put("zappies" ,"26000052");
+        card_id_dict.put("rascals" ,"26000053");
+        card_id_dict.put("cannon_cart" ,"26000054");
+        card_id_dict.put("mega_knight" ,"26000055");
+        card_id_dict.put("skeleton_barrel" ,"26000056");
+        card_id_dict.put("flying_machine" ,"26000057");
+        card_id_dict.put("wall_breakers" ,"26000058");
+        card_id_dict.put("royal_hogs" ,"26000059");
+        card_id_dict.put("goblin_giants" ,"26000060");
+        card_id_dict.put("fisherman" ,"26000061");
+        card_id_dict.put("magic_archers" ,"26000062");
+        card_id_dict.put("electro_dragon" ,"26000063");
+        card_id_dict.put("firecracker" ,"26000064");
+        card_id_dict.put("elixir_golem" ,"26000067");
+        card_id_dict.put("battle_healer" ,"26000068");
+        card_id_dict.put("skeleton_dragons" ,"26000080");
+        card_id_dict.put("cannon" ,"27000000");
+        card_id_dict.put("goblin_hut" ,"27000001");
+        card_id_dict.put("mortar" ,"27000002");
+        card_id_dict.put("inferno_tower" ,"27000003");
+        card_id_dict.put("bomb_tower" ,"27000004");
+        card_id_dict.put("barbarian_hut" ,"27000005");
+        card_id_dict.put("tesla" ,"27000006");
+        card_id_dict.put("elixir_collector" ,"27000007");
+        card_id_dict.put("xbow" ,"27000008");
+        card_id_dict.put("tombstone" ,"27000009");
+        card_id_dict.put("furnace" ,"27000010");
+        card_id_dict.put("goblin_cage" ,"27000012");
+        card_id_dict.put("fireball" ,"28000000");
+        card_id_dict.put("arrows" ,"28000001");
+        card_id_dict.put("rage" ,"28000002");
+        card_id_dict.put("rocket" ,"28000003");
+        card_id_dict.put("goblin_barrel" ,"28000004");
+        card_id_dict.put("freeze" ,"28000005");
+        card_id_dict.put("mirror" ,"28000006");
+        card_id_dict.put("lightning" ,"28000007");
+        card_id_dict.put("zap" ,"28000008");
+        card_id_dict.put("poison" ,"28000009");
+        card_id_dict.put("graveyard" ,"28000010");
+        card_id_dict.put("the_log" ,"28000011");
+        card_id_dict.put("tornado" ,"28000012");
+        card_id_dict.put("clone" ,"28000013");
+        card_id_dict.put("earthquake" ,"28000014");
+        card_id_dict.put("barbarian_barrel" ,"28000015");
+        card_id_dict.put("heal_spirit" ,"28000016");
+        card_id_dict.put("giant_snowball" ,"28000017");
+        card_id_dict.put("royal_delivery" ,"28000018");
+
+
+
 
         final Deck deck1 = new Deck(textView1,elixir_cost_text_view1,cardView1,
                 cardView2,cardView3,cardView4,cardView5,cardView6,cardView7,
@@ -329,7 +432,13 @@ public class HomeFragment extends Fragment {
 
          decks = new Deck[]{deck1,deck2,deck3,deck4,deck5,deck6,deck7,deck8,deck9,deck10};
 
-         share1 = root.findViewById(R.id.share1);
+         share1 = root.findViewById(R.id.share1);share2 = root.findViewById(R.id.share2);share3 = root.findViewById(R.id.share3);
+        share4 = root.findViewById(R.id.share4);share5 = root.findViewById(R.id.share5);share6 = root.findViewById(R.id.share6);
+        share7 = root.findViewById(R.id.share7);share8 = root.findViewById(R.id.share8);share9 = root.findViewById(R.id.share9);
+        share10 = root.findViewById(R.id.share10);
+
+        share_buttons = new Button[]{share1,share2,share3,share4,share5,
+        share6,share7,share8,share9,share10};
 
 
 
@@ -346,14 +455,19 @@ public class HomeFragment extends Fragment {
 
 
     private void shareClick(){
-        share1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                for (int i=0; i< 8; i++){
-                    System.out.println(decks[0].card_array[i].getTag());
+        for (int i=0; i< share_buttons.length;i++) {
+            final int k = i;
+
+            share_buttons[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    System.out.println("deck "+ (k+1));
+                    for (int j = 0; j < 8; j++) {
+                        System.out.println(decks[k].card_array[j].getTag());
+                    }
                 }
-            }
-        });
+            });
+        }
     }
     @Override
     public void onPause() {
