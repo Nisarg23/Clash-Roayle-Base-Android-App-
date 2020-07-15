@@ -6,16 +6,16 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_my_decks"
-            android:icon="@android:drawable/ic_btn_speak_now"
+            android:icon="@drawable/my_deck_icon"
             android:title="My Decks" />
         <item
             android:id="@+id/nav_meta_decks"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/decks_icon"
             android:title="Meta Decks" />
 
         <item
             android:id="@+id/nav_player_info"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_info"
             android:title="Player Info" />
     </group>
 
