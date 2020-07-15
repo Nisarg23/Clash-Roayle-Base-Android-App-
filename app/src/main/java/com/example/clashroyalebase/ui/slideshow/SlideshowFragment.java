@@ -3,7 +3,6 @@ package com.example.clashroyalebase.ui.slideshow;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,22 +10,16 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
-
-
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.clashroyalebase.Fragment1;
 import com.example.clashroyalebase.PlayerInfo;
-import com.example.clashroyalebase.Player_Buffering;
 import com.example.clashroyalebase.R;
-import com.example.clashroyalebase.ui.gallery.GalleryFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;

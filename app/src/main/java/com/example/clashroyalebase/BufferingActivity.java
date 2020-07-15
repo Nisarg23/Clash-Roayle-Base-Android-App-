@@ -189,7 +189,9 @@ public class BufferingActivity extends AppCompatActivity {
                                 sub = sub.substring(27);
                                 int end = sub.indexOf('<');
                                 sub = sub.substring(0, end);
+                                System.out.println("before win rate "+GalleryFragment.win_rate.get(0).getText());
                                 GalleryFragment.win_rate.get(i).setText("Win rate: " + sub + "%");
+                                System.out.println("after win rate "+GalleryFragment.win_rate.get(0).getText());
                             }
 
                         }
