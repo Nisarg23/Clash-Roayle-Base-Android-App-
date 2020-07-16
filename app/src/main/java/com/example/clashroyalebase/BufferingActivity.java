@@ -1,45 +1,27 @@
 package com.example.clashroyalebase;
 
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Spinner;
-import android.widget.TextView;
-
 import com.example.clashroyalebase.ui.gallery.GalleryFragment;
-import com.example.clashroyalebase.ui.gallery.GalleryViewModel;
 import com.example.clashroyalebase.ui.home.HomeFragment;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Map;
 
 
 public class BufferingActivity extends AppCompatActivity {
 
     public Elements img;
     public Elements txt;
-    public InputStream is;
-    public Drawable d;
-    public static ArrayList<String> keys = new ArrayList<String>();
-
-    public static TextView buffering_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

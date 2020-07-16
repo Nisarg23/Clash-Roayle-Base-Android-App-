@@ -7,6 +7,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -36,11 +39,19 @@ public class LoadScreen extends AppCompatActivity {
 
         progressAnimation();
 
+        ImageView image = findViewById(R.id.image);
+
+        Animation animation = AnimationUtils.loadAnimation(this,R.anim.bounce);
+        image.startAnimation(animation);
+
+
+
+
     }
 
     public void progressAnimation(){
         ProgressBarAnimation anim = new ProgressBarAnimation(this,progressBar,textView,0f,100f);
-        anim.setDuration(1000);
+        anim.setDuration(3000);
         progressBar.setAnimation(anim);
     }
 

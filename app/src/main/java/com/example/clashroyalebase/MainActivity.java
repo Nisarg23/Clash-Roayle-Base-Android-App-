@@ -214,7 +214,8 @@ public class MainActivity extends AppCompatActivity implements
                 || super.onSupportNavigateUp();
     }
     public void onBackPressed() {
-        moveTaskToBack(true);
+
+
     }
 
     public void save(){
